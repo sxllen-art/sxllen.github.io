@@ -7,7 +7,22 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Il Mio Portfolio</title>
+    <title>SXLLEN — Concept Artist & Illustrator</title>
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- MAIN CSS -->
 
     <link rel="stylesheet" href="style.css">
 
@@ -22,7 +37,7 @@
     <nav>
 
         <a href="#home" class="logo">
-            IL TUO NOME
+            SXLLEN
         </a>
 
 
@@ -75,7 +90,9 @@
 <main>
 
 
-    <!-- HOME -->
+    <!-- =========================
+         HOME
+    ========================== -->
 
     <section id="home" class="hero">
 
@@ -83,20 +100,24 @@
         <div class="hero-text">
 
 
-            <p class="small-title" data-i18n="heroSmall">
+            <p
+                class="small-title"
+                data-i18n="heroSmall"
+            >
                 CONCEPT ARTIST & ILLUSTRATOR
             </p>
 
 
             <h1 data-i18n="heroTitle">
-                Il tuo nome
+                SXLLEN
             </h1>
 
 
             <p data-i18n="heroDescription">
 
-                Character design, environment art
-                e concept illustration.
+                Specializzata in character, environment e prop
+                design per progetti fantasy e dark fantasy,
+                con un focus su illustrazione e 3D.
 
             </p>
 
@@ -117,359 +138,403 @@
 
 
 
-    <!-- PORTFOLIO -->
+    <!-- =========================
+         PORTFOLIO
+    ========================== -->
 
-<section id="portfolio" class="section">
-
-    <p class="small-title" data-i18n="portfolioSmall">
-        SELECTED WORKS
-    </p>
-
-    <h2 data-i18n="portfolioTitle">
-        Portfolio
-    </h2>
+    <section id="portfolio" class="section">
 
 
-    <!-- MAIN PORTFOLIO CATEGORIES -->
+        <p
+            class="small-title"
+            data-i18n="portfolioSmall"
+        >
+            SELECTED WORKS
+        </p>
 
-    <div id="portfolioCategories" class="portfolio-categories">
+
+        <h2 data-i18n="portfolioTitle">
+            Portfolio
+        </h2>
 
 
-        <!-- CHARACTER DESIGN -->
+
+        <!-- MAIN PORTFOLIO CATEGORIES -->
 
         <div
-            class="portfolio-category"
-            onclick="openCategory('character-design')"
+            id="portfolioCategories"
+            class="portfolio-categories"
         >
 
-            <div class="category-image">
 
-                <img
-                    src="artwork01.JPG"
-                    alt="Character Design"
-                >
+            <!-- CHARACTER DESIGN -->
+
+            <div
+                class="portfolio-category"
+                onclick="openCategory('character-design')"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="artwork01.JPG"
+                        alt="Character Design"
+                    >
+
+                </div>
+
+
+                <h3 data-i18n="categoryCharacter">
+                    Character Design
+                </h3>
 
             </div>
 
-            <h3 data-i18n="categoryCharacter">
+
+
+            <!-- PROP DESIGN -->
+
+            <div
+                class="portfolio-category"
+                onclick="openCategory('prop-design')"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="artwork02.JPG"
+                        alt="Prop Design"
+                    >
+
+                </div>
+
+
+                <h3 data-i18n="categoryProps">
+                    Prop Design
+                </h3>
+
+            </div>
+
+
+
+            <!-- ENVIRONMENT -->
+
+            <div
+                class="portfolio-category"
+                onclick="openCategory('environment')"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="artwork03.JPG"
+                        alt="Environment"
+                    >
+
+                </div>
+
+
+                <h3 data-i18n="categoryEnvironment">
+                    Environment
+                </h3>
+
+            </div>
+
+
+
+            <!-- 3D MODELS -->
+
+            <div
+                class="portfolio-category"
+                onclick="openCategory('3d-models')"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="artwork04.JPG"
+                        alt="3D Models"
+                    >
+
+                </div>
+
+
+                <h3 data-i18n="category3D">
+                    3D Models
+                </h3>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             CHARACTER DESIGN
+        ========================== -->
+
+        <div
+            id="character-design"
+            class="portfolio-view"
+            style="display: none;"
+        >
+
+
+            <button
+                class="back-button"
+                onclick="backToPortfolio()"
+                data-i18n="backPortfolio"
+            >
+                ← Back to Portfolio
+            </button>
+
+
+            <h2 data-i18n="categoryCharacter">
                 Character Design
-            </h3>
+            </h2>
+
+
+            <div class="subcategory-list">
+
+
+                <button
+                    onclick="openSubcategory('characters')"
+                    data-i18n="subcategoryCharacters"
+                >
+                    Characters
+                </button>
+
+
+                <button
+                    onclick="openSubcategory('creature-design')"
+                    data-i18n="subcategoryCreatures"
+                >
+                    Creature Design
+                </button>
+
+
+                <button
+                    onclick="openSubcategory('boss-design')"
+                    data-i18n="subcategoryBosses"
+                >
+                    Boss Design
+                </button>
+
+
+            </div>
+
 
         </div>
 
 
 
-        <!-- PROP DESIGN -->
+        <!-- =========================
+             PROP DESIGN
+        ========================== -->
 
         <div
-            class="portfolio-category"
-            onclick="openCategory('prop-design')"
+            id="prop-design"
+            class="portfolio-view"
+            style="display: none;"
         >
 
-            <div class="category-image">
 
-                <img
-                    src="artwork02.JPG"
-                    alt="Prop Design"
-                >
+            <button
+                class="back-button"
+                onclick="backToPortfolio()"
+                data-i18n="backPortfolio"
+            >
+                ← Back to Portfolio
+            </button>
 
-            </div>
 
-            <h3 data-i18n="categoryProps">
+            <h2 data-i18n="categoryProps">
                 Prop Design
-            </h3>
+            </h2>
+
+
+            <div class="subcategory-list">
+
+
+                <button
+                    onclick="openSubcategory('weapons')"
+                    data-i18n="subcategoryWeapons"
+                >
+                    Weapons
+                </button>
+
+
+                <button
+                    onclick="openSubcategory('items-and-collectibles')"
+                    data-i18n="subcategoryItems"
+                >
+                    Items & Collectibles
+                </button>
+
+
+                <button
+                    onclick="openSubcategory('set-dressing')"
+                    data-i18n="subcategorySetDressing"
+                >
+                    Set Dressing
+                </button>
+
+
+            </div>
+
 
         </div>
 
 
 
-        <!-- ENVIRONMENT -->
+        <!-- =========================
+             ENVIRONMENT
+        ========================== -->
 
         <div
-            class="portfolio-category"
-            onclick="openCategory('environment')"
+            id="environment"
+            class="portfolio-view"
+            style="display: none;"
         >
 
-            <div class="category-image">
 
-                <img
-                    src="artwork03.JPG"
-                    alt="Environment"
-                >
+            <button
+                class="back-button"
+                onclick="backToPortfolio()"
+                data-i18n="backPortfolio"
+            >
+                ← Back to Portfolio
+            </button>
 
-            </div>
 
-            <h3 data-i18n="categoryEnvironment">
+            <h2 data-i18n="categoryEnvironment">
                 Environment
-            </h3>
-
-        </div>
+            </h2>
 
 
+            <div class="subcategory-list">
 
-        <!-- 3D MODELS -->
 
-        <div
-            class="portfolio-category"
-            onclick="openCategory('3d-models')"
-        >
-
-            <div class="category-image">
-
-                <img
-                    src="artwork04.JPG"
-                    alt="3D Models"
+                <button
+                    onclick="openSubcategory('interiors')"
+                    data-i18n="subcategoryInteriors"
                 >
+                    Interiors
+                </button>
+
+
+                <button
+                    onclick="openSubcategory('exteriors')"
+                    data-i18n="subcategoryExteriors"
+                >
+                    Exteriors
+                </button>
+
 
             </div>
 
-            <h3 data-i18n="category3D">
+
+        </div>
+
+
+
+        <!-- =========================
+             3D MODELS
+        ========================== -->
+
+        <div
+            id="3d-models"
+            class="portfolio-view"
+            style="display: none;"
+        >
+
+
+            <button
+                class="back-button"
+                onclick="backToPortfolio()"
+                data-i18n="backPortfolio"
+            >
+                ← Back to Portfolio
+            </button>
+
+
+            <h2 data-i18n="category3D">
                 3D Models
-            </h3>
+            </h2>
+
+
+            <div
+                id="gallery-3d-models"
+                class="gallery"
+            >
+
+                <!-- Images will be added later -->
+
+            </div>
+
 
         </div>
 
 
-    </div>
 
-
-
-    <!-- CHARACTER DESIGN SUBCATEGORIES -->
-
-    <div
-        id="character-design"
-        class="portfolio-view"
-        style="display: none;"
-    >
-
-        <button
-            class="back-button"
-            onclick="backToPortfolio()"
-            data-i18n="backPortfolio"
-        >
-            ← Back to Portfolio
-        </button>
-
-
-        <h2 data-i18n="categoryCharacter">
-            Character Design
-        </h2>
-
-
-        <div class="subcategory-list">
-
-
-            <button
-                onclick="openSubcategory('characters')"
-                data-i18n="subcategoryCharacters"
-            >
-                Characters
-            </button>
-
-
-            <button
-                onclick="openSubcategory('creature-design')"
-                data-i18n="subcategoryCreatures"
-            >
-                Creature Design
-            </button>
-
-
-            <button
-                onclick="openSubcategory('boss-design')"
-                data-i18n="subcategoryBosses"
-            >
-                Boss Design
-            </button>
-
-
-        </div>
-
-    </div>
-
-
-
-    <!-- PROP DESIGN SUBCATEGORIES -->
-
-    <div
-        id="prop-design"
-        class="portfolio-view"
-        style="display: none;"
-    >
-
-        <button
-            class="back-button"
-            onclick="backToPortfolio()"
-            data-i18n="backPortfolio"
-        >
-            ← Back to Portfolio
-        </button>
-
-
-        <h2 data-i18n="categoryProps">
-            Prop Design
-        </h2>
-
-
-        <div class="subcategory-list">
-
-
-            <button
-                onclick="openSubcategory('weapons')"
-                data-i18n="subcategoryWeapons"
-            >
-                Weapons
-            </button>
-
-
-            <button
-                onclick="openSubcategory('items-and-collectibles')"
-                data-i18n="subcategoryItems"
-            >
-                Items & Collectibles
-            </button>
-
-
-            <button
-                onclick="openSubcategory('set-dressing')"
-                data-i18n="subcategorySetDressing"
-            >
-                Set Dressing
-            </button>
-
-
-        </div>
-
-    </div>
-
-
-
-    <!-- ENVIRONMENT SUBCATEGORIES -->
-
-    <div
-        id="environment"
-        class="portfolio-view"
-        style="display: none;"
-    >
-
-        <button
-            class="back-button"
-            onclick="backToPortfolio()"
-            data-i18n="backPortfolio"
-        >
-            ← Back to Portfolio
-        </button>
-
-
-        <h2 data-i18n="categoryEnvironment">
-            Environment
-        </h2>
-
-
-        <div class="subcategory-list">
-
-
-            <button
-                onclick="openSubcategory('interiors')"
-                data-i18n="subcategoryInteriors"
-            >
-                Interiors
-            </button>
-
-
-            <button
-                onclick="openSubcategory('exteriors')"
-                data-i18n="subcategoryExteriors"
-            >
-                Exteriors
-            </button>
-
-
-        </div>
-
-    </div>
-
-
-
-    <!-- 3D MODELS -->
-
-    <div
-        id="3d-models"
-        class="portfolio-view"
-        style="display: none;"
-    >
-
-        <button
-            class="back-button"
-            onclick="backToPortfolio()"
-            data-i18n="backPortfolio"
-        >
-            ← Back to Portfolio
-        </button>
-
-
-        <h2 data-i18n="category3D">
-            3D Models
-        </h2>
-
+        <!-- =========================
+             SUBCATEGORY GALLERY
+        ========================== -->
 
         <div
-            id="gallery-3d-models"
-            class="gallery"
+            id="subcategory-gallery"
+            class="portfolio-view"
+            style="display: none;"
         >
 
-            <!-- Images will be added here later -->
+
+            <button
+                class="back-button"
+                onclick="backToCategory()"
+                data-i18n="backCategory"
+            >
+                ← Back
+            </button>
+
+
+            <h2 id="subcategory-title"></h2>
+
+
+            <div
+                id="subcategory-images"
+                class="gallery"
+            >
+
+                <!-- Images will be added later -->
+
+            </div>
+
 
         </div>
 
-    </div>
+
+    </section>
 
 
 
-    <!-- SUBCATEGORY GALLERY -->
+    <!-- =========================
+         ABOUT
+    ========================== -->
 
-    <div
-        id="subcategory-gallery"
-        class="portfolio-view"
-        style="display: none;"
+    <section
+        id="about"
+        class="section about"
     >
-
-        <button
-            class="back-button"
-            onclick="backToCategory()"
-            data-i18n="backCategory"
-        >
-            ← Back
-        </button>
-
-
-        <h2 id="subcategory-title"></h2>
-
-
-        <div
-            id="subcategory-images"
-            class="gallery"
-        >
-
-            <!-- Images will be added here later -->
-
-        </div>
-
-    </div>
-
-
-</section>
-
-
-    <!-- ABOUT -->
-
-    <section id="about" class="section about">
 
 
         <div>
 
 
-            <p class="small-title" data-i18n="aboutSmall">
+            <p
+                class="small-title"
+                data-i18n="aboutSmall"
+            >
                 ABOUT ME
             </p>
 
@@ -481,18 +546,18 @@
 
             <p data-i18n="aboutText1">
 
-                Ciao! Sono [IL TUO NOME], concept artist
-                e illustratore. Mi occupo di character design,
-                environment design e illustrazione.
+                Ciao! Sono SXLLEN, concept artist e illustratrice.
+                Mi occupo di character design, prop design,
+                environment design, illustrazione e modellazione 3D.
 
             </p>
 
 
             <p data-i18n="aboutText2">
 
-                Qui puoi inserire una breve descrizione di te,
-                della tua formazione, delle tue passioni e del tipo
-                di progetti a cui ti piace lavorare.
+                Amo esplorare mondi fantasy e dark fantasy,
+                creando personaggi, ambientazioni e oggetti
+                attraverso un approccio semi-realistico.
 
             </p>
 
@@ -504,12 +569,20 @@
 
 
 
-    <!-- COMMISSIONS -->
+    <!-- =========================
+         COMMISSIONS
+    ========================== -->
 
-    <section id="commissions" class="section">
+    <section
+        id="commissions"
+        class="section"
+    >
 
 
-        <p class="small-title" data-i18n="commissionsSmall">
+        <p
+            class="small-title"
+            data-i18n="commissionsSmall"
+        >
             COMMISSIONS
         </p>
 
@@ -522,15 +595,20 @@
         <div class="prices">
 
 
+            <!-- CHARACTER DESIGN -->
+
             <div class="price-card">
+
 
                 <h3 data-i18n="price1Title">
                     Character Design
                 </h3>
 
+
                 <p class="price">
                     € XX
                 </p>
+
 
                 <p data-i18n="price1Description">
 
@@ -539,19 +617,25 @@
 
                 </p>
 
+
             </div>
 
 
 
+            <!-- PORTRAIT -->
+
             <div class="price-card">
+
 
                 <h3 data-i18n="price2Title">
                     Portrait
                 </h3>
 
+
                 <p class="price">
                     € XX
                 </p>
+
 
                 <p data-i18n="price2Description">
 
@@ -560,19 +644,25 @@
 
                 </p>
 
+
             </div>
 
 
 
+            <!-- ILLUSTRATION -->
+
             <div class="price-card">
+
 
                 <h3 data-i18n="price3Title">
                     Illustration
                 </h3>
 
+
                 <p class="price">
                     € XX
                 </p>
+
 
                 <p data-i18n="price3Description">
 
@@ -580,6 +670,7 @@
                     composizione e rendering.
 
                 </p>
+
 
             </div>
 
@@ -591,12 +682,20 @@
 
 
 
-    <!-- CONTACT -->
+    <!-- =========================
+         CONTACT
+    ========================== -->
 
-    <section id="contact" class="section contact">
+    <section
+        id="contact"
+        class="section contact"
+    >
 
 
-        <p class="small-title" data-i18n="contactSmall">
+        <p
+            class="small-title"
+            data-i18n="contactSmall"
+        >
             GET IN TOUCH
         </p>
 
@@ -615,7 +714,7 @@
 
 
         <a
-            href="mailto:tuaemail@email.com"
+            href="mailto:sabrinasrn29@gmail.com"
             class="button"
             data-i18n="contactButton"
         >
@@ -630,15 +729,21 @@
 
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
     <p data-i18n="footer">
-        © 2026 Il tuo nome — Concept Artist
+        © 2026 SXLLEN — Concept Artist & Illustrator
     </p>
 
 </footer>
 
 
+
+<!-- MAIN JAVASCRIPT -->
 
 <script src="script.js"></script>
 
