@@ -8,8 +8,8 @@ const translations = {
         navContact: "Contatti",
 
         heroSmall: "CONCEPT ARTIST & ILLUSTRATOR",
-        heroTitle: "Il tuo nome",
-        heroDescription: "Character design, environment art e concept illustration.",
+        heroTitle: "SXLLEN",
+        heroDescription: "Specializzata in character, environment e prop design per progetti fantasy e dark fantasy.",
         heroButton: "Guarda il portfolio",
 
         portfolioSmall: "SELECTED WORKS",
@@ -72,8 +72,8 @@ const translations = {
         navContact: "Contact",
 
         heroSmall: "CONCEPT ARTIST & ILLUSTRATOR",
-        heroTitle: "Your name",
-        heroDescription: "Character design, environment art and concept illustration.",
+        heroTitle: "SXLLEN",
+        heroDescription: "Specializing in character, environment and prop design for fantasy and dark fantasy projects.",
         heroButton: "View portfolio",
 
         portfolioSmall: "SELECTED WORKS",
