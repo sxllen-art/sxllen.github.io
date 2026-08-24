@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Libre Baskerville", serif;
     background: #111111;
     color: #f2f2f2;
     line-height: 1.6;
@@ -54,8 +54,9 @@ nav {
 }
 
 .logo {
-    font-weight: bold;
-    letter-spacing: 2px;
+    font-family: "Cinzel", serif;
+    font-weight: 600;
+    letter-spacing: 3px;
 }
 
 .menu {
@@ -64,7 +65,10 @@ nav {
 }
 
 .menu a {
+    font-family: "Libre Baskerville", serif;
+
     color: #cccccc;
+
     font-size: 14px;
 
     transition: color 0.3s ease;
@@ -81,11 +85,14 @@ nav {
 
 #languageSelector {
     background: #111111;
+
     color: #f2f2f2;
 
     border: 1px solid #444444;
 
     padding: 7px 10px;
+
+    font-family: "Libre Baskerville", serif;
 
     font-size: 12px;
 
@@ -111,38 +118,61 @@ nav {
 
     background:
         linear-gradient(
-            rgba(0,0,0,0.35),
-            rgba(0,0,0,0.8)
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.8)
         ),
         url("artwork01.JPG");
 
     background-size: cover;
+
     background-position: center;
 }
 
 .hero-text {
     max-width: 800px;
+
     margin: auto;
+
     width: 100%;
 }
 
 .small-title {
+    font-family: "Cinzel", serif;
+
+    font-weight: 500;
+
     font-size: 12px;
+
     letter-spacing: 3px;
+
     color: #aaaaaa;
+
     margin-bottom: 20px;
 }
 
 .hero h1 {
+    font-family: "Cinzel", serif;
+
+    font-weight: 600;
+
     font-size: clamp(60px, 10vw, 130px);
+
     line-height: 0.9;
+
+    letter-spacing: 2px;
+
     margin-bottom: 30px;
 }
 
 .hero p:not(.small-title) {
     max-width: 550px;
-    font-size: 20px;
+
+    font-family: "Libre Baskerville", serif;
+
+    font-size: 18px;
+
     color: #cccccc;
+
     margin-bottom: 35px;
 }
 
@@ -158,7 +188,10 @@ nav {
 
     border: 1px solid #eeeeee;
 
+    font-family: "Libre Baskerville", serif;
+
     font-size: 13px;
+
     letter-spacing: 1px;
 
     transition:
@@ -168,6 +201,7 @@ nav {
 
 .button:hover {
     background: #ffffff;
+
     color: #111111;
 }
 
@@ -178,14 +212,23 @@ nav {
 
 .section {
     max-width: 1200px;
+
     margin: auto;
 
     padding: 120px 30px;
 }
 
 .section h2 {
+    font-family: "Cinzel", serif;
+
+    font-weight: 500;
+
     font-size: clamp(45px, 7vw, 80px);
+
     line-height: 1;
+
+    letter-spacing: 1px;
+
     margin-bottom: 60px;
 }
 
@@ -207,11 +250,13 @@ nav {
 
 .portfolio-category {
     cursor: pointer;
+
     overflow: hidden;
 }
 
 .category-image {
     width: 100%;
+
     overflow: hidden;
 }
 
@@ -219,6 +264,7 @@ nav {
     display: block;
 
     width: 100%;
+
     height: auto;
 
     object-fit: contain;
@@ -231,18 +277,30 @@ nav {
 }
 
 .portfolio-category h3 {
+    font-family: "Cinzel", serif;
+
+    font-weight: 500;
+
     margin-top: 18px;
 
     font-size: 20px;
+
+    letter-spacing: 0.5px;
 }
 
 
 /* =========================
-   PORTFOLIO SUBCATEGORIES
+   PORTFOLIO SUBPAGES
 ========================= */
 
 .portfolio-view {
     margin-top: 40px;
+}
+
+.portfolio-view h2 {
+    font-family: "Cinzel", serif;
+
+    font-weight: 500;
 }
 
 .back-button {
@@ -256,7 +314,9 @@ nav {
 
     cursor: pointer;
 
-    font: inherit;
+    font-family: "Libre Baskerville", serif;
+
+    font-size: 14px;
 
     color: #f2f2f2;
 }
@@ -286,7 +346,9 @@ nav {
 
     cursor: pointer;
 
-    font: inherit;
+    font-family: "Libre Baskerville", serif;
+
+    font-size: 13px;
 
     transition:
         background 0.3s ease,
@@ -337,6 +399,8 @@ nav {
 }
 
 .artwork h3 {
+    font-family: "Cinzel", serif;
+
     margin-top: 18px;
 
     font-size: 20px;
@@ -357,12 +421,18 @@ nav {
     max-width: 900px;
 }
 
+.about h2 {
+    font-family: "Cinzel", serif;
+}
+
 .about p:not(.small-title) {
     max-width: 700px;
 
     color: #bbbbbb;
 
-    font-size: 18px;
+    font-family: "Libre Baskerville", serif;
+
+    font-size: 17px;
 
     margin-bottom: 20px;
 }
@@ -400,12 +470,18 @@ nav {
 }
 
 .price-card h3 {
+    font-family: "Cinzel", serif;
+
+    font-weight: 500;
+
     font-size: 22px;
 
     margin-bottom: 25px;
 }
 
 .price {
+    font-family: "Cinzel", serif;
+
     font-size: 40px;
 
     margin-bottom: 20px;
@@ -413,6 +489,10 @@ nav {
 
 .price-card p:not(.price) {
     color: #999999;
+
+    font-family: "Libre Baskerville", serif;
+
+    font-size: 14px;
 }
 
 
@@ -426,8 +506,14 @@ nav {
     max-width: 800px;
 }
 
+.contact h2 {
+    font-family: "Cinzel", serif;
+}
+
 .contact p:not(.small-title) {
     color: #aaaaaa;
+
+    font-family: "Libre Baskerville", serif;
 
     margin-bottom: 30px;
 }
@@ -445,6 +531,8 @@ footer {
     text-align: center;
 
     color: #666666;
+
+    font-family: "Libre Baskerville", serif;
 
     font-size: 13px;
 }
@@ -471,13 +559,17 @@ footer {
     #languageSelector {
         padding: 6px 7px;
 
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .hero {
         padding-left: 20px;
 
         padding-right: 20px;
+    }
+
+    .hero h1 {
+        font-size: clamp(50px, 16vw, 90px);
     }
 
     .section {
@@ -494,6 +586,10 @@ footer {
 
     .prices {
         grid-template-columns: 1fr;
+    }
+
+    .portfolio-category h3 {
+        font-size: 18px;
     }
 
 }
