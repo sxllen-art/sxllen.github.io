@@ -119,102 +119,346 @@
 
     <!-- PORTFOLIO -->
 
-    <section id="portfolio" class="section">
+<section id="portfolio" class="section">
+
+    <p class="small-title" data-i18n="portfolioSmall">
+        SELECTED WORKS
+    </p>
+
+    <h2 data-i18n="portfolioTitle">
+        Portfolio
+    </h2>
 
 
-        <p class="small-title" data-i18n="portfolioSmall">
-            SELECTED WORKS
-        </p>
+    <!-- MAIN PORTFOLIO CATEGORIES -->
+
+    <div id="portfolioCategories" class="portfolio-categories">
 
 
-        <h2 data-i18n="portfolioTitle">
-            Portfolio
-        </h2>
+        <!-- CHARACTER DESIGN -->
 
+        <div
+            class="portfolio-category"
+            onclick="openCategory('character-design')"
+        >
 
-        <div class="gallery">
-
-
-            <div class="artwork">
+            <div class="category-image">
 
                 <img
                     src="artwork01.JPG"
-                    alt="Artwork 1"
+                    alt="Character Design"
                 >
-
-                <h3 data-i18n="artwork1Title">
-                    Character Design
-                </h3>
-
-                <p data-i18n="artwork1Description">
-                    Character concept
-                </p>
 
             </div>
 
-
-
-            <div class="artwork">
-
-                <img
-                    src="artwork02.JPG"
-                    alt="Artwork 2"
-                >
-
-                <h3 data-i18n="artwork2Title">
-                    Environment
-                </h3>
-
-                <p data-i18n="artwork2Description">
-                    Environment concept
-                </p>
-
-            </div>
-
-
-
-            <div class="artwork">
-
-                <img
-                    src="artwork03.JPG"
-                    alt="Artwork 3"
-                >
-
-                <h3 data-i18n="artwork3Title">
-                    Illustration
-                </h3>
-
-                <p data-i18n="artwork3Description">
-                    Digital illustration
-                </p>
-
-            </div>
-
-
-
-            <div class="artwork">
-
-                <img
-                    src="artwork04.JPG"
-                    alt="Artwork 4"
-                >
-
-                <h3 data-i18n="artwork4Title">
-                    Props
-                </h3>
-
-                <p data-i18n="artwork4Description">
-                    Prop design
-                </p>
-
-            </div>
-
+            <h3 data-i18n="categoryCharacter">
+                Character Design
+            </h3>
 
         </div>
 
 
-    </section>
 
+        <!-- PROP DESIGN -->
+
+        <div
+            class="portfolio-category"
+            onclick="openCategory('prop-design')"
+        >
+
+            <div class="category-image">
+
+                <img
+                    src="artwork02.JPG"
+                    alt="Prop Design"
+                >
+
+            </div>
+
+            <h3 data-i18n="categoryProps">
+                Prop Design
+            </h3>
+
+        </div>
+
+
+
+        <!-- ENVIRONMENT -->
+
+        <div
+            class="portfolio-category"
+            onclick="openCategory('environment')"
+        >
+
+            <div class="category-image">
+
+                <img
+                    src="artwork03.JPG"
+                    alt="Environment"
+                >
+
+            </div>
+
+            <h3 data-i18n="categoryEnvironment">
+                Environment
+            </h3>
+
+        </div>
+
+
+
+        <!-- 3D MODELS -->
+
+        <div
+            class="portfolio-category"
+            onclick="openCategory('3d-models')"
+        >
+
+            <div class="category-image">
+
+                <img
+                    src="artwork04.JPG"
+                    alt="3D Models"
+                >
+
+            </div>
+
+            <h3 data-i18n="category3D">
+                3D Models
+            </h3>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- CHARACTER DESIGN SUBCATEGORIES -->
+
+    <div
+        id="character-design"
+        class="portfolio-view"
+        style="display: none;"
+    >
+
+        <button
+            class="back-button"
+            onclick="backToPortfolio()"
+            data-i18n="backPortfolio"
+        >
+            ← Back to Portfolio
+        </button>
+
+
+        <h2 data-i18n="categoryCharacter">
+            Character Design
+        </h2>
+
+
+        <div class="subcategory-list">
+
+
+            <button
+                onclick="openSubcategory('characters')"
+                data-i18n="subcategoryCharacters"
+            >
+                Characters
+            </button>
+
+
+            <button
+                onclick="openSubcategory('creature-design')"
+                data-i18n="subcategoryCreatures"
+            >
+                Creature Design
+            </button>
+
+
+            <button
+                onclick="openSubcategory('boss-design')"
+                data-i18n="subcategoryBosses"
+            >
+                Boss Design
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- PROP DESIGN SUBCATEGORIES -->
+
+    <div
+        id="prop-design"
+        class="portfolio-view"
+        style="display: none;"
+    >
+
+        <button
+            class="back-button"
+            onclick="backToPortfolio()"
+            data-i18n="backPortfolio"
+        >
+            ← Back to Portfolio
+        </button>
+
+
+        <h2 data-i18n="categoryProps">
+            Prop Design
+        </h2>
+
+
+        <div class="subcategory-list">
+
+
+            <button
+                onclick="openSubcategory('weapons')"
+                data-i18n="subcategoryWeapons"
+            >
+                Weapons
+            </button>
+
+
+            <button
+                onclick="openSubcategory('items-and-collectibles')"
+                data-i18n="subcategoryItems"
+            >
+                Items & Collectibles
+            </button>
+
+
+            <button
+                onclick="openSubcategory('set-dressing')"
+                data-i18n="subcategorySetDressing"
+            >
+                Set Dressing
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ENVIRONMENT SUBCATEGORIES -->
+
+    <div
+        id="environment"
+        class="portfolio-view"
+        style="display: none;"
+    >
+
+        <button
+            class="back-button"
+            onclick="backToPortfolio()"
+            data-i18n="backPortfolio"
+        >
+            ← Back to Portfolio
+        </button>
+
+
+        <h2 data-i18n="categoryEnvironment">
+            Environment
+        </h2>
+
+
+        <div class="subcategory-list">
+
+
+            <button
+                onclick="openSubcategory('interiors')"
+                data-i18n="subcategoryInteriors"
+            >
+                Interiors
+            </button>
+
+
+            <button
+                onclick="openSubcategory('exteriors')"
+                data-i18n="subcategoryExteriors"
+            >
+                Exteriors
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- 3D MODELS -->
+
+    <div
+        id="3d-models"
+        class="portfolio-view"
+        style="display: none;"
+    >
+
+        <button
+            class="back-button"
+            onclick="backToPortfolio()"
+            data-i18n="backPortfolio"
+        >
+            ← Back to Portfolio
+        </button>
+
+
+        <h2 data-i18n="category3D">
+            3D Models
+        </h2>
+
+
+        <div
+            id="gallery-3d-models"
+            class="gallery"
+        >
+
+            <!-- Images will be added here later -->
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SUBCATEGORY GALLERY -->
+
+    <div
+        id="subcategory-gallery"
+        class="portfolio-view"
+        style="display: none;"
+    >
+
+        <button
+            class="back-button"
+            onclick="backToCategory()"
+            data-i18n="backCategory"
+        >
+            ← Back
+        </button>
+
+
+        <h2 id="subcategory-title"></h2>
+
+
+        <div
+            id="subcategory-images"
+            class="gallery"
+        >
+
+            <!-- Images will be added here later -->
+
+        </div>
+
+    </div>
+
+
+</section>
 
 
     <!-- ABOUT -->
