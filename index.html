@@ -1,208 +1,404 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Il Mio Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-    <header>
-        <nav>
-            <a href="#home" class="logo">IL TUO NOME</a>
 
-            <div class="menu">
-                <a href="#portfolio">Portfolio</a>
-                <a href="#about">About</a>
-                <a href="#commissions">Listino</a>
-                <a href="#contact">Contatti</a>
-            </div>
-        </nav>
-    </header>
+<header>
 
+    <nav>
 
-    <main>
+        <a href="#home" class="logo">
+            IL TUO NOME
+        </a>
 
-        <!-- HOME -->
 
-        <section id="home" class="hero">
+        <div class="menu">
 
-            <div class="hero-text">
-
-                <p class="small-title">CONCEPT ARTIST & ILLUSTRATOR</p>
-
-                <h1>Il tuo nome</h1>
-
-                <p>
-                    Character design, environment art
-                    e concept illustration.
-                </p>
-
-                <a href="#portfolio" class="button">
-                    Guarda il portfolio
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- PORTFOLIO -->
-
-        <section id="portfolio" class="section">
-
-            <p class="small-title">SELECTED WORKS</p>
-
-            <h2>Portfolio</h2>
-
-            <div class="gallery">
-
-                <div class="artwork">
-                    <img src="artwork01.JPG" alt="Artwork 1">
-                    <h3>Character Design</h3>
-                    <p>Character concept</p>
-                </div>
-
-                <div class="artwork">
-                    <img src="artwork02.JPG" alt="Artwork 2">
-                    <h3>Environment</h3>
-                    <p>Environment concept</p>
-                </div>
-
-                <div class="artwork">
-                    <img src="artwork03.JPG" alt="Artwork 3">
-                    <h3>Illustration</h3>
-                    <p>Digital illustration</p>
-                </div>
-
-                <div class="artwork">
-                    <img src="artwork04.JPG" alt="Artwork 4">
-                    <h3>Props</h3>
-                    <p>Prop design</p>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ABOUT -->
-
-        <section id="about" class="section about">
-
-            <div>
-
-                <p class="small-title">ABOUT ME</p>
-
-                <h2>Chi sono</h2>
-
-                <p>
-                    Ciao! Sono [IL TUO NOME], concept artist e illustratore.
-                    Mi occupo di character design, environment design
-                    e illustrazione.
-                </p>
-
-                <p>
-                    Qui puoi inserire una breve descrizione di te,
-                    della tua formazione, delle tue passioni e del tipo
-                    di progetti a cui ti piace lavorare.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- COMMISSIONS -->
-
-        <section id="commissions" class="section">
-
-            <p class="small-title">COMMISSIONS</p>
-
-            <h2>Listino</h2>
-
-            <div class="prices">
-
-                <div class="price-card">
-
-                    <h3>Character Design</h3>
-
-                    <p class="price">€ XX</p>
-
-                    <p>
-                        Character design completo,
-                        sketch iniziale e rendering finale.
-                    </p>
-
-                </div>
-
-
-                <div class="price-card">
-
-                    <h3>Portrait</h3>
-
-                    <p class="price">€ XX</p>
-
-                    <p>
-                        Ritratto digitale personalizzato
-                        a mezzo busto.
-                    </p>
-
-                </div>
-
-
-                <div class="price-card">
-
-                    <h3>Illustration</h3>
-
-                    <p class="price">€ XX</p>
-
-                    <p>
-                        Illustrazione completa con
-                        composizione e rendering.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- CONTACT -->
-
-        <section id="contact" class="section contact">
-
-            <p class="small-title">GET IN TOUCH</p>
-
-            <h2>Parliamo del tuo progetto</h2>
-
-            <p>
-                Hai un progetto o vuoi commissionarmi un'illustrazione?
-                Scrivimi!
-            </p>
-
-            <a href="mailto:tuaemail@email.com" class="button">
-                Contattami
+            <a href="#portfolio" data-i18n="navPortfolio">
+                Portfolio
             </a>
 
-        </section>
+            <a href="#about" data-i18n="navAbout">
+                About
+            </a>
 
-    </main>
+            <a href="#commissions" data-i18n="navCommissions">
+                Listino
+            </a>
+
+            <a href="#contact" data-i18n="navContact">
+                Contatti
+            </a>
+
+        </div>
 
 
-    <footer>
+        <!-- LANGUAGE SELECTOR -->
 
-        <p>
-            © 2026 Il tuo nome — Concept Artist
+        <select id="languageSelector" aria-label="Language">
+
+            <option value="it">IT</option>
+
+            <option value="en">EN</option>
+
+            <option value="es">ES</option>
+
+            <option value="fr">FR</option>
+
+            <option value="de">DE</option>
+
+            <option value="ja">JP</option>
+
+        </select>
+
+
+    </nav>
+
+</header>
+
+
+
+<main>
+
+
+    <!-- HOME -->
+
+    <section id="home" class="hero">
+
+
+        <div class="hero-text">
+
+
+            <p class="small-title" data-i18n="heroSmall">
+                CONCEPT ARTIST & ILLUSTRATOR
+            </p>
+
+
+            <h1 data-i18n="heroTitle">
+                Il tuo nome
+            </h1>
+
+
+            <p data-i18n="heroDescription">
+
+                Character design, environment art
+                e concept illustration.
+
+            </p>
+
+
+            <a
+                href="#portfolio"
+                class="button"
+                data-i18n="heroButton"
+            >
+                Guarda il portfolio
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- PORTFOLIO -->
+
+    <section id="portfolio" class="section">
+
+
+        <p class="small-title" data-i18n="portfolioSmall">
+            SELECTED WORKS
         </p>
 
-    </footer>
+
+        <h2 data-i18n="portfolioTitle">
+            Portfolio
+        </h2>
+
+
+        <div class="gallery">
+
+
+            <div class="artwork">
+
+                <img
+                    src="artwork01.JPG"
+                    alt="Artwork 1"
+                >
+
+                <h3 data-i18n="artwork1Title">
+                    Character Design
+                </h3>
+
+                <p data-i18n="artwork1Description">
+                    Character concept
+                </p>
+
+            </div>
+
+
+
+            <div class="artwork">
+
+                <img
+                    src="artwork02.JPG"
+                    alt="Artwork 2"
+                >
+
+                <h3 data-i18n="artwork2Title">
+                    Environment
+                </h3>
+
+                <p data-i18n="artwork2Description">
+                    Environment concept
+                </p>
+
+            </div>
+
+
+
+            <div class="artwork">
+
+                <img
+                    src="artwork03.JPG"
+                    alt="Artwork 3"
+                >
+
+                <h3 data-i18n="artwork3Title">
+                    Illustration
+                </h3>
+
+                <p data-i18n="artwork3Description">
+                    Digital illustration
+                </p>
+
+            </div>
+
+
+
+            <div class="artwork">
+
+                <img
+                    src="artwork04.JPG"
+                    alt="Artwork 4"
+                >
+
+                <h3 data-i18n="artwork4Title">
+                    Props
+                </h3>
+
+                <p data-i18n="artwork4Description">
+                    Prop design
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ABOUT -->
+
+    <section id="about" class="section about">
+
+
+        <div>
+
+
+            <p class="small-title" data-i18n="aboutSmall">
+                ABOUT ME
+            </p>
+
+
+            <h2 data-i18n="aboutTitle">
+                Chi sono
+            </h2>
+
+
+            <p data-i18n="aboutText1">
+
+                Ciao! Sono [IL TUO NOME], concept artist
+                e illustratore. Mi occupo di character design,
+                environment design e illustrazione.
+
+            </p>
+
+
+            <p data-i18n="aboutText2">
+
+                Qui puoi inserire una breve descrizione di te,
+                della tua formazione, delle tue passioni e del tipo
+                di progetti a cui ti piace lavorare.
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- COMMISSIONS -->
+
+    <section id="commissions" class="section">
+
+
+        <p class="small-title" data-i18n="commissionsSmall">
+            COMMISSIONS
+        </p>
+
+
+        <h2 data-i18n="commissionsTitle">
+            Listino
+        </h2>
+
+
+        <div class="prices">
+
+
+            <div class="price-card">
+
+                <h3 data-i18n="price1Title">
+                    Character Design
+                </h3>
+
+                <p class="price">
+                    € XX
+                </p>
+
+                <p data-i18n="price1Description">
+
+                    Character design completo,
+                    sketch iniziale e rendering finale.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="price-card">
+
+                <h3 data-i18n="price2Title">
+                    Portrait
+                </h3>
+
+                <p class="price">
+                    € XX
+                </p>
+
+                <p data-i18n="price2Description">
+
+                    Ritratto digitale personalizzato
+                    a mezzo busto.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="price-card">
+
+                <h3 data-i18n="price3Title">
+                    Illustration
+                </h3>
+
+                <p class="price">
+                    € XX
+                </p>
+
+                <p data-i18n="price3Description">
+
+                    Illustrazione completa con
+                    composizione e rendering.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="section contact">
+
+
+        <p class="small-title" data-i18n="contactSmall">
+            GET IN TOUCH
+        </p>
+
+
+        <h2 data-i18n="contactTitle">
+            Parliamo del tuo progetto
+        </h2>
+
+
+        <p data-i18n="contactDescription">
+
+            Hai un progetto o vuoi commissionarmi
+            un'illustrazione? Scrivimi!
+
+        </p>
+
+
+        <a
+            href="mailto:tuaemail@email.com"
+            class="button"
+            data-i18n="contactButton"
+        >
+            Contattami
+        </a>
+
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    <p data-i18n="footer">
+        © 2026 Il tuo nome — Concept Artist
+    </p>
+
+</footer>
+
+
+
+<script src="script.js"></script>
 
 
 </body>
+
 </html>
