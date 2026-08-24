@@ -438,3 +438,192 @@ if (savedLanguage && translations[savedLanguage]) {
     setLanguage("it");
 
 }
+/* ========================================
+   PORTFOLIO NAVIGATION
+======================================== */
+
+function hidePortfolioViews() {
+
+    const categories = document.getElementById("portfolioCategories");
+
+    const views = document.querySelectorAll(".portfolio-view");
+
+    if (categories) {
+        categories.style.display = "none";
+    }
+
+    views.forEach(function(view) {
+        view.style.display = "none";
+    });
+}
+
+
+/* ========================================
+   OPEN MAIN CATEGORY
+======================================== */
+
+function openCategory(categoryId) {
+
+    const categories =
+        document.getElementById("portfolioCategories");
+
+    const view =
+        document.getElementById(categoryId);
+
+    if (!view) {
+        return;
+    }
+
+    if (categories) {
+        categories.style.display = "none";
+    }
+
+    document
+        .querySelectorAll(".portfolio-view")
+        .forEach(function(item) {
+            item.style.display = "none";
+        });
+
+    view.style.display = "block";
+
+    view.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+}
+
+
+/* ========================================
+   BACK TO MAIN PORTFOLIO
+======================================== */
+
+function backToPortfolio() {
+
+    const categories =
+        document.getElementById("portfolioCategories");
+
+    document
+        .querySelectorAll(".portfolio-view")
+        .forEach(function(view) {
+            view.style.display = "none";
+        });
+
+    if (categories) {
+
+        categories.style.display = "grid";
+
+        categories.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }
+}
+
+
+/* ========================================
+   OPEN SUBCATEGORY
+======================================== */
+
+function openSubcategory(subcategoryId) {
+
+    const gallery =
+        document.getElementById("subcategory-gallery");
+
+    const title =
+        document.getElementById("subcategory-title");
+
+    const images =
+        document.getElementById("subcategory-images");
+
+    if (!gallery || !title || !images) {
+        return;
+    }
+
+
+    /*
+       At the moment the folders are empty,
+       so we only open the gallery page.
+
+       We will add the images later.
+    */
+
+
+    const names = {
+
+        "characters": "Characters",
+
+        "creature-design": "Creature Design",
+
+        "boss-design": "Boss Design",
+
+        "weapons": "Weapons",
+
+        "items-and-collectibles":
+            "Items & Collectibles",
+
+        "set-dressing": "Set Dressing",
+
+        "interiors": "Interiors",
+
+        "exteriors": "Exteriors"
+
+    };
+
+
+    title.textContent =
+        names[subcategoryId] || subcategoryId;
+
+
+    images.innerHTML = `
+        <p style="color:#888888;">
+            No artworks added yet.
+        </p>
+    `;
+
+
+    document
+        .querySelectorAll(".portfolio-view")
+        .forEach(function(view) {
+            view.style.display = "none";
+        });
+
+
+    gallery.style.display = "block";
+
+
+    gallery.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+
+/* ========================================
+   BACK FROM SUBCATEGORY
+======================================== */
+
+function backToCategory() {
+
+    const gallery =
+        document.getElementById("subcategory-gallery");
+
+    if (gallery) {
+        gallery.style.display = "none";
+    }
+
+    document
+        .querySelectorAll(".portfolio-view")
+        .forEach(function(view) {
+            view.style.display = "none";
+        });
+
+    const categories =
+        document.getElementById("portfolioCategories");
+
+    if (categories) {
+        categories.style.display = "grid";
+    }
+
+}
