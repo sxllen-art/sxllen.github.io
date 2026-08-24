@@ -187,14 +187,10 @@ nav {
 
 .artwork img {
     display: block;
-
     width: 100%;
-    height: auto;
-
-    object-fit: cover;
-
-    transition:
-        transform 0.5s ease;
+    height: auto !important;
+    object-fit: contain !important;
+    transition: transform 0.5s ease;
 }
 
 .artwork:hover img {
@@ -341,7 +337,7 @@ footer {
     }
 
     .artwork img {
-        height: auto;
+        height: auto !important;
     }
 
     .prices {
