@@ -1,6 +1,6 @@
 /* =========================================================
    SXLLEN — SCRIPT.JS
-   Portfolio / Navigation / Gallery / Translations
+   Portfolio / Navigation / Gallery / Translations / Lightbox
 ========================================================= */
 
 
@@ -9,6 +9,10 @@
 ========================================================= */
 
 const translations = {
+
+    /* =====================================================
+       ITALIAN
+    ===================================================== */
 
     it: {
 
@@ -128,6 +132,10 @@ const translations = {
     },
 
 
+    /* =====================================================
+       ENGLISH
+    ===================================================== */
+
     en: {
 
         navPortfolio: "Portfolio",
@@ -245,6 +253,10 @@ const translations = {
         footer: "© 2026 SXLLEN — Concept Artist & Illustrator"
     },
 
+
+    /* =====================================================
+       SPANISH
+    ===================================================== */
 
     es: {
 
@@ -364,6 +376,10 @@ const translations = {
     },
 
 
+    /* =====================================================
+       FRENCH
+    ===================================================== */
+
     fr: {
 
         navPortfolio: "Portfolio",
@@ -482,6 +498,10 @@ const translations = {
     },
 
 
+    /* =====================================================
+       GERMAN
+    ===================================================== */
+
     de: {
 
         navPortfolio: "Portfolio",
@@ -599,6 +619,10 @@ const translations = {
         footer: "© 2026 SXLLEN — Concept Artist & Illustrator"
     },
 
+
+    /* =====================================================
+       JAPANESE
+    ===================================================== */
 
     ja: {
 
@@ -804,23 +828,29 @@ function applyTranslations(language) {
 
     }
 
+
     currentLanguage = language;
+
 
     document.documentElement.lang =
         language;
 
+
     const languageData =
         translations[language];
+
 
     const elements =
         document.querySelectorAll(
             "[data-i18n]"
         );
 
+
     elements.forEach(element => {
 
         const key =
             element.getAttribute("data-i18n");
+
 
         if (
             key &&
@@ -843,6 +873,7 @@ function applyTranslations(language) {
             ".price"
         );
 
+
     const priceKeys = [
         "price1",
         "price2",
@@ -850,10 +881,12 @@ function applyTranslations(language) {
         "price4"
     ];
 
+
     prices.forEach((element, index) => {
 
         const key =
             priceKeys[index];
+
 
         if (
             key &&
@@ -876,6 +909,7 @@ function applyTranslations(language) {
             "languageSelector"
         );
 
+
     if (selector) {
 
         selector.value =
@@ -892,6 +926,7 @@ function applyTranslations(language) {
             "subcategory-title"
         );
 
+
     if (
         subcategoryTitle &&
         currentOpenSubcategory
@@ -905,9 +940,7 @@ function applyTranslations(language) {
     }
 
 
-    if (
-        currentOpenSubcategory
-    ) {
+    if (currentOpenSubcategory) {
 
         loadSubcategoryGallery(
             currentOpenSubcategory
@@ -920,6 +953,7 @@ function applyTranslations(language) {
         document.getElementById(
             "illustrations"
         );
+
 
     if (
         illustrations &&
@@ -946,6 +980,7 @@ function setupLanguageSelector() {
             "languageSelector"
         );
 
+
     if (!selector) {
 
         console.warn(
@@ -959,6 +994,7 @@ function setupLanguageSelector() {
 
     const savedLanguage =
         getSavedLanguage();
+
 
     applyTranslations(
         savedLanguage
@@ -993,11 +1029,13 @@ function setupContactButton() {
             "#contact .button"
         );
 
+
     if (!contactButton) {
 
         return;
 
     }
+
 
     contactButton.href =
         "https://mail.google.com/mail/?view=cm&fs=1&to=sabrinasrn29@gmail.com";
@@ -1022,6 +1060,7 @@ function hideAllPortfolioViews() {
             ".portfolio-view"
         );
 
+
     views.forEach(view => {
 
         view.style.display =
@@ -1043,10 +1082,12 @@ function openCategory(categoryId) {
             "portfolioCategories"
         );
 
+
     const selectedCategory =
         document.getElementById(
             categoryId
         );
+
 
     if (
         !categories ||
@@ -1057,19 +1098,25 @@ function openCategory(categoryId) {
 
     }
 
+
     currentCategory =
         categoryId;
+
 
     currentOpenSubcategory =
         null;
 
+
     categories.style.display =
         "none";
 
+
     hideAllPortfolioViews();
+
 
     selectedCategory.style.display =
         "block";
+
 
     selectedCategory.scrollIntoView({
         behavior: "smooth",
@@ -1088,15 +1135,19 @@ function backToPortfolio() {
     currentCategory =
         null;
 
+
     currentOpenSubcategory =
         null;
 
+
     hideAllPortfolioViews();
+
 
     const categories =
         document.getElementById(
             "portfolioCategories"
         );
+
 
     if (!categories) {
 
@@ -1104,8 +1155,10 @@ function backToPortfolio() {
 
     }
 
+
     categories.style.display =
         "grid";
+
 
     categories.scrollIntoView({
         behavior: "smooth",
@@ -1126,10 +1179,12 @@ function openSubcategory(subcategoryId) {
             "subcategory-gallery"
         );
 
+
     const title =
         document.getElementById(
             "subcategory-title"
         );
+
 
     if (
         !gallery ||
@@ -1140,22 +1195,28 @@ function openSubcategory(subcategoryId) {
 
     }
 
+
     currentOpenSubcategory =
         subcategoryId;
 
+
     hideAllPortfolioViews();
+
 
     gallery.style.display =
         "block";
+
 
     title.textContent =
         getSubcategoryTitle(
             subcategoryId
         );
 
+
     loadSubcategoryGallery(
         subcategoryId
     );
+
 
     gallery.scrollIntoView({
         behavior: "smooth",
@@ -1174,6 +1235,7 @@ function backToCategory() {
     currentOpenSubcategory =
         null;
 
+
     if (!currentCategory) {
 
         backToPortfolio();
@@ -1182,17 +1244,21 @@ function backToCategory() {
 
     }
 
+
     hideAllPortfolioViews();
+
 
     const category =
         document.getElementById(
             currentCategory
         );
 
+
     if (category) {
 
         category.style.display =
             "block";
+
 
         category.scrollIntoView({
             behavior: "smooth",
@@ -1219,11 +1285,13 @@ function getSubcategoryTitle(
     const language =
         translations[currentLanguage];
 
+
     if (!language) {
 
         return subcategoryId;
 
     }
+
 
     const titleMap = {
 
@@ -1253,8 +1321,10 @@ function getSubcategoryTitle(
 
     };
 
+
     const key =
         titleMap[subcategoryId];
+
 
     if (
         key &&
@@ -1267,6 +1337,7 @@ function getSubcategoryTitle(
         return language[key];
 
     }
+
 
     return subcategoryId;
 
@@ -1306,123 +1377,6 @@ const galleryData = {
 
 
 /* =========================================================
-   IMAGE LIGHTBOX
-========================================================= */
-
-function openImageLightbox(imagePath, altText) {
-
-    const existing =
-        document.getElementById(
-            "sxllen-lightbox"
-        );
-
-    if (existing) {
-
-        existing.remove();
-
-    }
-
-
-    const overlay =
-        document.createElement("div");
-
-    overlay.id =
-        "sxllen-lightbox";
-
-    overlay.style.position =
-        "fixed";
-
-    overlay.style.inset =
-        "0";
-
-    overlay.style.zIndex =
-        "99999";
-
-    overlay.style.background =
-        "rgba(0, 0, 0, 0.92)";
-
-    overlay.style.display =
-        "flex";
-
-    overlay.style.alignItems =
-        "center";
-
-    overlay.style.justifyContent =
-        "center";
-
-    overlay.style.padding =
-        "30px";
-
-    overlay.style.cursor =
-        "zoom-out";
-
-
-    const image =
-        document.createElement("img");
-
-    image.src =
-        imagePath;
-
-    image.alt =
-        altText || "";
-
-    image.style.display =
-        "block";
-
-    image.style.maxWidth =
-        "95vw";
-
-    image.style.maxHeight =
-        "95vh";
-
-    image.style.width =
-        "auto";
-
-    image.style.height =
-        "auto";
-
-    image.style.objectFit =
-        "contain";
-
-    image.style.cursor =
-        "default";
-
-    image.style.boxShadow =
-        "0 20px 80px rgba(0,0,0,0.7)";
-
-
-    overlay.appendChild(
-        image
-    );
-
-    document.body.appendChild(
-        overlay
-    );
-
-
-    overlay.addEventListener(
-        "click",
-        function () {
-
-            overlay.remove();
-
-        }
-    );
-
-
-    image.addEventListener(
-        "click",
-        function (event) {
-
-            event.stopPropagation();
-
-        }
-    );
-
-}
-
-
-/* =========================================================
    LOAD SUBCATEGORY GALLERY
 ========================================================= */
 
@@ -1435,13 +1389,16 @@ function loadSubcategoryGallery(
             "subcategory-images"
         );
 
+
     if (!container) {
 
         return;
 
     }
 
+
     container.innerHTML = "";
+
 
     const images =
         galleryData[subcategoryId] || [];
@@ -1452,15 +1409,19 @@ function loadSubcategoryGallery(
         const message =
             document.createElement("p");
 
+
         message.className =
             "gallery-empty";
+
 
         message.textContent =
             getGalleryEmptyMessage();
 
+
         container.appendChild(
             message
         );
+
 
         return;
 
@@ -1473,6 +1434,7 @@ function loadSubcategoryGallery(
             const wrapper =
                 document.createElement("div");
 
+
             wrapper.className =
                 "gallery-item";
 
@@ -1480,24 +1442,24 @@ function loadSubcategoryGallery(
             const image =
                 document.createElement("img");
 
+
             image.src =
                 imagePath;
+
 
             image.alt =
                 `${getSubcategoryTitle(
                     subcategoryId
                 )} ${index + 1}`;
 
+
             image.loading =
                 "lazy";
 
 
-            /*
-             * IMPORTANTE:
-             * Il clic sull'immagine viene fermato qui,
-             * così non può interferire con il clic
-             * sulle cartelle/categorie.
-             */
+            image.style.cursor =
+                "zoom-in";
+
 
             image.addEventListener(
                 "click",
@@ -1507,7 +1469,7 @@ function loadSubcategoryGallery(
 
                     event.stopPropagation();
 
-                    openImageLightbox(
+                    openLightbox(
                         imagePath,
                         image.alt
                     );
@@ -1519,6 +1481,7 @@ function loadSubcategoryGallery(
             wrapper.appendChild(
                 image
             );
+
 
             container.appendChild(
                 wrapper
@@ -1541,13 +1504,16 @@ function loadIllustrationsGallery() {
             "gallery-illustrations"
         );
 
+
     if (!container) {
 
         return;
 
     }
 
+
     container.innerHTML = "";
+
 
     const images =
         galleryData.illustrations || [];
@@ -1558,15 +1524,19 @@ function loadIllustrationsGallery() {
         const message =
             document.createElement("p");
 
+
         message.className =
             "gallery-empty";
+
 
         message.textContent =
             getGalleryEmptyMessage();
 
+
         container.appendChild(
             message
         );
+
 
         return;
 
@@ -1579,6 +1549,7 @@ function loadIllustrationsGallery() {
             const wrapper =
                 document.createElement("div");
 
+
             wrapper.className =
                 "gallery-item";
 
@@ -1586,16 +1557,23 @@ function loadIllustrationsGallery() {
             const image =
                 document.createElement("img");
 
+
             image.src =
                 imagePath;
+
 
             image.alt =
                 `${translations[
                     currentLanguage
                 ].categoryIllustrations} ${index + 1}`;
 
+
             image.loading =
                 "lazy";
+
+
+            image.style.cursor =
+                "zoom-in";
 
 
             image.addEventListener(
@@ -1606,7 +1584,7 @@ function loadIllustrationsGallery() {
 
                     event.stopPropagation();
 
-                    openImageLightbox(
+                    openLightbox(
                         imagePath,
                         image.alt
                     );
@@ -1618,6 +1596,7 @@ function loadIllustrationsGallery() {
             wrapper.appendChild(
                 image
             );
+
 
             container.appendChild(
                 wrapper
@@ -1657,6 +1636,7 @@ function getGalleryEmptyMessage() {
 
     };
 
+
     return (
         messages[currentLanguage] ||
         messages.it
@@ -1676,10 +1656,12 @@ function openIllustrations() {
             "portfolioCategories"
         );
 
+
     const illustrations =
         document.getElementById(
             "illustrations"
         );
+
 
     if (
         !categories ||
@@ -1690,21 +1672,28 @@ function openIllustrations() {
 
     }
 
+
     currentCategory =
         "illustrations";
+
 
     currentOpenSubcategory =
         null;
 
+
     categories.style.display =
         "none";
 
+
     hideAllPortfolioViews();
+
 
     illustrations.style.display =
         "block";
 
+
     loadIllustrationsGallery();
+
 
     illustrations.scrollIntoView({
         behavior: "smooth",
@@ -1725,11 +1714,13 @@ function setupCommissionTerms() {
             ".commission-terms"
         );
 
+
     if (!terms) {
 
         return;
 
     }
+
 
     terms.addEventListener(
         "toggle",
@@ -1758,10 +1749,12 @@ function setupPortfolio() {
 
     hideAllPortfolioViews();
 
+
     const categories =
         document.getElementById(
             "portfolioCategories"
         );
+
 
     if (categories) {
 
@@ -1784,11 +1777,13 @@ function setupIllustrationsCategory() {
             '.portfolio-category[onclick="openCategory(\'illustrations\')"]'
         );
 
+
     if (!illustrationCategory) {
 
         return;
 
     }
+
 
     illustrationCategory.onclick =
         function (event) {
@@ -1821,24 +1816,11 @@ function setupEscapeKey() {
             }
 
 
-            const lightbox =
-                document.getElementById(
-                    "sxllen-lightbox"
-                );
-
-            if (lightbox) {
-
-                lightbox.remove();
-
-                return;
-
-            }
-
-
             const terms =
                 document.querySelector(
                     ".commission-terms"
                 );
+
 
             if (
                 terms &&
@@ -1850,8 +1832,294 @@ function setupEscapeKey() {
 
             }
 
+
+            closeLightbox();
+
         }
     );
+
+}
+
+
+/* =========================================================
+   LIGHTBOX
+   Cliccando su un'immagine della galleria
+   l'immagine viene mostrata ingrandita.
+========================================================= */
+
+function createLightbox() {
+
+    if (
+        document.getElementById(
+            "sxllen-lightbox"
+        )
+    ) {
+
+        return;
+
+    }
+
+
+    const lightbox =
+        document.createElement("div");
+
+
+    lightbox.id =
+        "sxllen-lightbox";
+
+
+    lightbox.style.position =
+        "fixed";
+
+    lightbox.style.inset =
+        "0";
+
+    lightbox.style.zIndex =
+        "9999";
+
+    lightbox.style.background =
+        "rgba(0, 0, 0, 0.94)";
+
+    lightbox.style.display =
+        "none";
+
+    lightbox.style.alignItems =
+        "center";
+
+    lightbox.style.justifyContent =
+        "center";
+
+    lightbox.style.padding =
+        "30px";
+
+    lightbox.style.cursor =
+        "zoom-out";
+
+
+    const image =
+        document.createElement("img");
+
+
+    image.id =
+        "sxllen-lightbox-image";
+
+
+    image.style.maxWidth =
+        "95vw";
+
+    image.style.maxHeight =
+        "92vh";
+
+    image.style.width =
+        "auto";
+
+    image.style.height =
+        "auto";
+
+    image.style.objectFit =
+        "contain";
+
+    image.style.display =
+        "block";
+
+    image.style.cursor =
+        "default";
+
+    image.style.boxShadow =
+        "0 20px 80px rgba(0,0,0,0.7)";
+
+
+    const closeButton =
+        document.createElement("button");
+
+
+    closeButton.id =
+        "sxllen-lightbox-close";
+
+
+    closeButton.type =
+        "button";
+
+
+    closeButton.innerHTML =
+        "×";
+
+
+    closeButton.setAttribute(
+        "aria-label",
+        "Close image"
+    );
+
+
+    closeButton.style.position =
+        "absolute";
+
+    closeButton.style.top =
+        "20px";
+
+    closeButton.style.right =
+        "25px";
+
+    closeButton.style.width =
+        "45px";
+
+    closeButton.style.height =
+        "45px";
+
+    closeButton.style.border =
+        "1px solid rgba(255,255,255,0.5)";
+
+    closeButton.style.background =
+        "rgba(0,0,0,0.5)";
+
+    closeButton.style.color =
+        "#ffffff";
+
+    closeButton.style.fontSize =
+        "34px";
+
+    closeButton.style.lineHeight =
+        "38px";
+
+    closeButton.style.fontFamily =
+        "Arial, sans-serif";
+
+    closeButton.style.cursor =
+        "pointer";
+
+    closeButton.style.borderRadius =
+        "50%";
+
+
+    closeButton.addEventListener(
+        "click",
+        function (event) {
+
+            event.preventDefault();
+
+            event.stopPropagation();
+
+            closeLightbox();
+
+        }
+    );
+
+
+    lightbox.addEventListener(
+        "click",
+        function (event) {
+
+            if (
+                event.target ===
+                lightbox
+            ) {
+
+                closeLightbox();
+
+            }
+
+        }
+    );
+
+
+    image.addEventListener(
+        "click",
+        function (event) {
+
+            event.preventDefault();
+
+            event.stopPropagation();
+
+        }
+    );
+
+
+    lightbox.appendChild(
+        image
+    );
+
+
+    lightbox.appendChild(
+        closeButton
+    );
+
+
+    document.body.appendChild(
+        lightbox
+    );
+
+}
+
+
+function openLightbox(
+    imagePath,
+    imageAlt
+) {
+
+    createLightbox();
+
+
+    const lightbox =
+        document.getElementById(
+            "sxllen-lightbox"
+        );
+
+
+    const image =
+        document.getElementById(
+            "sxllen-lightbox-image"
+        );
+
+
+    if (
+        !lightbox ||
+        !image
+    ) {
+
+        return;
+
+    }
+
+
+    image.src =
+        imagePath;
+
+
+    image.alt =
+        imageAlt || "";
+
+
+    lightbox.style.display =
+        "flex";
+
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+
+function closeLightbox() {
+
+    const lightbox =
+        document.getElementById(
+            "sxllen-lightbox"
+        );
+
+
+    if (!lightbox) {
+
+        return;
+
+    }
+
+
+    lightbox.style.display =
+        "none";
+
+
+    document.body.style.overflow =
+        "";
 
 }
 
@@ -1888,6 +2156,7 @@ document.addEventListener(
             "SXLLEN: script.js caricato correttamente."
         );
 
+
         setupLanguageSelector();
 
         setupContactButton();
@@ -1899,6 +2168,8 @@ document.addEventListener(
         setupCommissionTerms();
 
         setupEscapeKey();
+
+        createLightbox();
 
     }
 );
