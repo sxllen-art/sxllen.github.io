@@ -62,23 +62,24 @@ const translations = {
         commissionsSmall: "COMMISSIONS",
         commissionsTitle: "Commissioni",
 
-        price1Title: "Character Design",
         price1: "A partire da €180",
+        price2: "A partire da €120",
+        price3: "A partire da €200",
+        price4: "A partire da €180",
+
+        price1Title: "Character Design",
         price1Description:
             "Character design completo, con sketch iniziale e rendering finale.",
 
         price2Title: "Prop Design",
-        price2: "A partire da €120",
         price2Description:
             "Design di props e oggetti, con concept e rendering.",
 
         price3Title: "Environment Design",
-        price3: "A partire da €200",
         price3Description:
             "Concept di ambiente, con composizione, mood e rendering.",
 
         price4Title: "Illustrazione",
-        price4: "A partire da €180",
         price4Description:
             "Illustrazione completa con composizione e rendering.",
 
@@ -184,23 +185,24 @@ const translations = {
         commissionsSmall: "COMMISSIONS",
         commissionsTitle: "Commissions",
 
-        price1Title: "Character Design",
         price1: "Starting from €180",
+        price2: "Starting from €120",
+        price3: "Starting from €200",
+        price4: "Starting from €180",
+
+        price1Title: "Character Design",
         price1Description:
             "Complete character design with initial sketch and final rendering.",
 
         price2Title: "Prop Design",
-        price2: "Starting from €120",
         price2Description:
             "Prop and object design with concept and rendering.",
 
         price3Title: "Environment Design",
-        price3: "Starting from €200",
         price3Description:
             "Environment concept with composition, mood and rendering.",
 
         price4Title: "Illustration",
-        price4: "Starting from €180",
         price4Description:
             "Complete illustration with composition and rendering.",
 
@@ -306,23 +308,24 @@ const translations = {
         commissionsSmall: "COMISIONES",
         commissionsTitle: "Comisiones",
 
-        price1Title: "Diseño de Personajes",
         price1: "A partir de €180",
+        price2: "A partir de €120",
+        price3: "A partir de €200",
+        price4: "A partir de €180",
+
+        price1Title: "Diseño de Personajes",
         price1Description:
             "Diseño completo de personaje, con sketch inicial y renderizado final.",
 
         price2Title: "Diseño de Props",
-        price2: "A partir de €120",
         price2Description:
             "Diseño de props y objetos, con concepto y renderizado.",
 
         price3Title: "Diseño de Entornos",
-        price3: "A partir de €200",
         price3Description:
             "Concepto de entorno, con composición, mood y renderizado.",
 
         price4Title: "Ilustración",
-        price4: "A partir de €180",
         price4Description:
             "Ilustración completa con composición y renderizado.",
 
@@ -428,23 +431,24 @@ const translations = {
         commissionsSmall: "COMMANDES",
         commissionsTitle: "Commandes",
 
-        price1Title: "Character Design",
         price1: "À partir de 180 €",
+        price2: "À partir de 120 €",
+        price3: "À partir de 200 €",
+        price4: "À partir de 180 €",
+
+        price1Title: "Character Design",
         price1Description:
             "Character design complet avec sketch initial et rendu final.",
 
         price2Title: "Prop Design",
-        price2: "À partir de 120 €",
         price2Description:
             "Design de props et d'objets avec concept et rendu.",
 
         price3Title: "Environment Design",
-        price3: "À partir de 200 €",
         price3Description:
             "Concept d'environnement avec composition, ambiance et rendu.",
 
         price4Title: "Illustration",
-        price4: "À partir de 180 €",
         price4Description:
             "Illustration complète avec composition et rendu.",
 
@@ -550,23 +554,24 @@ const translations = {
         commissionsSmall: "AUFTRÄGE",
         commissionsTitle: "Aufträge",
 
-        price1Title: "Character Design",
         price1: "Ab €180",
+        price2: "Ab €120",
+        price3: "Ab €200",
+        price4: "Ab €180",
+
+        price1Title: "Character Design",
         price1Description:
             "Komplettes Character Design mit initialem Sketch und finalem Rendering.",
 
         price2Title: "Prop Design",
-        price2: "Ab €120",
         price2Description:
             "Design von Props und Objekten mit Konzept und Rendering.",
 
         price3Title: "Environment Design",
-        price3: "Ab €200",
         price3Description:
             "Environment-Konzept mit Komposition, Stimmung und Rendering.",
 
         price4Title: "Illustration",
-        price4: "Ab €180",
         price4Description:
             "Komplette Illustration mit Komposition und Rendering.",
 
@@ -672,23 +677,24 @@ const translations = {
         commissionsSmall: "COMMISSIONS",
         commissionsTitle: "ご依頼",
 
-        price1Title: "キャラクターデザイン",
         price1: "€180から",
+        price2: "€120から",
+        price3: "€200から",
+        price4: "€180から",
+
+        price1Title: "キャラクターデザイン",
         price1Description:
             "初期スケッチから最終レンダリングまでを含むキャラクターデザイン。",
 
         price2Title: "プロップデザイン",
-        price2: "€120から",
         price2Description:
             "コンセプトとレンダリングを含む小道具・アイテムのデザイン。",
 
         price3Title: "エンバイロメントデザイン",
-        price3: "€200から",
         price3Description:
             "構図、ムード、レンダリングを含む背景・環境コンセプト。",
 
         price4Title: "イラストレーション",
-        price4: "€180から",
         price4Description:
             "構図とレンダリングを含む完成イラスト。",
 
@@ -746,43 +752,12 @@ const translations = {
 
 
 /* =========================================================
-   CURRENT LANGUAGE
+   GLOBAL STATE
 ========================================================= */
 
 let currentLanguage = "it";
-
 let currentCategory = null;
-
 let currentOpenSubcategory = null;
-
-
-/* =========================================================
-   GALLERY DATA
-========================================================= */
-
-const galleryData = {
-
-    characters: [],
-
-    "creature-design": [],
-
-    "boss-design": [],
-
-    weapons: [],
-
-    "items-and-collectibles": [],
-
-    "set-dressing": [],
-
-    interiors: [],
-
-    exteriors: [],
-
-    illustrations: [],
-
-    "3d-models": []
-
-};
 
 
 /* =========================================================
@@ -791,78 +766,47 @@ const galleryData = {
 
 function applyTranslations(language) {
 
-    /* ---------------------------------------------
-       Check language
-    --------------------------------------------- */
+    /*
+     * Controlla che la lingua esista.
+     * Se non esiste, torna automaticamente all'italiano.
+     */
 
-    if (!translations[language]) {
+    if (
+        typeof language !== "string" ||
+        !Object.prototype.hasOwnProperty.call(
+            translations,
+            language
+        )
+    ) {
         language = "it";
     }
+
 
     currentLanguage = language;
 
 
-    /* ---------------------------------------------
-       Update HTML language
-    --------------------------------------------- */
+    /* HTML LANG */
 
-    document.documentElement.lang = language;
+    document.documentElement.lang =
+        language;
 
 
-    /* ---------------------------------------------
-       Translate every data-i18n element
-    --------------------------------------------- */
+    /* -----------------------------------------------------
+       ELEMENTS WITH data-i18n
+    ----------------------------------------------------- */
 
     const elements =
-        document.querySelectorAll("[data-i18n]");
+        document.querySelectorAll(
+            "[data-i18n]"
+        );
 
 
     elements.forEach(element => {
 
         const key =
-            element.getAttribute("data-i18n");
-
-
-        if (
-            Object.prototype.hasOwnProperty.call(
-                translations[language],
-                key
-            )
-        ) {
-
-            element.textContent =
-                translations[language][key];
-
-        }
-
-    });
-
-
-    /* ---------------------------------------------
-       Translate commission prices
-       
-       The current index.html uses:
-       <p class="price">...</p>
-       
-       so prices are handled separately.
-    --------------------------------------------- */
-
-    const priceElements =
-        document.querySelectorAll(".price");
-
-
-    const priceKeys = [
-        "price1",
-        "price2",
-        "price3",
-        "price4"
-    ];
-
-
-    priceElements.forEach((element, index) => {
-
-        const key =
-            priceKeys[index];
+            element.getAttribute(
+                "data-i18n"
+            );
 
 
         if (
@@ -881,9 +825,51 @@ function applyTranslations(language) {
     });
 
 
-    /* ---------------------------------------------
-       Update language selector
-    --------------------------------------------- */
+    /* -----------------------------------------------------
+       PRICES
+    ----------------------------------------------------- */
+
+    const priceElements =
+        document.querySelectorAll(
+            ".price"
+        );
+
+
+    const priceKeys = [
+        "price1",
+        "price2",
+        "price3",
+        "price4"
+    ];
+
+
+    priceElements.forEach(
+        (element, index) => {
+
+            const key =
+                priceKeys[index];
+
+
+            if (
+                key &&
+                Object.prototype.hasOwnProperty.call(
+                    translations[language],
+                    key
+                )
+            ) {
+
+                element.textContent =
+                    translations[language][key];
+
+            }
+
+        }
+    );
+
+
+    /* -----------------------------------------------------
+       LANGUAGE SELECTOR
+    ----------------------------------------------------- */
 
     const selector =
         document.getElementById(
@@ -892,13 +878,16 @@ function applyTranslations(language) {
 
 
     if (selector) {
-        selector.value = language;
+
+        selector.value =
+            language;
+
     }
 
 
-    /* ---------------------------------------------
-       Save language
-    --------------------------------------------- */
+    /* -----------------------------------------------------
+       SAVE LANGUAGE
+    ----------------------------------------------------- */
 
     try {
 
@@ -910,18 +899,20 @@ function applyTranslations(language) {
     } catch (error) {
 
         console.warn(
-            "Unable to save language preference.",
+            "Impossibile salvare la lingua:",
             error
         );
 
     }
 
 
-    /* ---------------------------------------------
-       Update open subcategory title
-    --------------------------------------------- */
+    /* -----------------------------------------------------
+       OPEN SUBCATEGORY TITLE
+    ----------------------------------------------------- */
 
-    if (currentOpenSubcategory) {
+    if (
+        currentOpenSubcategory
+    ) {
 
         const subcategoryTitle =
             document.getElementById(
@@ -941,22 +932,9 @@ function applyTranslations(language) {
     }
 
 
-    /* ---------------------------------------------
-       Update open gallery empty message
-    --------------------------------------------- */
-
-    if (currentOpenSubcategory) {
-
-        loadSubcategoryGallery(
-            currentOpenSubcategory
-        );
-
-    }
-
-
-    /* ---------------------------------------------
-       Update illustrations gallery
-    --------------------------------------------- */
+    /* -----------------------------------------------------
+       ILLUSTRATION GALLERY
+    ----------------------------------------------------- */
 
     const illustrations =
         document.getElementById(
@@ -979,18 +957,13 @@ function applyTranslations(language) {
 
 
 /* =========================================================
-   LANGUAGE SELECTOR
+   INITIALIZE LANGUAGE
 ========================================================= */
 
-function setupLanguageSelector() {
+function initializeLanguage() {
 
-    const selector =
-        document.getElementById(
-            "languageSelector"
-        );
-
-
-    let savedLanguage = "it";
+    let savedLanguage =
+        "it";
 
 
     try {
@@ -1002,77 +975,91 @@ function setupLanguageSelector() {
 
     } catch (error) {
 
-        console.warn(
-            "Unable to read saved language.",
-            error
-        );
+        savedLanguage =
+            "it";
 
     }
 
 
-    if (!translations[savedLanguage]) {
-        savedLanguage = "it";
+    /*
+     * Se per qualsiasi motivo localStorage
+     * contiene una lingua non valida,
+     * usiamo l'italiano.
+     */
+
+    if (
+        !Object.prototype.hasOwnProperty.call(
+            translations,
+            savedLanguage
+        )
+    ) {
+
+        savedLanguage =
+            "it";
+
     }
 
-
-    /* Apply saved language */
 
     applyTranslations(
         savedLanguage
     );
 
 
-    /* Listen for language changes */
-
-    if (selector) {
-
-        selector.addEventListener(
-            "change",
-            event => {
-
-                applyTranslations(
-                    event.target.value
-                );
-
-            }
-        );
-
-    }
-
-}
-
-
-/* =========================================================
-   CONTACT BUTTON
-========================================================= */
-
-function setupContactButton() {
-
-    const contactButton =
-        document.querySelector(
-            "#contact .button"
+    const selector =
+        document.getElementById(
+            "languageSelector"
         );
 
 
-    if (!contactButton) {
+    if (!selector) {
+
+        console.warn(
+            "SXLLEN: languageSelector non trovato."
+        );
+
         return;
+
     }
 
 
-    contactButton.href =
-        "https://mail.google.com/mail/?view=cm&fs=1&to=sabrinasrn29@gmail.com";
+    /*
+     * Evita di aggiungere più volte
+     * lo stesso event listener.
+     */
 
-    contactButton.target =
-        "_blank";
+    if (
+        selector.dataset.translationReady === "true"
+    ) {
 
-    contactButton.rel =
-        "noopener noreferrer";
+        return;
+
+    }
+
+
+    selector.dataset.translationReady =
+        "true";
+
+
+    selector.addEventListener(
+        "change",
+        function (event) {
+
+            const selectedLanguage =
+                event.target.value;
+
+
+            applyTranslations(
+                selectedLanguage
+            );
+
+        }
+    );
 
 }
 
 
 /* =========================================================
-   HIDE ALL PORTFOLIO VIEWS
+   PORTFOLIO NAVIGATION
 ========================================================= */
 
 function hideAllPortfolioViews() {
@@ -1115,7 +1102,9 @@ function openCategory(categoryId) {
         !categories ||
         !selectedCategory
     ) {
+
         return;
+
     }
 
 
@@ -1187,7 +1176,9 @@ function backToPortfolio() {
    OPEN SUBCATEGORY
 ========================================================= */
 
-function openSubcategory(subcategoryId) {
+function openSubcategory(
+    subcategoryId
+) {
 
     const gallery =
         document.getElementById(
@@ -1205,17 +1196,22 @@ function openSubcategory(subcategoryId) {
         !gallery ||
         !title
     ) {
-        return;
-    }
 
-
-    if (!galleryData[subcategoryId]) {
         return;
+
     }
 
 
     currentOpenSubcategory =
         subcategoryId;
+
+
+    if (!currentCategory) {
+
+        currentCategory =
+            getCurrentCategory();
+
+    }
 
 
     hideAllPortfolioViews();
@@ -1293,6 +1289,52 @@ function backToCategory() {
 
 
 /* =========================================================
+   GET CURRENT CATEGORY
+========================================================= */
+
+function getCurrentCategory() {
+
+    const categoryIds = [
+
+        "character-design",
+        "prop-design",
+        "environment",
+        "illustrations",
+        "3d-models"
+
+    ];
+
+
+    for (
+        const id of categoryIds
+    ) {
+
+        const element =
+            document.getElementById(
+                id
+            );
+
+
+        if (
+            element &&
+            window.getComputedStyle(
+                element
+            ).display !== "none"
+        ) {
+
+            return id;
+
+        }
+
+    }
+
+
+    return null;
+
+}
+
+
+/* =========================================================
    SUBCATEGORY TITLES
 ========================================================= */
 
@@ -1340,10 +1382,7 @@ function getSubcategoryTitle(
     if (
         key &&
         language &&
-        Object.prototype.hasOwnProperty.call(
-            language,
-            key
-        )
+        language[key]
     ) {
 
         return language[key];
@@ -1354,6 +1393,35 @@ function getSubcategoryTitle(
     return subcategoryId;
 
 }
+
+
+/* =========================================================
+   GALLERY DATA
+========================================================= */
+
+const galleryData = {
+
+    characters: [],
+
+    "creature-design": [],
+
+    "boss-design": [],
+
+    weapons: [],
+
+    "items-and-collectibles": [],
+
+    "set-dressing": [],
+
+    interiors: [],
+
+    exteriors: [],
+
+    illustrations: [],
+
+    "3d-models": []
+
+};
 
 
 /* =========================================================
@@ -1371,18 +1439,25 @@ function loadSubcategoryGallery(
 
 
     if (!container) {
+
         return;
+
     }
 
 
-    container.innerHTML = "";
+    container.innerHTML =
+        "";
 
 
     const images =
-        galleryData[subcategoryId] || [];
+        galleryData[
+            subcategoryId
+        ] || [];
 
 
-    if (images.length === 0) {
+    if (
+        images.length === 0
+    ) {
 
         const message =
             document.createElement(
@@ -1469,18 +1544,23 @@ function loadIllustrationsGallery() {
 
 
     if (!container) {
+
         return;
+
     }
 
 
-    container.innerHTML = "";
+    container.innerHTML =
+        "";
 
 
     const images =
         galleryData.illustrations || [];
 
 
-    if (images.length === 0) {
+    if (
+        images.length === 0
+    ) {
 
         const message =
             document.createElement(
@@ -1613,7 +1693,9 @@ function openIllustrations() {
         !categories ||
         !illustrations
     ) {
+
         return;
+
     }
 
 
@@ -1648,6 +1730,39 @@ function openIllustrations() {
 
 
 /* =========================================================
+   CONTACT BUTTON
+========================================================= */
+
+function setupContactButton() {
+
+    const contactButton =
+        document.querySelector(
+            "#contact .button"
+        );
+
+
+    if (!contactButton) {
+
+        return;
+
+    }
+
+
+    contactButton.href =
+        "https://mail.google.com/mail/?view=cm&fs=1&to=sabrinasrn29@gmail.com";
+
+
+    contactButton.target =
+        "_blank";
+
+
+    contactButton.rel =
+        "noopener noreferrer";
+
+}
+
+
+/* =========================================================
    COMMISSION TERMS
 ========================================================= */
 
@@ -1660,13 +1775,15 @@ function setupCommissionTerms() {
 
 
     if (!terms) {
+
         return;
+
     }
 
 
     terms.addEventListener(
         "toggle",
-        () => {
+        function () {
 
             if (terms.open) {
 
@@ -1684,17 +1801,46 @@ function setupCommissionTerms() {
 
 
 /* =========================================================
-   HANDLE ESC KEY
+   INITIAL PORTFOLIO STATE
+========================================================= */
+
+function initializePortfolio() {
+
+    hideAllPortfolioViews();
+
+
+    const categories =
+        document.getElementById(
+            "portfolioCategories"
+        );
+
+
+    if (categories) {
+
+        categories.style.display =
+            "grid";
+
+    }
+
+}
+
+
+/* =========================================================
+   ESC KEY
 ========================================================= */
 
 function setupEscapeKey() {
 
     document.addEventListener(
         "keydown",
-        event => {
+        function (event) {
 
-            if (event.key !== "Escape") {
+            if (
+                event.key !== "Escape"
+            ) {
+
                 return;
+
             }
 
 
@@ -1721,78 +1867,52 @@ function setupEscapeKey() {
 
 
 /* =========================================================
-   INITIAL PORTFOLIO STATE
-========================================================= */
-
-function setupInitialPortfolioState() {
-
-    hideAllPortfolioViews();
-
-
-    const categories =
-        document.getElementById(
-            "portfolioCategories"
-        );
-
-
-    if (categories) {
-
-        categories.style.display =
-            "grid";
-
-    }
-
-}
-
-
-/* =========================================================
-   ILLUSTRATIONS CATEGORY
-========================================================= */
-
-function setupIllustrationsCategory() {
-
-    const illustrationCategory =
-        document.querySelector(
-            '.portfolio-category[onclick="openCategory(\'illustrations\')"]'
-        );
-
-
-    if (illustrationCategory) {
-
-        illustrationCategory.onclick =
-            function () {
-
-                openIllustrations();
-
-            };
-
-    }
-
-}
-
-
-/* =========================================================
    INITIALIZE EVERYTHING
 ========================================================= */
 
-document.addEventListener(
-    "DOMContentLoaded",
-    () => {
+function initializeSite() {
 
-        setupLanguageSelector();
+    initializeLanguage();
 
-        setupContactButton();
+    initializePortfolio();
 
-        setupCommissionTerms();
+    setupContactButton();
 
-        setupEscapeKey();
+    setupCommissionTerms();
 
-        setupInitialPortfolioState();
+    setupEscapeKey();
 
-        setupIllustrationsCategory();
+}
 
-    }
-);
+
+/* =========================================================
+   START SCRIPT
+========================================================= */
+
+/*
+ * Questo controllo permette allo script
+ * di funzionare sia se viene caricato
+ * prima del DOM sia se viene caricato
+ * dopo che il DOM è già pronto.
+ */
+
+if (
+    document.readyState === "loading"
+) {
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        initializeSite,
+        {
+            once: true
+        }
+    );
+
+} else {
+
+    initializeSite();
+
+}
 
 
 /* =========================================================
@@ -1813,4 +1933,7 @@ window.backToCategory =
 
 window.openIllustrations =
     openIllustrations;
+
+window.applyTranslations =
+    applyTranslations;
 ```
