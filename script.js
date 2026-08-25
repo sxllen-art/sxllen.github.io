@@ -940,7 +940,9 @@ function applyTranslations(language) {
     }
 
 
-    if (currentOpenSubcategory) {
+    if (
+        currentOpenSubcategory
+    ) {
 
         loadSubcategoryGallery(
             currentOpenSubcategory
@@ -1007,6 +1009,7 @@ function setupLanguageSelector() {
 
             const selectedLanguage =
                 event.target.value;
+
 
             applyTranslations(
                 selectedLanguage
@@ -1461,23 +1464,6 @@ function loadSubcategoryGallery(
                 "zoom-in";
 
 
-            image.addEventListener(
-                "click",
-                function (event) {
-
-                    event.preventDefault();
-
-                    event.stopPropagation();
-
-                    openLightbox(
-                        imagePath,
-                        image.alt
-                    );
-
-                }
-            );
-
-
             wrapper.appendChild(
                 image
             );
@@ -1574,23 +1560,6 @@ function loadIllustrationsGallery() {
 
             image.style.cursor =
                 "zoom-in";
-
-
-            image.addEventListener(
-                "click",
-                function (event) {
-
-                    event.preventDefault();
-
-                    event.stopPropagation();
-
-                    openLightbox(
-                        imagePath,
-                        image.alt
-                    );
-
-                }
-            );
 
 
             wrapper.appendChild(
@@ -1699,6 +1668,352 @@ function openIllustrations() {
         behavior: "smooth",
         block: "start"
     });
+
+}
+
+
+/* =========================================================
+   LIGHTBOX
+   Cliccando sulle immagini delle gallerie
+   si apre l'immagine a grandezza naturale.
+========================================================= */
+
+let lightbox = null;
+let lightboxImage = null;
+
+
+function createLightbox() {
+
+    if (document.getElementById("sxllen-lightbox")) {
+
+        lightbox =
+            document.getElementById(
+                "sxllen-lightbox"
+            );
+
+        lightboxImage =
+            lightbox.querySelector(
+                ".sxllen-lightbox-image"
+            );
+
+        return;
+
+    }
+
+
+    lightbox =
+        document.createElement("div");
+
+
+    lightbox.id =
+        "sxllen-lightbox";
+
+
+    lightbox.innerHTML = `
+        <button
+            type="button"
+            class="sxllen-lightbox-close"
+            aria-label="Close"
+        >
+            ×
+        </button>
+
+        <img
+            class="sxllen-lightbox-image"
+            src=""
+            alt=""
+        >
+    `;
+
+
+    document.body.appendChild(
+        lightbox
+    );
+
+
+    lightboxImage =
+        lightbox.querySelector(
+            ".sxllen-lightbox-image"
+        );
+
+
+    const closeButton =
+        lightbox.querySelector(
+            ".sxllen-lightbox-close"
+        );
+
+
+    closeButton.addEventListener(
+        "click",
+        function (event) {
+
+            event.stopPropagation();
+
+            closeLightbox();
+
+        }
+    );
+
+
+    lightbox.addEventListener(
+        "click",
+        function (event) {
+
+            if (
+                event.target === lightbox
+            ) {
+
+                closeLightbox();
+
+            }
+
+        }
+    );
+
+
+    lightboxImage.addEventListener(
+        "click",
+        function (event) {
+
+            event.stopPropagation();
+
+        }
+    );
+
+}
+
+
+function openLightbox(
+    imageSource,
+    imageAlt
+) {
+
+    createLightbox();
+
+
+    lightboxImage.src =
+        imageSource;
+
+
+    lightboxImage.alt =
+        imageAlt || "";
+
+
+    lightbox.classList.add(
+        "active"
+    );
+
+
+    document.body.classList.add(
+        "lightbox-open"
+    );
+
+}
+
+
+function closeLightbox() {
+
+    if (!lightbox) {
+
+        return;
+
+    }
+
+
+    lightbox.classList.remove(
+        "active"
+    );
+
+
+    document.body.classList.remove(
+        "lightbox-open"
+    );
+
+
+    if (lightboxImage) {
+
+        lightboxImage.src =
+            "";
+
+    }
+
+}
+
+
+function setupGalleryLightbox() {
+
+    document.addEventListener(
+        "click",
+        function (event) {
+
+            const image =
+                event.target.closest(
+                    "#subcategory-images img, #gallery-illustrations img"
+                );
+
+
+            if (!image) {
+
+                return;
+
+            }
+
+
+            event.preventDefault();
+
+            event.stopPropagation();
+
+
+            openLightbox(
+                image.src,
+                image.alt
+            );
+
+        }
+    );
+
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Escape"
+            ) {
+
+                closeLightbox();
+
+            }
+
+        }
+    );
+
+
+    const style =
+        document.createElement("style");
+
+
+    style.id =
+        "sxllen-lightbox-style";
+
+
+    style.textContent = `
+
+        body.lightbox-open {
+            overflow: hidden;
+        }
+
+        #sxllen-lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 40px;
+
+            background: rgba(0, 0, 0, 0.92);
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition:
+                opacity 0.25s ease,
+                visibility 0.25s ease;
+
+            cursor: zoom-out;
+        }
+
+        #sxllen-lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .sxllen-lightbox-image {
+            display: block;
+
+            max-width: 95vw;
+            max-height: 92vh;
+
+            width: auto;
+            height: auto;
+
+            object-fit: contain;
+
+            cursor: default;
+
+            box-shadow:
+                0 20px 80px rgba(0, 0, 0, 0.7);
+        }
+
+        .sxllen-lightbox-close {
+            position: absolute;
+
+            top: 20px;
+            right: 25px;
+
+            z-index: 2;
+
+            width: 45px;
+            height: 45px;
+
+            padding: 0;
+
+            border: none;
+            background: transparent;
+
+            color: #ffffff;
+
+            font-family: Arial, sans-serif;
+            font-size: 42px;
+            font-weight: 300;
+
+            line-height: 45px;
+
+            cursor: pointer;
+
+            transition:
+                opacity 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .sxllen-lightbox-close:hover {
+            opacity: 0.7;
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 700px) {
+
+            #sxllen-lightbox {
+                padding: 20px;
+            }
+
+            .sxllen-lightbox-image {
+                max-width: 94vw;
+                max-height: 88vh;
+            }
+
+            .sxllen-lightbox-close {
+                top: 10px;
+                right: 15px;
+
+                width: 40px;
+                height: 40px;
+
+                font-size: 36px;
+                line-height: 40px;
+            }
+
+        }
+
+    `;
+
+
+    document.head.appendChild(
+        style
+    );
 
 }
 
@@ -1832,294 +2147,8 @@ function setupEscapeKey() {
 
             }
 
-
-            closeLightbox();
-
         }
     );
-
-}
-
-
-/* =========================================================
-   LIGHTBOX
-   Cliccando su un'immagine della galleria
-   l'immagine viene mostrata ingrandita.
-========================================================= */
-
-function createLightbox() {
-
-    if (
-        document.getElementById(
-            "sxllen-lightbox"
-        )
-    ) {
-
-        return;
-
-    }
-
-
-    const lightbox =
-        document.createElement("div");
-
-
-    lightbox.id =
-        "sxllen-lightbox";
-
-
-    lightbox.style.position =
-        "fixed";
-
-    lightbox.style.inset =
-        "0";
-
-    lightbox.style.zIndex =
-        "9999";
-
-    lightbox.style.background =
-        "rgba(0, 0, 0, 0.94)";
-
-    lightbox.style.display =
-        "none";
-
-    lightbox.style.alignItems =
-        "center";
-
-    lightbox.style.justifyContent =
-        "center";
-
-    lightbox.style.padding =
-        "30px";
-
-    lightbox.style.cursor =
-        "zoom-out";
-
-
-    const image =
-        document.createElement("img");
-
-
-    image.id =
-        "sxllen-lightbox-image";
-
-
-    image.style.maxWidth =
-        "95vw";
-
-    image.style.maxHeight =
-        "92vh";
-
-    image.style.width =
-        "auto";
-
-    image.style.height =
-        "auto";
-
-    image.style.objectFit =
-        "contain";
-
-    image.style.display =
-        "block";
-
-    image.style.cursor =
-        "default";
-
-    image.style.boxShadow =
-        "0 20px 80px rgba(0,0,0,0.7)";
-
-
-    const closeButton =
-        document.createElement("button");
-
-
-    closeButton.id =
-        "sxllen-lightbox-close";
-
-
-    closeButton.type =
-        "button";
-
-
-    closeButton.innerHTML =
-        "×";
-
-
-    closeButton.setAttribute(
-        "aria-label",
-        "Close image"
-    );
-
-
-    closeButton.style.position =
-        "absolute";
-
-    closeButton.style.top =
-        "20px";
-
-    closeButton.style.right =
-        "25px";
-
-    closeButton.style.width =
-        "45px";
-
-    closeButton.style.height =
-        "45px";
-
-    closeButton.style.border =
-        "1px solid rgba(255,255,255,0.5)";
-
-    closeButton.style.background =
-        "rgba(0,0,0,0.5)";
-
-    closeButton.style.color =
-        "#ffffff";
-
-    closeButton.style.fontSize =
-        "34px";
-
-    closeButton.style.lineHeight =
-        "38px";
-
-    closeButton.style.fontFamily =
-        "Arial, sans-serif";
-
-    closeButton.style.cursor =
-        "pointer";
-
-    closeButton.style.borderRadius =
-        "50%";
-
-
-    closeButton.addEventListener(
-        "click",
-        function (event) {
-
-            event.preventDefault();
-
-            event.stopPropagation();
-
-            closeLightbox();
-
-        }
-    );
-
-
-    lightbox.addEventListener(
-        "click",
-        function (event) {
-
-            if (
-                event.target ===
-                lightbox
-            ) {
-
-                closeLightbox();
-
-            }
-
-        }
-    );
-
-
-    image.addEventListener(
-        "click",
-        function (event) {
-
-            event.preventDefault();
-
-            event.stopPropagation();
-
-        }
-    );
-
-
-    lightbox.appendChild(
-        image
-    );
-
-
-    lightbox.appendChild(
-        closeButton
-    );
-
-
-    document.body.appendChild(
-        lightbox
-    );
-
-}
-
-
-function openLightbox(
-    imagePath,
-    imageAlt
-) {
-
-    createLightbox();
-
-
-    const lightbox =
-        document.getElementById(
-            "sxllen-lightbox"
-        );
-
-
-    const image =
-        document.getElementById(
-            "sxllen-lightbox-image"
-        );
-
-
-    if (
-        !lightbox ||
-        !image
-    ) {
-
-        return;
-
-    }
-
-
-    image.src =
-        imagePath;
-
-
-    image.alt =
-        imageAlt || "";
-
-
-    lightbox.style.display =
-        "flex";
-
-
-    document.body.style.overflow =
-        "hidden";
-
-}
-
-
-function closeLightbox() {
-
-    const lightbox =
-        document.getElementById(
-            "sxllen-lightbox"
-        );
-
-
-    if (!lightbox) {
-
-        return;
-
-    }
-
-
-    lightbox.style.display =
-        "none";
-
-
-    document.body.style.overflow =
-        "";
 
 }
 
@@ -2169,7 +2198,7 @@ document.addEventListener(
 
         setupEscapeKey();
 
-        createLightbox();
+        setupGalleryLightbox();
 
     }
 );
