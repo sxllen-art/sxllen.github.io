@@ -161,7 +161,7 @@ nav {
             rgba(8, 8, 8, 0.72) 42%,
             rgba(8, 8, 8, 0.32) 100%
         ),
-        url("artwork01.JPG");
+        url("hero.JPG");
 
     background-size: cover;
 
@@ -754,7 +754,7 @@ footer {
                 rgba(8, 8, 8, 0.78),
                 rgba(8, 8, 8, 0.72)
             ),
-            url("artwork01.JPG");
+            url("hero.JPG");
 
         background-size: cover;
 
