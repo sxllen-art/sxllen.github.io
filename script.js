@@ -1264,11 +1264,6 @@ function getSubcategoryTitle(
 
 /* =========================================================
    GALLERY DATA
-   =========================================================
-   QUI AGGIUNGIAMO I FILE DELLE SOTTOCARTELLE.
-
-   Le immagini vengono caricate automaticamente
-   quando apri la relativa sottocartella.
 ========================================================= */
 
 const galleryData = {
@@ -1325,10 +1320,13 @@ function createGalleryImage(
         imagePath;
 
     image.alt =
-        altText;
+        altText || "";
 
     image.loading =
         "lazy";
+
+    image.decoding =
+        "async";
 
     image.style.cursor =
         "zoom-in";
@@ -1336,7 +1334,10 @@ function createGalleryImage(
 
     image.addEventListener(
         "click",
-        function () {
+        function (event) {
+
+            event.preventDefault();
+            event.stopPropagation();
 
             openLightbox(
                 imagePath,
@@ -1641,13 +1642,24 @@ function createLightbox() {
 
         closeButton.addEventListener(
             "click",
-            closeLightbox
+            function (event) {
+
+                event.preventDefault();
+                event.stopPropagation();
+
+                closeLightbox();
+
+            }
         );
 
     }
 
 }
 
+
+/* =========================================================
+   OPEN LIGHTBOX
+========================================================= */
 
 function openLightbox(
     imagePath,
@@ -1695,6 +1707,10 @@ function openLightbox(
 
 }
 
+
+/* =========================================================
+   CLOSE LIGHTBOX
+========================================================= */
 
 function closeLightbox() {
 
@@ -1838,7 +1854,6 @@ function setupEscapeKey() {
                         false;
 
                 }
-
 
                 closeLightbox();
 
