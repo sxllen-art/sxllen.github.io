@@ -566,36 +566,42 @@ nav {
 
     margin: 50px auto 0;
 
-    border-top: 1px solid #292929;
+    border: none;
 
-    border-bottom: 1px solid #292929;
+    text-align: center;
 }
 
 
-/* TERMS TITLE */
+/* =========================================================
+   TERMS BUTTON
+========================================================= */
 
 .commission-terms summary {
+    display: inline-block;
+
     list-style: none;
 
     cursor: pointer;
 
-    padding: 25px 5px;
+    padding: 14px 27px;
+
+    border: 1px solid #eeeeee;
 
     font-family:
         "Cinzel",
         Georgia,
         serif;
 
-    font-size: 16px;
+    font-size: 12px;
 
     letter-spacing: 2px;
 
-    color: #dddddd;
-
-    text-align: center;
+    color: #eeeeee;
 
     transition:
-        color 0.3s ease;
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .commission-terms summary::-webkit-details-marker {
@@ -603,38 +609,39 @@ nav {
 }
 
 .commission-terms summary::after {
-    content: " ↓";
-
-    display: inline-block;
-
-    margin-left: 8px;
-
-    font-size: 14px;
-
-    transition:
-        transform 0.3s ease;
-}
-
-.commission-terms[open] summary::after {
-    transform: rotate(180deg);
+    content: none;
 }
 
 .commission-terms summary:hover {
-    color: #ffffff;
+    background: #ffffff;
+
+    color: #111111;
+
+    border-color: #ffffff;
 }
 
 
-/* TERMS CONTENT */
+/* =========================================================
+   TERMS CONTENT
+========================================================= */
 
 .commission-terms-content {
-    padding: 15px 5px 45px;
+    max-width: 800px;
+
+    margin: 45px auto 0;
+
+    padding: 0;
+
+    text-align: left;
 }
 
 
-/* INDIVIDUAL TERM */
+/* =========================================================
+   INDIVIDUAL TERMS
+========================================================= */
 
 .commission-term {
-    padding: 25px 0;
+    padding: 30px 0;
 
     border-top: 1px solid #222222;
 }
@@ -655,7 +662,7 @@ nav {
 
     color: #eeeeee;
 
-    margin-bottom: 10px;
+    margin-bottom: 14px;
 }
 
 .commission-term p {
@@ -665,7 +672,7 @@ nav {
 
     font-size: 17px;
 
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 
@@ -826,17 +833,17 @@ footer {
     }
 
     .commission-terms summary {
-        font-size: 14px;
+        font-size: 12px;
 
-        padding: 22px 0;
+        padding: 14px 22px;
     }
 
     .commission-terms-content {
-        padding: 5px 0 30px;
+        margin-top: 35px;
     }
 
     .commission-term {
-        padding: 22px 0;
+        padding: 25px 0;
     }
 
     .commission-term h3 {
@@ -845,6 +852,8 @@ footer {
 
     .commission-term p {
         font-size: 16px;
+
+        line-height: 1.7;
     }
 
     .contact-link {
