@@ -9,21 +9,6 @@
 
     <title>SXLLEN — Concept Artist & Illustrator</title>
 
-
-    <!-- GOOGLE FONTS -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap"
-        rel="stylesheet"
-    >
-
-
-    <!-- MAIN CSS -->
-
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -90,9 +75,9 @@
 <main>
 
 
-    <!-- =========================
+    <!-- =====================================================
          HOME
-    ========================== -->
+    ====================================================== -->
 
     <section id="home" class="hero">
 
@@ -138,9 +123,9 @@
 
 
 
-    <!-- =========================
+    <!-- =====================================================
          PORTFOLIO
-    ========================== -->
+    ====================================================== -->
 
     <section id="portfolio" class="section">
 
@@ -159,7 +144,9 @@
 
 
 
-        <!-- MAIN PORTFOLIO CATEGORIES -->
+        <!-- =================================================
+             MAIN PORTFOLIO CATEGORIES
+        ================================================== -->
 
         <div
             id="portfolioCategories"
@@ -177,7 +164,7 @@
                 <div class="category-image">
 
                     <img
-                        src="artwork01.JPG"
+                        src="character-cover.JPG"
                         alt="Character Design"
                     >
 
@@ -202,7 +189,7 @@
                 <div class="category-image">
 
                     <img
-                        src="artwork02.JPG"
+                        src="prop-cover.JPG"
                         alt="Prop Design"
                     >
 
@@ -227,7 +214,7 @@
                 <div class="category-image">
 
                     <img
-                        src="artwork03.JPG"
+                        src="environment-cover.JPG"
                         alt="Environment"
                     >
 
@@ -241,9 +228,38 @@
             </div>
 
 
-        <!-- =========================
+
+            <!-- ILLUSTRAZIONI -->
+
+            <div
+                class="portfolio-category"
+                onclick="openCategory('illustrations')"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="illustration-cover.JPG"
+                        alt="Illustrazioni"
+                    >
+
+                </div>
+
+
+                <h3 data-i18n="categoryIllustrations">
+                    Illustrazioni
+                </h3>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
              CHARACTER DESIGN
-        ========================== -->
+        ================================================== -->
 
         <div
             id="character-design"
@@ -300,9 +316,9 @@
 
 
 
-        <!-- =========================
+        <!-- =================================================
              PROP DESIGN
-        ========================== -->
+        ================================================== -->
 
         <div
             id="prop-design"
@@ -359,9 +375,9 @@
 
 
 
-        <!-- =========================
+        <!-- =================================================
              ENVIRONMENT
-        ========================== -->
+        ================================================== -->
 
         <div
             id="environment"
@@ -410,9 +426,51 @@
 
 
 
-        <!-- =========================
+        <!-- =================================================
+             ILLUSTRAZIONI
+             NESSUNA SOTTOCATEGORIA
+        ================================================== -->
+
+        <div
+            id="illustrations"
+            class="portfolio-view"
+            style="display: none;"
+        >
+
+
+            <button
+                class="back-button"
+                onclick="backToPortfolio()"
+                data-i18n="backPortfolio"
+            >
+                ← Back to Portfolio
+            </button>
+
+
+            <h2 data-i18n="categoryIllustrations">
+                Illustrazioni
+            </h2>
+
+
+            <div
+                id="gallery-illustrations"
+                class="gallery"
+            >
+
+                <!-- Images will be added here later -->
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
              3D MODELS
-        ========================== -->
+             TEMPORANEAMENTE NON VISIBILE
+             MANTENUTO PER IL FUTURO
+        ================================================== -->
 
         <div
             id="3d-models"
@@ -440,7 +498,7 @@
                 class="gallery"
             >
 
-                <!-- Images will be added later -->
+                <!-- Images will be added here later -->
 
             </div>
 
@@ -449,9 +507,9 @@
 
 
 
-        <!-- =========================
+        <!-- =================================================
              SUBCATEGORY GALLERY
-        ========================== -->
+        ================================================== -->
 
         <div
             id="subcategory-gallery"
@@ -477,7 +535,7 @@
                 class="gallery"
             >
 
-                <!-- Images will be added later -->
+                <!-- Images will be added here later -->
 
             </div>
 
@@ -489,9 +547,9 @@
 
 
 
-    <!-- =========================
+    <!-- =====================================================
          ABOUT
-    ========================== -->
+    ====================================================== -->
 
     <section
         id="about"
@@ -519,16 +577,16 @@
 
                 Ciao! Sono SXLLEN, concept artist e illustratrice.
                 Mi occupo di character design, prop design,
-                environment design, illustrazione e modellazione 3D.
+                environment design e illustrazione.
 
             </p>
 
 
             <p data-i18n="aboutText2">
 
-                Amo esplorare mondi fantasy e dark fantasy,
-                creando personaggi, ambientazioni e oggetti
-                attraverso un approccio semi-realistico.
+                Qui puoi inserire una breve descrizione della tua
+                formazione, delle tue passioni e del tipo di
+                progetti a cui ti piace lavorare.
 
             </p>
 
@@ -540,9 +598,9 @@
 
 
 
-    <!-- =========================
+    <!-- =====================================================
          COMMISSIONS
-    ========================== -->
+    ====================================================== -->
 
     <section
         id="commissions"
@@ -653,9 +711,9 @@
 
 
 
-    <!-- =========================
+    <!-- =====================================================
          CONTACT
-    ========================== -->
+    ====================================================== -->
 
     <section
         id="contact"
@@ -700,9 +758,9 @@
 
 
 
-<!-- =========================
+<!-- =========================================================
      FOOTER
-========================= -->
+========================================================= -->
 
 <footer>
 
@@ -713,8 +771,6 @@
 </footer>
 
 
-
-<!-- MAIN JAVASCRIPT -->
 
 <script src="script.js"></script>
 
