@@ -1,6 +1,6 @@
 /* =========================================================
    SXLLEN PORTFOLIO
-   DARK FANTASY · ELEGANT · GOTHIC
+   DARK FANTASY / GOTHIC STYLE
 ========================================================= */
 
 
@@ -14,12 +14,14 @@
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
-    font-family: "Libre Baskerville", serif;
+    font-family: "Cormorant Garamond", Georgia, serif;
 
     background: #111111;
 
@@ -28,11 +30,12 @@ body {
     line-height: 1.6;
 }
 
+
 a {
     color: inherit;
-
     text-decoration: none;
 }
+
 
 
 /* =========================================================
@@ -49,12 +52,15 @@ header {
 
     z-index: 1000;
 
-    background: rgba(17, 17, 17, 0.92);
+    background:
+        rgba(17, 17, 17, 0.94);
 
     backdrop-filter: blur(10px);
 
-    border-bottom: 1px solid #292929;
+    border-bottom:
+        1px solid #292929;
 }
+
 
 nav {
     max-width: 1200px;
@@ -68,48 +74,47 @@ nav {
     justify-content: space-between;
 
     align-items: center;
-
-    gap: 30px;
 }
 
 
-/* Logo */
-
 .logo {
-    font-family: "Cinzel", serif;
+    font-family:
+        "Cinzel", Georgia, serif;
 
     font-weight: 600;
 
-    letter-spacing: 3px;
+    letter-spacing: 4px;
 
-    white-space: nowrap;
+    font-size: 18px;
 }
 
-
-/* Navigation */
 
 .menu {
     display: flex;
 
     gap: 30px;
-
-    align-items: center;
 }
 
-.menu a {
-    font-family: "Libre Baskerville", serif;
 
+.menu a {
     color: #cccccc;
 
-    font-size: 13px;
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 16px;
 
     transition:
         color 0.3s ease;
 }
 
+
 .menu a:hover {
     color: #ffffff;
 }
+
 
 
 /* =========================================================
@@ -119,24 +124,27 @@ nav {
 #languageSelector {
     background: #111111;
 
-    color: #f2f2f2;
+    color: #cccccc;
 
     border: 1px solid #444444;
 
-    padding: 7px 10px;
+    padding: 6px 10px;
 
-    font-family: "Libre Baskerville", serif;
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-    font-size: 11px;
+    font-size: 14px;
 
     cursor: pointer;
-
-    outline: none;
 }
+
 
 #languageSelector:hover {
-    border-color: #888888;
+    border-color: #777777;
 }
+
 
 
 /* =========================================================
@@ -146,173 +154,116 @@ nav {
 .hero {
     min-height: 100vh;
 
-    position: relative;
-
     display: flex;
 
     align-items: center;
 
-    padding: 140px 30px 80px;
+    padding:
+        140px 30px 80px;
 
     background:
         linear-gradient(
-            90deg,
-            rgba(8, 8, 8, 0.90) 0%,
-            rgba(8, 8, 8, 0.72) 42%,
-            rgba(8, 8, 8, 0.32) 100%
+            rgba(0,0,0,0.35),
+            rgba(0,0,0,0.85)
         ),
         url("hero.JPG");
 
     background-size: cover;
 
     background-position: center;
-
-    border-bottom: 1px solid #292929;
 }
 
-
-/* Dark vignette */
-
-.hero::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    pointer-events: none;
-
-    background:
-        radial-gradient(
-            circle at center,
-            transparent 30%,
-            rgba(0, 0, 0, 0.38) 100%
-        );
-}
-
-
-/* Hero content */
 
 .hero-text {
-    position: relative;
+    max-width: 800px;
 
-    z-index: 1;
-
-    max-width: 850px;
-
-    margin: 0 auto;
+    margin: auto;
 
     width: 100%;
 }
 
 
-/* Small title */
-
-.hero .small-title {
-    font-family: "Cinzel", serif;
+.small-title {
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
 
     font-size: 13px;
 
-    font-weight: 500;
+    letter-spacing: 4px;
 
-    letter-spacing: 5px;
+    color: #aaaaaa;
 
-    color: #c4c4c4;
-
-    margin-bottom: 25px;
-
-    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
-
-/* Main title */
 
 .hero h1 {
-    font-family: "Cinzel", serif;
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
 
-    font-size: clamp(70px, 12vw, 150px);
+    font-size:
+        clamp(60px, 10vw, 130px);
 
-    font-weight: 600;
+    line-height: 0.9;
 
-    line-height: 0.85;
+    letter-spacing: 4px;
 
-    letter-spacing: 8px;
-
-    margin-bottom: 35px;
-
-    color: #f3f3f3;
-
-    text-shadow:
-        0 3px 20px rgba(0, 0, 0, 0.65);
+    margin-bottom: 30px;
 }
 
-
-/* Gothic decorative line */
-
-.hero h1::after {
-    content: "";
-
-    display: block;
-
-    width: 90px;
-
-    height: 1px;
-
-    background: #777777;
-
-    margin-top: 32px;
-}
-
-
-/* Hero description */
 
 .hero p:not(.small-title) {
-    max-width: 560px;
+    max-width: 550px;
 
-    font-family: "Libre Baskerville", serif;
+    font-size: 21px;
 
-    font-size: 16px;
+    color: #cccccc;
 
-    line-height: 1.9;
-
-    color: #c8c8c8;
-
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
+
 
 
 /* =========================================================
-   BUTTONS
+   BUTTON
 ========================================================= */
 
 .button {
     display: inline-block;
 
-    padding: 15px 28px;
+    padding: 14px 27px;
 
-    border: 1px solid #aaaaaa;
+    border:
+        1px solid #eeeeee;
 
-    background: rgba(0, 0, 0, 0.18);
-
-    font-family: "Cinzel", serif;
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
 
     font-size: 12px;
 
     letter-spacing: 2px;
 
     transition:
-        background 0.35s ease,
-        border-color 0.35s ease,
-        color 0.35s ease;
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
 }
+
 
 .button:hover {
-    background: #f2f2f2;
-
-    border-color: #f2f2f2;
+    background: #ffffff;
 
     color: #111111;
+
+    border-color: #ffffff;
 }
+
 
 
 /* =========================================================
@@ -324,15 +275,19 @@ nav {
 
     margin: auto;
 
-    padding: 120px 30px;
+    padding:
+        120px 30px;
 }
 
+
 .section h2 {
-    font-family: "Cinzel", serif;
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
 
-    font-weight: 500;
-
-    font-size: clamp(45px, 7vw, 80px);
+    font-size:
+        clamp(45px, 7vw, 80px);
 
     line-height: 1;
 
@@ -341,24 +296,6 @@ nav {
     margin-bottom: 60px;
 }
 
-
-/* Section small titles */
-
-.small-title {
-    font-family: "Cinzel", serif;
-
-    font-weight: 500;
-
-    font-size: 12px;
-
-    letter-spacing: 3px;
-
-    color: #aaaaaa;
-
-    margin-bottom: 20px;
-
-    text-transform: uppercase;
-}
 
 
 /* =========================================================
@@ -371,67 +308,71 @@ nav {
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
-    gap: 55px 30px;
+    gap: 50px 30px;
 
     margin-top: 40px;
 }
 
+
 .portfolio-category {
     cursor: pointer;
 
-    overflow: hidden;
+    transition:
+        transform 0.4s ease;
 }
 
 
-/* Category image */
+.portfolio-category:hover {
+    transform:
+        translateY(-5px);
+}
+
 
 .category-image {
     width: 100%;
+
+    aspect-ratio: 4 / 3;
 
     overflow: hidden;
 
     background: #181818;
 }
 
-.category-image img {
-    display: block;
 
+.category-image img {
     width: 100%;
 
-    height: auto;
+    height: 100%;
 
-    object-fit: contain;
+    object-fit: cover;
+
+    display: block;
 
     transition:
-        transform 0.6s ease,
-        opacity 0.6s ease;
+        transform 0.6s ease;
 }
 
 
-/* Hover */
-
-.portfolio-category:hover .category-image img {
-    transform: scale(1.025);
-
-    opacity: 0.88;
+.portfolio-category:hover
+.category-image img {
+    transform:
+        scale(1.04);
 }
 
-
-/* Category title */
 
 .portfolio-category h3 {
-    font-family: "Cinzel", serif;
-
-    font-weight: 500;
-
-    font-size: 20px;
-
-    letter-spacing: 0.5px;
-
     margin-top: 18px;
 
-    color: #eeeeee;
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+    font-size: 21px;
+
+    letter-spacing: 1px;
 }
+
 
 
 /* =========================================================
@@ -442,14 +383,6 @@ nav {
     margin-top: 40px;
 }
 
-.portfolio-view h2 {
-    font-family: "Cinzel", serif;
-
-    font-weight: 500;
-}
-
-
-/* Back buttons */
 
 .back-button {
     background: none;
@@ -462,24 +395,24 @@ nav {
 
     cursor: pointer;
 
-    font-family: "Libre Baskerville", serif;
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-    font-size: 13px;
+    font-size: 17px;
 
-    color: #cccccc;
+    color: #bbbbbb;
 
     transition:
         color 0.3s ease;
 }
 
+
 .back-button:hover {
     color: #ffffff;
 }
 
-
-/* =========================================================
-   SUBCATEGORY BUTTONS
-========================================================= */
 
 .subcategory-list {
     display: flex;
@@ -491,20 +424,26 @@ nav {
     margin-top: 30px;
 }
 
+
 .subcategory-list button {
-    background: transparent;
+    background: none;
 
-    color: #eeeeee;
+    border:
+        1px solid #555555;
 
-    border: 1px solid #555555;
+    color: #dddddd;
 
-    padding: 12px 20px;
+    padding:
+        12px 20px;
 
     cursor: pointer;
 
-    font-family: "Libre Baskerville", serif;
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-    font-size: 13px;
+    font-size: 17px;
 
     transition:
         background 0.3s ease,
@@ -512,17 +451,19 @@ nav {
         border-color 0.3s ease;
 }
 
+
 .subcategory-list button:hover {
-    background: #eeeeee;
+    background: #ffffff;
 
     color: #111111;
 
-    border-color: #eeeeee;
+    border-color: #ffffff;
 }
 
 
+
 /* =========================================================
-   GALLERIES
+   GALLERY
 ========================================================= */
 
 .gallery {
@@ -534,9 +475,11 @@ nav {
     gap: 50px 30px;
 }
 
+
 .artwork {
     overflow: hidden;
 }
+
 
 .artwork img {
     display: block;
@@ -551,27 +494,31 @@ nav {
         transform 0.5s ease;
 }
 
+
 .artwork:hover img {
-    transform: scale(1.03);
+    transform:
+        scale(1.03);
 }
 
+
 .artwork h3 {
-    font-family: "Cinzel", serif;
-
-    font-weight: 500;
-
     margin-top: 18px;
+
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
 
     font-size: 20px;
 }
 
+
 .artwork p {
     color: #888888;
 
-    font-family: "Libre Baskerville", serif;
-
-    font-size: 14px;
+    font-size: 15px;
 }
+
 
 
 /* =========================================================
@@ -582,27 +529,21 @@ nav {
     max-width: 900px;
 }
 
-.about h2 {
-    font-family: "Cinzel", serif;
-}
 
 .about p:not(.small-title) {
     max-width: 700px;
 
     color: #bbbbbb;
 
-    font-family: "Libre Baskerville", serif;
-
-    font-size: 17px;
-
-    line-height: 1.9;
+    font-size: 19px;
 
     margin-bottom: 20px;
 }
 
 
+
 /* =========================================================
-   COMMISSIONS / PRICES
+   PRICES
 ========================================================= */
 
 .prices {
@@ -614,8 +555,10 @@ nav {
     gap: 20px;
 }
 
+
 .price-card {
-    border: 1px solid #292929;
+    border:
+        1px solid #292929;
 
     padding: 35px;
 
@@ -626,41 +569,45 @@ nav {
         transform 0.3s ease;
 }
 
+
 .price-card:hover {
     border-color: #666666;
 
-    transform: translateY(-5px);
+    transform:
+        translateY(-5px);
 }
 
+
 .price-card h3 {
-    font-family: "Cinzel", serif;
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
 
-    font-weight: 500;
-
-    font-size: 22px;
+    font-size: 21px;
 
     margin-bottom: 25px;
 }
 
+
 .price {
-    font-family: "Cinzel", serif;
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
 
     font-size: 40px;
 
     margin-bottom: 20px;
-
-    color: #eeeeee;
 }
+
 
 .price-card p:not(.price) {
     color: #999999;
 
-    font-family: "Libre Baskerville", serif;
-
-    font-size: 14px;
-
-    line-height: 1.8;
+    font-size: 17px;
 }
+
 
 
 /* =========================================================
@@ -670,22 +617,99 @@ nav {
 .contact {
     text-align: center;
 
-    max-width: 800px;
+    max-width: 850px;
 }
 
-.contact h2 {
-    font-family: "Cinzel", serif;
-}
 
 .contact p:not(.small-title) {
+    max-width: 650px;
+
+    margin:
+        0 auto 40px;
+
     color: #aaaaaa;
 
-    font-family: "Libre Baskerville", serif;
-
-    margin-bottom: 30px;
-
-    line-height: 1.8;
+    font-size: 19px;
 }
+
+
+
+/* =========================================================
+   CONTACT LINKS
+========================================================= */
+
+.contact-links {
+    display: flex;
+
+    flex-direction: column;
+
+    max-width: 600px;
+
+    margin:
+        0 auto 40px;
+
+    border-top:
+        1px solid #292929;
+}
+
+
+.contact-link {
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding:
+        20px 0;
+
+    border-bottom:
+        1px solid #292929;
+
+    text-align: left;
+
+    transition:
+        color 0.3s ease,
+        padding-left 0.3s ease;
+}
+
+
+.contact-link:hover {
+    color: #ffffff;
+
+    padding-left: 8px;
+}
+
+
+.contact-label {
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    color: #888888;
+}
+
+
+.contact-value {
+    font-size: 18px;
+
+    color: #dddddd;
+}
+
+
+.contact-link:hover
+.contact-value {
+    color: #ffffff;
+}
+
 
 
 /* =========================================================
@@ -693,7 +717,8 @@ nav {
 ========================================================= */
 
 footer {
-    border-top: 1px solid #292929;
+    border-top:
+        1px solid #292929;
 
     padding: 30px;
 
@@ -701,10 +726,9 @@ footer {
 
     color: #666666;
 
-    font-family: "Libre Baskerville", serif;
-
-    font-size: 13px;
+    font-size: 14px;
 }
+
 
 
 /* =========================================================
@@ -713,135 +737,67 @@ footer {
 
 @media (max-width: 700px) {
 
-    /* Header */
 
     nav {
-        padding: 18px 20px;
-
-        gap: 15px;
+        padding:
+            18px 20px;
     }
 
-    .logo {
-        font-size: 14px;
-
-        letter-spacing: 2px;
-    }
 
     .menu {
         gap: 12px;
     }
 
+
     .menu a {
-        font-size: 10px;
+        font-size: 13px;
     }
 
-    #languageSelector {
-        padding: 6px 7px;
-
-        font-size: 10px;
-    }
-
-
-    /* Hero */
 
     .hero {
         padding-left: 20px;
 
         padding-right: 20px;
-
-        background:
-            linear-gradient(
-                rgba(8, 8, 8, 0.78),
-                rgba(8, 8, 8, 0.72)
-            ),
-            url("hero.JPG");
-
-        background-size: cover;
-
-        background-position: center;
     }
 
-    .hero-text {
-        max-width: 100%;
-    }
-
-    .hero .small-title {
-        font-size: 10px;
-
-        letter-spacing: 3px;
-
-        line-height: 1.6;
-    }
-
-    .hero h1 {
-        font-size: clamp(55px, 17vw, 90px);
-
-        letter-spacing: 4px;
-    }
-
-    .hero h1::after {
-        width: 60px;
-
-        margin-top: 25px;
-    }
-
-    .hero p:not(.small-title) {
-        font-size: 14px;
-
-        line-height: 1.8;
-    }
-
-
-    /* Sections */
 
     .section {
-        padding: 80px 20px;
+        padding:
+            80px 20px;
     }
 
-    .section h2 {
-        font-size: clamp(40px, 12vw, 65px);
-
-        margin-bottom: 45px;
-    }
-
-
-    /* Portfolio */
 
     .portfolio-categories {
         grid-template-columns: 1fr;
 
-        gap: 45px;
+        gap: 40px;
     }
 
-    .portfolio-category h3 {
-        font-size: 18px;
-    }
-
-
-    /* Gallery */
 
     .gallery {
         grid-template-columns: 1fr;
     }
 
 
-    /* Prices */
-
     .prices {
         grid-template-columns: 1fr;
     }
 
 
-    /* Subcategories */
+    .contact-link {
+        flex-direction: column;
 
-    .subcategory-list {
-        gap: 10px;
+        align-items: flex-start;
+
+        gap: 5px;
     }
 
-    .subcategory-list button {
-        padding: 10px 15px;
 
-        font-size: 12px;
+    .contact-value {
+        font-size: 17px;
+
+        word-break: break-word;
     }
+
 
 }
