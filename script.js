@@ -1,19 +1,9 @@
-
 /* =========================================================
    SXLLEN — SCRIPT.JS
    Portfolio / Navigation / Gallery / Translations
 ========================================================= */
 
-
-/* =========================================================
-   TRANSLATIONS
-========================================================= */
-
 const translations = {
-
-    /* =====================================================
-       ITALIANO
-    ===================================================== */
 
     it: {
         navPortfolio: "Portfolio",
@@ -38,11 +28,9 @@ const translations = {
         subcategoryCharacters: "Characters",
         subcategoryCreatures: "Creature Design",
         subcategoryBosses: "Boss Design",
-
         subcategoryWeapons: "Weapons",
         subcategoryItems: "Items & Collectibles",
         subcategorySetDressing: "Set Dressing",
-
         subcategoryInteriors: "Interiors",
         subcategoryExteriors: "Exteriors",
 
@@ -51,7 +39,6 @@ const translations = {
 
         aboutSmall: "ABOUT ME",
         aboutTitle: "Chi sono",
-
         aboutText1: "Mi chiamo Sabrina e sono un'artista italiana. Da sempre appassionata di arte e videogiochi, ho frequentato un corso di concept art triennale. Lavoro principalmente a progetti dark fantasy, fantasy e semi-realistici.",
         aboutText2: "",
 
@@ -113,11 +100,6 @@ const translations = {
         footer: "© 2026 SXLLEN — Concept Artist & Illustrator"
     },
 
-
-    /* =====================================================
-       ENGLISH
-    ===================================================== */
-
     en: {
         navPortfolio: "Portfolio",
         navAbout: "About",
@@ -141,11 +123,9 @@ const translations = {
         subcategoryCharacters: "Characters",
         subcategoryCreatures: "Creature Design",
         subcategoryBosses: "Boss Design",
-
         subcategoryWeapons: "Weapons",
         subcategoryItems: "Items & Collectibles",
         subcategorySetDressing: "Set Dressing",
-
         subcategoryInteriors: "Interiors",
         subcategoryExteriors: "Exteriors",
 
@@ -154,7 +134,6 @@ const translations = {
 
         aboutSmall: "ABOUT ME",
         aboutTitle: "About Me",
-
         aboutText1: "My name is Sabrina and I am an Italian artist. Passionate about art and video games since I was young, I completed a three-year concept art course. I mainly work on dark fantasy, fantasy and semi-realistic projects.",
         aboutText2: "",
 
@@ -216,11 +195,6 @@ const translations = {
         footer: "© 2026 SXLLEN — Concept Artist & Illustrator"
     },
 
-
-    /* =====================================================
-       SPANISH
-    ===================================================== */
-
     es: {
         navPortfolio: "Portfolio",
         navAbout: "Sobre mí",
@@ -244,11 +218,9 @@ const translations = {
         subcategoryCharacters: "Personajes",
         subcategoryCreatures: "Diseño de Criaturas",
         subcategoryBosses: "Diseño de Jefes",
-
         subcategoryWeapons: "Armas",
         subcategoryItems: "Objetos y Coleccionables",
         subcategorySetDressing: "Decoración de Escenarios",
-
         subcategoryInteriors: "Interiores",
         subcategoryExteriors: "Exteriores",
 
@@ -257,7 +229,6 @@ const translations = {
 
         aboutSmall: "SOBRE MÍ",
         aboutTitle: "Quién soy",
-
         aboutText1: "Me llamo Sabrina y soy una artista italiana. Apasionada por el arte y los videojuegos desde siempre, estudié un curso de concept art de tres años. Trabajo principalmente en proyectos de dark fantasy, fantasy y estilos semirrealistas.",
         aboutText2: "",
 
@@ -319,11 +290,6 @@ const translations = {
         footer: "© 2026 SXLLEN — Concept Artist & Illustrator"
     },
 
-
-    /* =====================================================
-       FRENCH
-    ===================================================== */
-
     fr: {
         navPortfolio: "Portfolio",
         navAbout: "À propos",
@@ -347,11 +313,9 @@ const translations = {
         subcategoryCharacters: "Personnages",
         subcategoryCreatures: "Créatures",
         subcategoryBosses: "Boss",
-
         subcategoryWeapons: "Armes",
         subcategoryItems: "Objets & Collectibles",
         subcategorySetDressing: "Décor",
-
         subcategoryInteriors: "Intérieurs",
         subcategoryExteriors: "Extérieurs",
 
@@ -360,7 +324,6 @@ const translations = {
 
         aboutSmall: "À PROPOS DE MOI",
         aboutTitle: "Qui suis-je",
-
         aboutText1: "Je m'appelle Sabrina et je suis une artiste italienne. Passionnée d'art et de jeux vidéo depuis toujours, j'ai suivi une formation de trois ans en concept art. Je travaille principalement sur des projets dark fantasy, fantasy et semi-réalistes.",
         aboutText2: "",
 
@@ -422,11 +385,6 @@ const translations = {
         footer: "© 2026 SXLLEN — Concept Artist & Illustrator"
     },
 
-
-    /* =====================================================
-       GERMAN
-    ===================================================== */
-
     de: {
         navPortfolio: "Portfolio",
         navAbout: "Über mich",
@@ -450,11 +408,9 @@ const translations = {
         subcategoryCharacters: "Charaktere",
         subcategoryCreatures: "Creature Design",
         subcategoryBosses: "Boss Design",
-
         subcategoryWeapons: "Waffen",
         subcategoryItems: "Gegenstände & Sammlerstücke",
         subcategorySetDressing: "Set Dressing",
-
         subcategoryInteriors: "Innenräume",
         subcategoryExteriors: "Außenbereiche",
 
@@ -463,7 +419,6 @@ const translations = {
 
         aboutSmall: "ÜBER MICH",
         aboutTitle: "Wer ich bin",
-
         aboutText1: "Ich heiße Sabrina und bin eine italienische Künstlerin. Seit jeher begeistere ich mich für Kunst und Videospiele und habe eine dreijährige Ausbildung in Concept Art absolviert. Ich arbeite hauptsächlich an Dark-Fantasy-, Fantasy- und semi-realistischen Projekten.",
         aboutText2: "",
 
@@ -525,11 +480,6 @@ const translations = {
         footer: "© 2026 SXLLEN — Concept Artist & Illustrator"
     },
 
-
-    /* =====================================================
-       JAPANESE
-    ===================================================== */
-
     ja: {
         navPortfolio: "ポートフォリオ",
         navAbout: "プロフィール",
@@ -553,11 +503,9 @@ const translations = {
         subcategoryCharacters: "キャラクター",
         subcategoryCreatures: "クリーチャーデザイン",
         subcategoryBosses: "ボスデザイン",
-
         subcategoryWeapons: "武器",
         subcategoryItems: "アイテム・コレクション",
         subcategorySetDressing: "セットドレッシング",
-
         subcategoryInteriors: "インテリア",
         subcategoryExteriors: "エクステリア",
 
@@ -566,7 +514,6 @@ const translations = {
 
         aboutSmall: "ABOUT ME",
         aboutTitle: "プロフィール",
-
         aboutText1: "Sabrina（サブリナ）と申します。イタリア出身のアーティストです。幼い頃からアートとゲームが好きで、3年間のコンセプトアートコースを修了しました。主にダークファンタジー、ファンタジー、セミリアル系の作品を制作しています。",
         aboutText2: "",
 
@@ -631,7 +578,7 @@ const translations = {
 
 
 /* =========================================================
-   GLOBAL STATE
+   STATE
 ========================================================= */
 
 let currentLanguage = "it";
@@ -640,40 +587,21 @@ let currentOpenSubcategory = null;
 
 
 /* =========================================================
-   LANGUAGE STORAGE
+   LANGUAGE
 ========================================================= */
 
-const LANGUAGE_STORAGE_KEY = "sxllen-language";
-
-
 function getSavedLanguage() {
-
     try {
-
-        const savedLanguage =
-            localStorage.getItem(
-                LANGUAGE_STORAGE_KEY
-            );
+        const saved = localStorage.getItem("sxllen-language");
 
         if (
-            savedLanguage &&
-            Object.prototype.hasOwnProperty.call(
-                translations,
-                savedLanguage
-            )
+            saved &&
+            Object.prototype.hasOwnProperty.call(translations, saved)
         ) {
-
-            return savedLanguage;
-
+            return saved;
         }
-
     } catch (error) {
-
-        console.warn(
-            "SXLLEN: localStorage non disponibile.",
-            error
-        );
-
+        console.warn("SXLLEN: impossibile leggere localStorage.", error);
     }
 
     return "it";
@@ -681,100 +609,41 @@ function getSavedLanguage() {
 
 
 function saveLanguage(language) {
-
     try {
-
-        localStorage.setItem(
-            LANGUAGE_STORAGE_KEY,
-            language
-        );
-
+        localStorage.setItem("sxllen-language", language);
     } catch (error) {
-
-        console.warn(
-            "SXLLEN: impossibile salvare la lingua.",
-            error
-        );
-
+        console.warn("SXLLEN: impossibile salvare la lingua.", error);
     }
 }
 
 
-/* =========================================================
-   APPLY TRANSLATIONS
-========================================================= */
-
 function applyTranslations(language) {
 
-    /* Controlla che la lingua esista */
-
     if (
-        !Object.prototype.hasOwnProperty.call(
-            translations,
-            language
-        )
+        !language ||
+        !Object.prototype.hasOwnProperty.call(translations, language)
     ) {
-
         language = "it";
-
     }
 
+    currentLanguage = language;
 
-    currentLanguage =
-        language;
+    document.documentElement.lang = language;
 
+    const languageData = translations[language];
 
-    /* Cambia la lingua HTML */
+    document.querySelectorAll("[data-i18n]").forEach(element => {
 
-    document.documentElement.lang =
-        language;
-
-
-    /* Recupera le traduzioni */
-
-    const languageData =
-        translations[language];
-
-
-    /* Traduce tutti gli elementi data-i18n */
-
-    const elements =
-        document.querySelectorAll(
-            "[data-i18n]"
-        );
-
-
-    elements.forEach(function (element) {
-
-        const key =
-            element.getAttribute(
-                "data-i18n"
-            );
-
+        const key = element.getAttribute("data-i18n");
 
         if (
             key &&
-            Object.prototype.hasOwnProperty.call(
-                languageData,
-                key
-            )
+            Object.prototype.hasOwnProperty.call(languageData, key)
         ) {
-
-            element.textContent =
-                languageData[key];
-
+            element.textContent = languageData[key];
         }
 
     });
-
-
-    /* Traduce i prezzi */
-
-    const priceElements =
-        document.querySelectorAll(
-            ".price"
-        );
-
 
     const priceKeys = [
         "price1",
@@ -783,96 +652,45 @@ function applyTranslations(language) {
         "price4"
     ];
 
+    document.querySelectorAll(".price").forEach((element, index) => {
 
-    priceElements.forEach(
-        function (element, index) {
+        const key = priceKeys[index];
 
-            const key =
-                priceKeys[index];
-
-
-            if (
-                key &&
-                Object.prototype.hasOwnProperty.call(
-                    languageData,
-                    key
-                )
-            ) {
-
-                element.textContent =
-                    languageData[key];
-
-            }
-
+        if (
+            key &&
+            Object.prototype.hasOwnProperty.call(languageData, key)
+        ) {
+            element.textContent = languageData[key];
         }
-    );
 
+    });
 
-    /* Aggiorna il selettore */
-
-    const selector =
-        document.getElementById(
-            "languageSelector"
-        );
-
+    const selector = document.getElementById("languageSelector");
 
     if (selector) {
-
-        selector.value =
-            language;
-
+        selector.value = language;
     }
-
-
-    /* Salva la lingua */
 
     saveLanguage(language);
 
-
-    /* Aggiorna titolo sottocategoria */
-
     if (currentOpenSubcategory) {
-
-        const title =
-            document.getElementById(
-                "subcategory-title"
-            );
-
+        const title = document.getElementById("subcategory-title");
 
         if (title) {
-
-            title.textContent =
-                getSubcategoryTitle(
-                    currentOpenSubcategory
-                );
-
+            title.textContent = getSubcategoryTitle(currentOpenSubcategory);
         }
 
-
-        loadSubcategoryGallery(
-            currentOpenSubcategory
-        );
-
+        loadSubcategoryGallery(currentOpenSubcategory);
     }
 
-
-    /* Aggiorna eventuale messaggio galleria */
-
-    const illustrations =
-        document.getElementById(
-            "illustrations"
-        );
-
+    const illustrations = document.getElementById("illustrations");
 
     if (
         illustrations &&
-        illustrations.style.display !== "none"
+        window.getComputedStyle(illustrations).display !== "none"
     ) {
-
         loadIllustrationsGallery();
-
     }
-
 }
 
 
@@ -882,63 +700,20 @@ function applyTranslations(language) {
 
 function setupLanguageSelector() {
 
-    const selector =
-        document.getElementById(
-            "languageSelector"
-        );
-
+    const selector = document.getElementById("languageSelector");
 
     if (!selector) {
-
-        console.error(
-            "SXLLEN: ERRORE — #languageSelector non trovato nell'HTML."
-        );
-
+        console.warn("SXLLEN: languageSelector non trovato.");
         return;
-
     }
 
+    selector.addEventListener("change", function (event) {
+        applyTranslations(event.target.value);
+    });
 
-    /* Carica la lingua salvata */
+    const savedLanguage = getSavedLanguage();
 
-    const savedLanguage =
-        getSavedLanguage();
-
-
-    /* Imposta immediatamente il selettore */
-
-    selector.value =
-        savedLanguage;
-
-
-    /* Applica la lingua */
-
-    applyTranslations(
-        savedLanguage
-    );
-
-
-    /* Evita eventuali listener duplicati */
-
-    selector.onchange =
-        function () {
-
-            const selectedLanguage =
-                selector.value;
-
-
-            console.log(
-                "SXLLEN: cambio lingua →",
-                selectedLanguage
-            );
-
-
-            applyTranslations(
-                selectedLanguage
-            );
-
-        };
-
+    applyTranslations(savedLanguage);
 }
 
 
@@ -948,28 +723,17 @@ function setupLanguageSelector() {
 
 function setupContactButton() {
 
-    const contactButton =
-        document.querySelector(
-            "#contact .button"
-        );
-
+    const contactButton = document.querySelector("#contact .button");
 
     if (!contactButton) {
-
         return;
-
     }
-
 
     contactButton.href =
         "https://mail.google.com/mail/?view=cm&fs=1&to=sabrinasrn29@gmail.com";
 
-    contactButton.target =
-        "_blank";
-
-    contactButton.rel =
-        "noopener noreferrer";
-
+    contactButton.target = "_blank";
+    contactButton.rel = "noopener noreferrer";
 }
 
 
@@ -979,196 +743,102 @@ function setupContactButton() {
 
 function hideAllPortfolioViews() {
 
-    const views =
-        document.querySelectorAll(
-            ".portfolio-view"
-        );
-
-
-    views.forEach(
-        function (view) {
-
-            view.style.display =
-                "none";
-
-        }
-    );
+    document.querySelectorAll(".portfolio-view").forEach(view => {
+        view.style.display = "none";
+    });
 
 }
 
 
 function openCategory(categoryId) {
 
-    const categories =
-        document.getElementById(
-            "portfolioCategories"
-        );
+    const categories = document.getElementById("portfolioCategories");
+    const selectedCategory = document.getElementById(categoryId);
 
-
-    const selectedCategory =
-        document.getElementById(
-            categoryId
-        );
-
-
-    if (
-        !categories ||
-        !selectedCategory
-    ) {
-
+    if (!categories || !selectedCategory) {
         return;
-
     }
 
+    currentCategory = categoryId;
+    currentOpenSubcategory = null;
 
-    currentCategory =
-        categoryId;
-
-
-    currentOpenSubcategory =
-        null;
-
-
-    categories.style.display =
-        "none";
-
+    categories.style.display = "none";
 
     hideAllPortfolioViews();
 
-
-    selectedCategory.style.display =
-        "block";
-
+    selectedCategory.style.display = "block";
 
     selectedCategory.scrollIntoView({
         behavior: "smooth",
         block: "start"
     });
-
 }
 
 
 function backToPortfolio() {
 
-    currentCategory =
-        null;
-
-
-    currentOpenSubcategory =
-        null;
-
+    currentCategory = null;
+    currentOpenSubcategory = null;
 
     hideAllPortfolioViews();
 
-
-    const categories =
-        document.getElementById(
-            "portfolioCategories"
-        );
-
+    const categories = document.getElementById("portfolioCategories");
 
     if (!categories) {
-
         return;
-
     }
 
-
-    categories.style.display =
-        "grid";
-
+    categories.style.display = "grid";
 
     categories.scrollIntoView({
         behavior: "smooth",
         block: "start"
     });
-
 }
 
 
 function openSubcategory(subcategoryId) {
 
-    const gallery =
-        document.getElementById(
-            "subcategory-gallery"
-        );
+    const gallery = document.getElementById("subcategory-gallery");
+    const title = document.getElementById("subcategory-title");
 
-
-    const title =
-        document.getElementById(
-            "subcategory-title"
-        );
-
-
-    if (
-        !gallery ||
-        !title
-    ) {
-
+    if (!gallery || !title) {
         return;
-
     }
 
-
-    currentOpenSubcategory =
-        subcategoryId;
-
+    currentOpenSubcategory = subcategoryId;
 
     hideAllPortfolioViews();
 
+    gallery.style.display = "block";
 
-    gallery.style.display =
-        "block";
+    title.textContent = getSubcategoryTitle(subcategoryId);
 
-
-    title.textContent =
-        getSubcategoryTitle(
-            subcategoryId
-        );
-
-
-    loadSubcategoryGallery(
-        subcategoryId
-    );
-
+    loadSubcategoryGallery(subcategoryId);
 
     gallery.scrollIntoView({
         behavior: "smooth",
         block: "start"
     });
-
 }
 
 
 function backToCategory() {
 
-    currentOpenSubcategory =
-        null;
-
+    currentOpenSubcategory = null;
 
     if (!currentCategory) {
-
         backToPortfolio();
-
         return;
-
     }
-
 
     hideAllPortfolioViews();
 
-
-    const category =
-        document.getElementById(
-            currentCategory
-        );
-
+    const category = document.getElementById(currentCategory);
 
     if (category) {
 
-        category.style.display =
-            "block";
-
+        category.style.display = "block";
 
         category.scrollIntoView({
             behavior: "smooth",
@@ -1180,71 +850,42 @@ function backToCategory() {
         backToPortfolio();
 
     }
-
 }
 
 
 /* =========================================================
-   SUBCATEGORY TITLES
+   SUBCATEGORY
 ========================================================= */
 
-function getSubcategoryTitle(
-    subcategoryId
-) {
+function getSubcategoryTitle(subcategoryId) {
 
-    const languageData =
-        translations[currentLanguage];
+    const language = translations[currentLanguage];
 
-
-    const titleMap = {
-
-        "characters":
-            "subcategoryCharacters",
-
-        "creature-design":
-            "subcategoryCreatures",
-
-        "boss-design":
-            "subcategoryBosses",
-
-        "weapons":
-            "subcategoryWeapons",
-
-        "items-and-collectibles":
-            "subcategoryItems",
-
-        "set-dressing":
-            "subcategorySetDressing",
-
-        "interiors":
-            "subcategoryInteriors",
-
-        "exteriors":
-            "subcategoryExteriors"
-
-    };
-
-
-    const key =
-        titleMap[subcategoryId];
-
-
-    if (
-        languageData &&
-        key &&
-        Object.prototype.hasOwnProperty.call(
-            languageData,
-            key
-        )
-    ) {
-
-        return languageData[key];
-
+    if (!language) {
+        return subcategoryId;
     }
 
+    const titleMap = {
+        "characters": "subcategoryCharacters",
+        "creature-design": "subcategoryCreatures",
+        "boss-design": "subcategoryBosses",
+        "weapons": "subcategoryWeapons",
+        "items-and-collectibles": "subcategoryItems",
+        "set-dressing": "subcategorySetDressing",
+        "interiors": "subcategoryInteriors",
+        "exteriors": "subcategoryExteriors"
+    };
+
+    const key = titleMap[subcategoryId];
+
+    if (
+        key &&
+        Object.prototype.hasOwnProperty.call(language, key)
+    ) {
+        return language[key];
+    }
 
     return subcategoryId;
-
 }
 
 
@@ -1253,21 +894,16 @@ function getSubcategoryTitle(
 ========================================================= */
 
 const galleryData = {
-
     characters: [],
     "creature-design": [],
     "boss-design": [],
-
     weapons: [],
     "items-and-collectibles": [],
     "set-dressing": [],
-
     interiors: [],
     exteriors: [],
-
     illustrations: [],
     "3d-models": []
-
 };
 
 
@@ -1275,225 +911,111 @@ const galleryData = {
    GALLERY
 ========================================================= */
 
-function loadSubcategoryGallery(
-    subcategoryId
-) {
+function loadSubcategoryGallery(subcategoryId) {
 
-    const container =
-        document.getElementById(
-            "subcategory-images"
-        );
-
+    const container = document.getElementById("subcategory-images");
 
     if (!container) {
-
         return;
-
     }
 
+    container.innerHTML = "";
 
-    container.innerHTML =
-        "";
-
-
-    const images =
-        galleryData[subcategoryId] || [];
-
+    const images = galleryData[subcategoryId] || [];
 
     if (images.length === 0) {
 
-        const message =
-            document.createElement(
-                "p"
-            );
+        const message = document.createElement("p");
 
+        message.className = "gallery-empty";
 
-        message.className =
-            "gallery-empty";
+        message.textContent = getGalleryEmptyMessage();
 
-
-        message.textContent =
-            getGalleryEmptyMessage();
-
-
-        container.appendChild(
-            message
-        );
-
+        container.appendChild(message);
 
         return;
-
     }
 
+    images.forEach((imagePath, index) => {
 
-    images.forEach(
-        function (imagePath, index) {
+        const wrapper = document.createElement("div");
+        wrapper.className = "gallery-item";
 
-            const wrapper =
-                document.createElement(
-                    "div"
-                );
+        const image = document.createElement("img");
 
+        image.src = imagePath;
 
-            wrapper.className =
-                "gallery-item";
+        image.alt =
+            `${getSubcategoryTitle(subcategoryId)} ${index + 1}`;
 
+        image.loading = "lazy";
 
-            const image =
-                document.createElement(
-                    "img"
-                );
+        wrapper.appendChild(image);
+        container.appendChild(wrapper);
 
-
-            image.src =
-                imagePath;
-
-
-            image.alt =
-                getSubcategoryTitle(
-                    subcategoryId
-                ) +
-                " " +
-                (index + 1);
-
-
-            image.loading =
-                "lazy";
-
-
-            wrapper.appendChild(
-                image
-            );
-
-
-            container.appendChild(
-                wrapper
-            );
-
-        }
-    );
-
+    });
 }
 
 
 function loadIllustrationsGallery() {
 
     const container =
-        document.getElementById(
-            "gallery-illustrations"
-        );
-
+        document.getElementById("gallery-illustrations");
 
     if (!container) {
-
         return;
-
     }
 
+    container.innerHTML = "";
 
-    container.innerHTML =
-        "";
-
-
-    const images =
-        galleryData.illustrations || [];
-
+    const images = galleryData.illustrations || [];
 
     if (images.length === 0) {
 
-        const message =
-            document.createElement(
-                "p"
-            );
+        const message = document.createElement("p");
 
+        message.className = "gallery-empty";
 
-        message.className =
-            "gallery-empty";
+        message.textContent = getGalleryEmptyMessage();
 
-
-        message.textContent =
-            getGalleryEmptyMessage();
-
-
-        container.appendChild(
-            message
-        );
-
+        container.appendChild(message);
 
         return;
-
     }
 
+    images.forEach((imagePath, index) => {
 
-    images.forEach(
-        function (imagePath, index) {
+        const wrapper = document.createElement("div");
+        wrapper.className = "gallery-item";
 
-            const wrapper =
-                document.createElement(
-                    "div"
-                );
+        const image = document.createElement("img");
 
+        image.src = imagePath;
 
-            wrapper.className =
-                "gallery-item";
+        image.alt =
+            `${translations[currentLanguage].categoryIllustrations} ${index + 1}`;
 
+        image.loading = "lazy";
 
-            const image =
-                document.createElement(
-                    "img"
-                );
+        wrapper.appendChild(image);
+        container.appendChild(wrapper);
 
-
-            image.src =
-                imagePath;
-
-
-            image.alt =
-                translations[
-                    currentLanguage
-                ].categoryIllustrations +
-                " " +
-                (index + 1);
-
-
-            image.loading =
-                "lazy";
-
-
-            wrapper.appendChild(
-                image
-            );
-
-
-            container.appendChild(
-                wrapper
-            );
-
-        }
-    );
-
+    });
 }
 
 
 function getGalleryEmptyMessage() {
 
     const messages = {
-
         it: "I lavori verranno aggiunti presto.",
         en: "Works will be added soon.",
         es: "Los trabajos se añadirán próximamente.",
         fr: "Les travaux seront ajoutés prochainement.",
         de: "Die Arbeiten werden bald hinzugefügt.",
         ja: "作品は近日中に追加されます。"
-
     };
 
-
-    return (
-        messages[currentLanguage] ||
-        messages.it
-    );
-
+    return messages[currentLanguage] || messages.it;
 }
 
 
@@ -1504,54 +1026,48 @@ function getGalleryEmptyMessage() {
 function openIllustrations() {
 
     const categories =
-        document.getElementById(
-            "portfolioCategories"
-        );
-
+        document.getElementById("portfolioCategories");
 
     const illustrations =
-        document.getElementById(
-            "illustrations"
-        );
+        document.getElementById("illustrations");
 
-
-    if (
-        !categories ||
-        !illustrations
-    ) {
-
+    if (!categories || !illustrations) {
         return;
-
     }
 
+    currentCategory = "illustrations";
+    currentOpenSubcategory = null;
 
-    currentCategory =
-        "illustrations";
-
-
-    currentOpenSubcategory =
-        null;
-
-
-    categories.style.display =
-        "none";
-
+    categories.style.display = "none";
 
     hideAllPortfolioViews();
 
-
-    illustrations.style.display =
-        "block";
-
+    illustrations.style.display = "block";
 
     loadIllustrationsGallery();
-
 
     illustrations.scrollIntoView({
         behavior: "smooth",
         block: "start"
     });
+}
 
+
+function setupIllustrationsCategory() {
+
+    const illustrationCategory =
+        document.querySelector(
+            '.portfolio-category[onclick="openCategory(\'illustrations\')"]'
+        );
+
+    if (!illustrationCategory) {
+        return;
+    }
+
+    illustrationCategory.onclick = function (event) {
+        event.preventDefault();
+        openIllustrations();
+    };
 }
 
 
@@ -1562,90 +1078,24 @@ function openIllustrations() {
 function setupCommissionTerms() {
 
     const terms =
-        document.querySelector(
-            ".commission-terms"
-        );
-
+        document.querySelector(".commission-terms");
 
     if (!terms) {
-
         return;
-
     }
 
+    terms.addEventListener("toggle", function () {
 
-    terms.addEventListener(
-        "toggle",
-        function () {
+        if (terms.open) {
 
-            if (terms.open) {
-
-                terms.scrollIntoView({
-                    behavior: "smooth",
-                    block: "nearest"
-                });
-
-            }
+            terms.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest"
+            });
 
         }
-    );
 
-}
-
-
-/* =========================================================
-   INITIAL PORTFOLIO
-========================================================= */
-
-function setupPortfolio() {
-
-    hideAllPortfolioViews();
-
-
-    const categories =
-        document.getElementById(
-            "portfolioCategories"
-        );
-
-
-    if (categories) {
-
-        categories.style.display =
-            "grid";
-
-    }
-
-}
-
-
-/* =========================================================
-   ILLUSTRATION CATEGORY
-========================================================= */
-
-function setupIllustrationsCategory() {
-
-    const category =
-        document.querySelector(
-            '.portfolio-category[onclick="openCategory(\'illustrations\')"]'
-        );
-
-
-    if (!category) {
-
-        return;
-
-    }
-
-
-    category.onclick =
-        function (event) {
-
-            event.preventDefault();
-
-            openIllustrations();
-
-        };
-
+    });
 }
 
 
@@ -1655,85 +1105,61 @@ function setupIllustrationsCategory() {
 
 function setupEscapeKey() {
 
-    document.addEventListener(
-        "keydown",
-        function (event) {
+    document.addEventListener("keydown", function (event) {
 
-            if (
-                event.key !== "Escape"
-            ) {
-
-                return;
-
-            }
-
-
-            const terms =
-                document.querySelector(
-                    ".commission-terms"
-                );
-
-
-            if (
-                terms &&
-                terms.open
-            ) {
-
-                terms.open =
-                    false;
-
-            }
-
+        if (event.key !== "Escape") {
+            return;
         }
-    );
 
+        const terms =
+            document.querySelector(".commission-terms");
+
+        if (terms && terms.open) {
+            terms.open = false;
+        }
+
+    });
 }
 
 
 /* =========================================================
-   MAKE FUNCTIONS AVAILABLE TO HTML
+   HTML FUNCTIONS
 ========================================================= */
 
-window.openCategory =
-    openCategory;
-
-window.backToPortfolio =
-    backToPortfolio;
-
-window.openSubcategory =
-    openSubcategory;
-
-window.backToCategory =
-    backToCategory;
-
-window.openIllustrations =
-    openIllustrations;
+window.openCategory = openCategory;
+window.backToPortfolio = backToPortfolio;
+window.openSubcategory = openSubcategory;
+window.backToCategory = backToCategory;
+window.openIllustrations = openIllustrations;
 
 
 /* =========================================================
    START
 ========================================================= */
 
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-        console.log(
-            "SXLLEN: script.js caricato."
-        );
+    console.log("SXLLEN: script.js caricato.");
+
+    setupLanguageSelector();
+    setupContactButton();
+    setupPortfolio();
+    setupIllustrationsCategory();
+    setupCommissionTerms();
+    setupEscapeKey();
+
+});
 
 
-        setupLanguageSelector();
+function setupPortfolio() {
 
-        setupContactButton();
+    hideAllPortfolioViews();
 
-        setupPortfolio();
+    const categories =
+        document.getElementById("portfolioCategories");
 
-        setupIllustrationsCategory();
-
-        setupCommissionTerms();
-
-        setupEscapeKey();
-
+    if (categories) {
+        categories.style.display = "grid";
     }
-);
+
+}
