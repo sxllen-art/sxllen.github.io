@@ -1,4 +1,3 @@
-```javascript
 /* =========================================================
    SXLLEN — SCRIPT.JS
    Portfolio / Navigation / Gallery / Translations
@@ -10,10 +9,6 @@
 ========================================================= */
 
 const translations = {
-
-    /* =====================================================
-       ITALIAN
-    ===================================================== */
 
     it: {
 
@@ -133,10 +128,6 @@ const translations = {
     },
 
 
-    /* =====================================================
-       ENGLISH
-    ===================================================== */
-
     en: {
 
         navPortfolio: "Portfolio",
@@ -254,10 +245,6 @@ const translations = {
         footer: "© 2026 SXLLEN — Concept Artist & Illustrator"
     },
 
-
-    /* =====================================================
-       SPANISH
-    ===================================================== */
 
     es: {
 
@@ -377,10 +364,6 @@ const translations = {
     },
 
 
-    /* =====================================================
-       FRENCH
-    ===================================================== */
-
     fr: {
 
         navPortfolio: "Portfolio",
@@ -499,10 +482,6 @@ const translations = {
     },
 
 
-    /* =====================================================
-       GERMAN
-    ===================================================== */
-
     de: {
 
         navPortfolio: "Portfolio",
@@ -620,10 +599,6 @@ const translations = {
         footer: "© 2026 SXLLEN — Concept Artist & Illustrator"
     },
 
-
-    /* =====================================================
-       JAPANESE
-    ===================================================== */
 
     ja: {
 
@@ -862,6 +837,7 @@ function applyTranslations(language) {
 
     });
 
+
     const prices =
         document.querySelectorAll(
             ".price"
@@ -894,6 +870,7 @@ function applyTranslations(language) {
 
     });
 
+
     const selector =
         document.getElementById(
             "languageSelector"
@@ -906,7 +883,9 @@ function applyTranslations(language) {
 
     }
 
+
     saveLanguage(language);
+
 
     const subcategoryTitle =
         document.getElementById(
@@ -925,13 +904,17 @@ function applyTranslations(language) {
 
     }
 
-    if (currentOpenSubcategory) {
+
+    if (
+        currentOpenSubcategory
+    ) {
 
         loadSubcategoryGallery(
             currentOpenSubcategory
         );
 
     }
+
 
     const illustrations =
         document.getElementById(
@@ -973,12 +956,14 @@ function setupLanguageSelector() {
 
     }
 
+
     const savedLanguage =
         getSavedLanguage();
 
     applyTranslations(
         savedLanguage
     );
+
 
     selector.addEventListener(
         "change",
@@ -1321,6 +1306,123 @@ const galleryData = {
 
 
 /* =========================================================
+   IMAGE LIGHTBOX
+========================================================= */
+
+function openImageLightbox(imagePath, altText) {
+
+    const existing =
+        document.getElementById(
+            "sxllen-lightbox"
+        );
+
+    if (existing) {
+
+        existing.remove();
+
+    }
+
+
+    const overlay =
+        document.createElement("div");
+
+    overlay.id =
+        "sxllen-lightbox";
+
+    overlay.style.position =
+        "fixed";
+
+    overlay.style.inset =
+        "0";
+
+    overlay.style.zIndex =
+        "99999";
+
+    overlay.style.background =
+        "rgba(0, 0, 0, 0.92)";
+
+    overlay.style.display =
+        "flex";
+
+    overlay.style.alignItems =
+        "center";
+
+    overlay.style.justifyContent =
+        "center";
+
+    overlay.style.padding =
+        "30px";
+
+    overlay.style.cursor =
+        "zoom-out";
+
+
+    const image =
+        document.createElement("img");
+
+    image.src =
+        imagePath;
+
+    image.alt =
+        altText || "";
+
+    image.style.display =
+        "block";
+
+    image.style.maxWidth =
+        "95vw";
+
+    image.style.maxHeight =
+        "95vh";
+
+    image.style.width =
+        "auto";
+
+    image.style.height =
+        "auto";
+
+    image.style.objectFit =
+        "contain";
+
+    image.style.cursor =
+        "default";
+
+    image.style.boxShadow =
+        "0 20px 80px rgba(0,0,0,0.7)";
+
+
+    overlay.appendChild(
+        image
+    );
+
+    document.body.appendChild(
+        overlay
+    );
+
+
+    overlay.addEventListener(
+        "click",
+        function () {
+
+            overlay.remove();
+
+        }
+    );
+
+
+    image.addEventListener(
+        "click",
+        function (event) {
+
+            event.stopPropagation();
+
+        }
+    );
+
+}
+
+
+/* =========================================================
    LOAD SUBCATEGORY GALLERY
 ========================================================= */
 
@@ -1344,6 +1446,7 @@ function loadSubcategoryGallery(
     const images =
         galleryData[subcategoryId] || [];
 
+
     if (images.length === 0) {
 
         const message =
@@ -1363,6 +1466,7 @@ function loadSubcategoryGallery(
 
     }
 
+
     images.forEach(
         (imagePath, index) => {
 
@@ -1371,6 +1475,7 @@ function loadSubcategoryGallery(
 
             wrapper.className =
                 "gallery-item";
+
 
             const image =
                 document.createElement("img");
@@ -1385,6 +1490,31 @@ function loadSubcategoryGallery(
 
             image.loading =
                 "lazy";
+
+
+            /*
+             * IMPORTANTE:
+             * Il clic sull'immagine viene fermato qui,
+             * così non può interferire con il clic
+             * sulle cartelle/categorie.
+             */
+
+            image.addEventListener(
+                "click",
+                function (event) {
+
+                    event.preventDefault();
+
+                    event.stopPropagation();
+
+                    openImageLightbox(
+                        imagePath,
+                        image.alt
+                    );
+
+                }
+            );
+
 
             wrapper.appendChild(
                 image
@@ -1422,6 +1552,7 @@ function loadIllustrationsGallery() {
     const images =
         galleryData.illustrations || [];
 
+
     if (images.length === 0) {
 
         const message =
@@ -1441,6 +1572,7 @@ function loadIllustrationsGallery() {
 
     }
 
+
     images.forEach(
         (imagePath, index) => {
 
@@ -1449,6 +1581,7 @@ function loadIllustrationsGallery() {
 
             wrapper.className =
                 "gallery-item";
+
 
             const image =
                 document.createElement("img");
@@ -1463,6 +1596,24 @@ function loadIllustrationsGallery() {
 
             image.loading =
                 "lazy";
+
+
+            image.addEventListener(
+                "click",
+                function (event) {
+
+                    event.preventDefault();
+
+                    event.stopPropagation();
+
+                    openImageLightbox(
+                        imagePath,
+                        image.alt
+                    );
+
+                }
+            );
+
 
             wrapper.appendChild(
                 image
@@ -1669,6 +1820,21 @@ function setupEscapeKey() {
 
             }
 
+
+            const lightbox =
+                document.getElementById(
+                    "sxllen-lightbox"
+                );
+
+            if (lightbox) {
+
+                lightbox.remove();
+
+                return;
+
+            }
+
+
             const terms =
                 document.querySelector(
                     ".commission-terms"
@@ -1684,171 +1850,8 @@ function setupEscapeKey() {
 
             }
 
-            closeLightbox();
-
         }
     );
-
-}
-
-
-/* =========================================================
-   LIGHTBOX
-========================================================= */
-
-function setupLightbox() {
-
-    let lightbox =
-        document.getElementById(
-            "sxllen-lightbox"
-        );
-
-    if (!lightbox) {
-
-        lightbox =
-            document.createElement("div");
-
-        lightbox.id =
-            "sxllen-lightbox";
-
-        lightbox.className =
-            "lightbox";
-
-        lightbox.innerHTML = `
-            <button
-                type="button"
-                class="lightbox-close"
-                aria-label="Close"
-            >×</button>
-
-            <img
-                class="lightbox-image"
-                src=""
-                alt=""
-            >
-        `;
-
-        document.body.appendChild(
-            lightbox
-        );
-
-    }
-
-    lightbox.addEventListener(
-        "click",
-        function (event) {
-
-            if (
-                event.target === lightbox ||
-                event.target.classList.contains(
-                    "lightbox-close"
-                )
-            ) {
-
-                closeLightbox();
-
-            }
-
-        }
-    );
-
-
-    /*
-       Event delegation:
-       funziona anche con le immagini
-       create dinamicamente dal gallery.
-    */
-
-    document.addEventListener(
-        "click",
-        function (event) {
-
-            const image =
-                event.target.closest(
-                    ".gallery-item img, .artwork img"
-                );
-
-            if (!image) {
-
-                return;
-
-            }
-
-            event.preventDefault();
-
-            openLightbox(
-                image.src,
-                image.alt
-            );
-
-        }
-    );
-
-}
-
-
-function openLightbox(
-    imageSrc,
-    imageAlt
-) {
-
-    const lightbox =
-        document.getElementById(
-            "sxllen-lightbox"
-        );
-
-    if (!lightbox) {
-
-        return;
-
-    }
-
-    const lightboxImage =
-        lightbox.querySelector(
-            ".lightbox-image"
-        );
-
-    if (!lightboxImage) {
-
-        return;
-
-    }
-
-    lightboxImage.src =
-        imageSrc;
-
-    lightboxImage.alt =
-        imageAlt || "";
-
-    lightbox.classList.add(
-        "active"
-    );
-
-    document.body.style.overflow =
-        "hidden";
-
-}
-
-
-function closeLightbox() {
-
-    const lightbox =
-        document.getElementById(
-            "sxllen-lightbox"
-        );
-
-    if (!lightbox) {
-
-        return;
-
-    }
-
-    lightbox.classList.remove(
-        "active"
-    );
-
-    document.body.style.overflow =
-        "";
 
 }
 
@@ -1897,8 +1900,5 @@ document.addEventListener(
 
         setupEscapeKey();
 
-        setupLightbox();
-
     }
 );
-```
