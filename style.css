@@ -1,3 +1,4 @@
+```css
 /* =========================================================
    SXLLEN PORTFOLIO
    DARK FANTASY / GOTHIC STYLE
@@ -41,20 +42,15 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-
     background: rgba(17, 17, 17, 0.94);
-
     backdrop-filter: blur(10px);
-
     border-bottom: 1px solid #292929;
 }
 
 nav {
     max-width: 1200px;
     margin: auto;
-
     padding: 20px 30px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,11 +58,8 @@ nav {
 
 .logo {
     font-family: "Cinzel", Georgia, serif;
-
     font-weight: 600;
-
     letter-spacing: 4px;
-
     font-size: 18px;
 }
 
@@ -77,14 +70,8 @@ nav {
 
 .menu a {
     color: #cccccc;
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
+    font-family: "Cormorant Garamond", Georgia, serif;
     font-size: 16px;
-
     transition: color 0.3s ease;
 }
 
@@ -99,20 +86,11 @@ nav {
 
 #languageSelector {
     background: #111111;
-
     color: #cccccc;
-
     border: 1px solid #444444;
-
     padding: 6px 10px;
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
+    font-family: "Cormorant Garamond", Georgia, serif;
     font-size: 14px;
-
     cursor: pointer;
 }
 
@@ -127,10 +105,8 @@ nav {
 
 .hero {
     min-height: 100vh;
-
     display: flex;
     align-items: center;
-
     padding: 140px 30px 80px;
 
     background:
@@ -147,48 +123,29 @@ nav {
 .hero-text {
     max-width: 800px;
     margin: auto;
-
     width: 100%;
 }
 
 .small-title {
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
+    font-family: "Cinzel", Georgia, serif;
     font-size: 13px;
-
     letter-spacing: 4px;
-
     color: #aaaaaa;
-
     margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-    font-size:
-        clamp(60px, 10vw, 130px);
-
+    font-family: "Cinzel", Georgia, serif;
+    font-size: clamp(60px, 10vw, 130px);
     line-height: 0.9;
-
     letter-spacing: 4px;
-
     margin-bottom: 30px;
 }
 
 .hero p:not(.small-title) {
     max-width: 550px;
-
     font-size: 21px;
-
     color: #cccccc;
-
     margin-bottom: 35px;
 }
 
@@ -199,18 +156,11 @@ nav {
 
 .button {
     display: inline-block;
-
     padding: 14px 27px;
-
     border: 1px solid #eeeeee;
 
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
+    font-family: "Cinzel", Georgia, serif;
     font-size: 12px;
-
     letter-spacing: 2px;
 
     transition:
@@ -221,9 +171,7 @@ nav {
 
 .button:hover {
     background: #ffffff;
-
     color: #111111;
-
     border-color: #ffffff;
 }
 
@@ -234,25 +182,15 @@ nav {
 
 .section {
     max-width: 1200px;
-
     margin: auto;
-
     padding: 120px 30px;
 }
 
 .section h2 {
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-    font-size:
-        clamp(45px, 7vw, 80px);
-
+    font-family: "Cinzel", Georgia, serif;
+    font-size: clamp(45px, 7vw, 80px);
     line-height: 1;
-
     letter-spacing: 1px;
-
     margin-bottom: 60px;
 }
 
@@ -263,22 +201,15 @@ nav {
 
 .portfolio-categories {
     display: grid;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 50px 30px;
-
     margin-top: 40px;
 }
 
 .portfolio-category {
     cursor: pointer;
-
     min-width: 0;
-
-    transition:
-        transform 0.4s ease;
+    transition: transform 0.4s ease;
 }
 
 .portfolio-category:hover {
@@ -288,49 +219,32 @@ nav {
 
 /* =========================================================
    CATEGORY IMAGES
-   ORIGINAL IMAGE PROPORTIONS
 ========================================================= */
 
 .category-image {
     width: 100%;
-
     max-width: 100%;
-
     overflow: hidden;
-
     background: #181818;
 }
 
 .category-image img {
     display: block;
-
     width: 100%;
-
     max-width: 100%;
-
     height: auto;
-
     object-fit: contain;
-
-    transition:
-        transform 0.6s ease;
+    transition: transform 0.6s ease;
 }
 
-.portfolio-category:hover
-.category-image img {
+.portfolio-category:hover .category-image img {
     transform: scale(1.03);
 }
 
 .portfolio-category h3 {
     margin-top: 18px;
-
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
+    font-family: "Cinzel", Georgia, serif;
     font-size: 21px;
-
     letter-spacing: 1px;
 }
 
@@ -341,32 +255,21 @@ nav {
 
 .portfolio-view {
     margin-top: 40px;
-
     min-width: 0;
 }
 
 .back-button {
     background: none;
-
     border: none;
-
     padding: 0;
-
     margin-bottom: 30px;
-
     cursor: pointer;
 
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
+    font-family: "Cormorant Garamond", Georgia, serif;
     font-size: 17px;
-
     color: #bbbbbb;
 
-    transition:
-        color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .back-button:hover {
@@ -375,30 +278,19 @@ nav {
 
 .subcategory-list {
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 15px;
-
     margin-top: 30px;
 }
 
 .subcategory-list button {
     background: none;
-
     border: 1px solid #555555;
-
     color: #dddddd;
-
     padding: 12px 20px;
-
     cursor: pointer;
 
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
+    font-family: "Cormorant Garamond", Georgia, serif;
     font-size: 17px;
 
     transition:
@@ -409,9 +301,7 @@ nav {
 
 .subcategory-list button:hover {
     background: #ffffff;
-
     color: #111111;
-
     border-color: #ffffff;
 }
 
@@ -422,59 +312,36 @@ nav {
 
 .gallery {
     display: grid;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 50px 30px;
 
     width: 100%;
-
     max-width: 100%;
-
     min-width: 0;
 }
-
-
-/* =========================================================
-   GALLERY ITEMS
-   IMPORTANT:
-   The JavaScript creates .gallery-item
-========================================================= */
 
 .gallery-item {
     width: 100%;
-
     max-width: 100%;
-
     min-width: 0;
 
     overflow: hidden;
-
     background: #181818;
 }
-
-
-/* =========================================================
-   GALLERY IMAGES
-   Automatically handles every future image
-========================================================= */
 
 .gallery-item img {
     display: block;
 
     width: 100%;
-
     max-width: 100%;
-
     height: auto;
 
     object-fit: contain;
-
     margin: 0;
 
-    transition:
-        transform 0.5s ease;
+    cursor: zoom-in;
+
+    transition: transform 0.5s ease;
 }
 
 .gallery-item:hover img {
@@ -488,11 +355,8 @@ nav {
 
 .artwork {
     width: 100%;
-
     max-width: 100%;
-
     min-width: 0;
-
     overflow: hidden;
 }
 
@@ -500,15 +364,14 @@ nav {
     display: block;
 
     width: 100%;
-
     max-width: 100%;
-
     height: auto;
 
     object-fit: contain;
 
-    transition:
-        transform 0.5s ease;
+    cursor: zoom-in;
+
+    transition: transform 0.5s ease;
 }
 
 .artwork:hover img {
@@ -518,17 +381,12 @@ nav {
 .artwork h3 {
     margin-top: 18px;
 
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
+    font-family: "Cinzel", Georgia, serif;
     font-size: 20px;
 }
 
 .artwork p {
     color: #888888;
-
     font-size: 15px;
 }
 
@@ -541,12 +399,100 @@ nav {
     grid-column: 1 / -1;
 
     color: #888888;
-
     font-size: 18px;
-
     text-align: center;
 
     padding: 40px 20px;
+}
+
+
+/* =========================================================
+   LIGHTBOX
+   Click an image to enlarge it
+========================================================= */
+
+.lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    background: rgba(0, 0, 0, 0.92);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+
+    cursor: zoom-out;
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox img {
+    display: block;
+
+    max-width: 95vw;
+    max-height: 90vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, 0.8);
+
+    cursor: default;
+}
+
+.lightbox-close {
+    position: absolute;
+
+    top: 20px;
+    right: 30px;
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #777777;
+
+    background: rgba(17, 17, 17, 0.8);
+
+    color: #ffffff;
+
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.lightbox-close:hover {
+    background: #ffffff;
+    color: #111111;
+    border-color: #ffffff;
 }
 
 
@@ -575,10 +521,7 @@ nav {
 
 .prices {
     display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
 }
 
@@ -596,35 +539,23 @@ nav {
 
 .price-card:hover {
     border-color: #666666;
-
     transform: translateY(-5px);
 }
 
 .price-card h3 {
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
+    font-family: "Cinzel", Georgia, serif;
     font-size: 21px;
-
     margin-bottom: 25px;
 }
 
 .price {
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
+    font-family: "Cinzel", Georgia, serif;
     font-size: 40px;
-
     margin-bottom: 20px;
 }
 
 .price-card p:not(.price) {
     color: #999999;
-
     font-size: 17px;
 }
 
@@ -676,13 +607,8 @@ nav {
 
     border: 1px solid #eeeeee;
 
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
+    font-family: "Cinzel", Georgia, serif;
     font-size: 12px;
-
     letter-spacing: 2px;
 
     color: #eeeeee;
@@ -703,9 +629,7 @@ nav {
 
 .commission-terms summary:hover {
     background: #ffffff;
-
     color: #111111;
-
     border-color: #ffffff;
 }
 
@@ -740,10 +664,7 @@ nav {
 }
 
 .commission-term h3 {
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
+    font-family: "Cinzel", Georgia, serif;
 
     font-size: 19px;
 
@@ -829,10 +750,7 @@ nav {
 }
 
 .contact-label {
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
+    font-family: "Cinzel", Georgia, serif;
 
     font-size: 12px;
 
@@ -847,8 +765,7 @@ nav {
     color: #dddddd;
 }
 
-.contact-link:hover
-.contact-value {
+.contact-link:hover .contact-value {
     color: #ffffff;
 }
 
@@ -899,27 +816,22 @@ footer {
 
     .portfolio-categories {
         grid-template-columns: 1fr;
-
         gap: 40px;
     }
 
     .gallery {
         grid-template-columns: 1fr;
-
         gap: 40px;
     }
 
     .gallery-item {
         width: 100%;
-
         max-width: 100%;
     }
 
     .gallery-item img {
         width: 100%;
-
         max-width: 100%;
-
         height: auto;
     }
 
@@ -929,7 +841,6 @@ footer {
 
     .commission-note {
         font-size: 16px;
-
         text-align: left;
     }
 
@@ -939,7 +850,6 @@ footer {
 
     .commission-terms summary {
         font-size: 12px;
-
         padding: 14px 22px;
     }
 
@@ -957,30 +867,38 @@ footer {
 
     .commission-term p {
         font-size: 16px;
-
         line-height: 1.7;
     }
 
     .contact-link {
         flex-direction: column;
-
         align-items: flex-start;
-
         gap: 5px;
     }
 
     .contact-value {
         font-size: 17px;
-
         word-break: break-word;
     }
 
+    .lightbox {
+        padding: 20px;
+    }
+
+    .lightbox img {
+        max-width: 96vw;
+        max-height: 85vh;
+    }
+
+    .lightbox-close {
+        top: 15px;
+        right: 15px;
+    }
 }
 
 
 /* =========================================================
    FINAL IMAGE SAFETY
-   Prevents oversized images in every gallery
 ========================================================= */
 
 img {
@@ -998,7 +916,6 @@ img {
 
 /* =========================================================
    PORTFOLIO CATEGORY COVER IMAGES
-   Original proportions, never oversized
 ========================================================= */
 
 .portfolio-categories .category-image {
@@ -1028,3 +945,4 @@ img {
 
     object-fit: contain !important;
 }
+```
