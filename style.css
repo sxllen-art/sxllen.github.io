@@ -700,3 +700,23 @@ footer {
     }
 
 }
+/* =========================================================
+   FIX COPERTINE PORTFOLIO
+   Mantiene le proporzioni originali delle immagini
+========================================================= */
+
+.portfolio-categories .category-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    overflow: hidden;
+}
+
+.portfolio-categories .category-image img {
+    display: block;
+    width: 100%;
+    height: auto !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+}
