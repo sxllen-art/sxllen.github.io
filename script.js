@@ -897,7 +897,10 @@ const galleryData = {
     characters: [],
     "creature-design": [],
     "boss-design": [],
-    weapons: [],
+    weapons: [
+    "prop-design/weapons/weapon01.JPG",
+    "prop-design/weapons/weapon02.JPG"
+],
     "items-and-collectibles": [],
     "set-dressing": [],
     interiors: [],
