@@ -1312,6 +1312,9 @@ function createGalleryImage(
     wrapper.className =
         "gallery-item";
 
+    wrapper.style.cursor =
+        "zoom-in";
+
 
     const image =
         document.createElement("img");
@@ -1325,24 +1328,56 @@ function createGalleryImage(
     image.loading =
         "lazy";
 
-    image.decoding =
-        "async";
+    image.draggable =
+        false;
 
     image.style.cursor =
         "zoom-in";
 
+    image.style.display =
+        "block";
+
+
+    /*
+       CLICK DIRETTO SULL'IMMAGINE
+
+       Funziona allo stesso modo per:
+       - Weapons
+       - Set Dressing
+       - tutte le future sottocartelle
+    */
 
     image.addEventListener(
         "click",
         function (event) {
 
             event.preventDefault();
+
             event.stopPropagation();
 
             openLightbox(
                 imagePath,
                 altText
             );
+
+        }
+    );
+
+
+    wrapper.addEventListener(
+        "click",
+        function (event) {
+
+            if (
+                event.target === wrapper
+            ) {
+
+                openLightbox(
+                    imagePath,
+                    altText
+                );
+
+            }
 
         }
     );
@@ -1596,25 +1631,169 @@ function createLightbox() {
         "sxllen-lightbox";
 
 
-    lightbox.innerHTML = `
-        <button
-            id="sxllen-lightbox-close"
-            type="button"
-            aria-label="Close"
-        >×</button>
+    /*
+       STILI DIRETTAMENTE NEL JAVASCRIPT.
 
-        <img
-            id="sxllen-lightbox-image"
-            src=""
-            alt=""
-        >
-    `;
+       In questo modo il lightbox funziona anche se
+       nel CSS manca qualche regola relativa al lightbox.
+    */
 
+    lightbox.style.position =
+        "fixed";
+
+    lightbox.style.top =
+        "0";
+
+    lightbox.style.left =
+        "0";
+
+    lightbox.style.width =
+        "100vw";
+
+    lightbox.style.height =
+        "100vh";
+
+    lightbox.style.background =
+        "rgba(0, 0, 0, 0.94)";
+
+    lightbox.style.display =
+        "none";
+
+    lightbox.style.alignItems =
+        "center";
+
+    lightbox.style.justifyContent =
+        "center";
+
+    lightbox.style.padding =
+        "30px";
+
+    lightbox.style.zIndex =
+        "999999";
+
+    lightbox.style.cursor =
+        "zoom-out";
+
+    lightbox.style.opacity =
+        "0";
+
+    lightbox.style.transition =
+        "opacity 0.25s ease";
+
+
+    const closeButton =
+        document.createElement("button");
+
+    closeButton.id =
+        "sxllen-lightbox-close";
+
+    closeButton.type =
+        "button";
+
+    closeButton.setAttribute(
+        "aria-label",
+        "Close"
+    );
+
+    closeButton.textContent =
+        "×";
+
+
+    closeButton.style.position =
+        "absolute";
+
+    closeButton.style.top =
+        "20px";
+
+    closeButton.style.right =
+        "30px";
+
+    closeButton.style.zIndex =
+        "2";
+
+    closeButton.style.background =
+        "none";
+
+    closeButton.style.border =
+        "none";
+
+    closeButton.style.color =
+        "#ffffff";
+
+    closeButton.style.fontSize =
+        "45px";
+
+    closeButton.style.lineHeight =
+        "1";
+
+    closeButton.style.cursor =
+        "pointer";
+
+    closeButton.style.padding =
+        "5px 10px";
+
+
+    const image =
+        document.createElement("img");
+
+    image.id =
+        "sxllen-lightbox-image";
+
+    image.src =
+        "";
+
+    image.alt =
+        "";
+
+
+    image.style.display =
+        "block";
+
+    image.style.maxWidth =
+        "calc(100vw - 60px)";
+
+    image.style.maxHeight =
+        "calc(100vh - 60px)";
+
+    image.style.width =
+        "auto";
+
+    image.style.height =
+        "auto";
+
+    image.style.objectFit =
+        "contain";
+
+    image.style.cursor =
+        "default";
+
+    image.style.userSelect =
+        "none";
+
+    image.style.webkitUserSelect =
+        "none";
+
+    image.style.boxShadow =
+        "0 0 40px rgba(0,0,0,0.7)";
+
+
+    lightbox.appendChild(
+        closeButton
+    );
+
+    lightbox.appendChild(
+        image
+    );
 
     document.body.appendChild(
         lightbox
     );
 
+
+    /*
+       Cliccando sullo sfondo si chiude.
+       Cliccando sulla foto NON si chiude.
+    */
 
     lightbox.addEventListener(
         "click",
@@ -1632,27 +1811,18 @@ function createLightbox() {
     );
 
 
-    const closeButton =
-        document.getElementById(
-            "sxllen-lightbox-close"
-        );
+    closeButton.addEventListener(
+        "click",
+        function (event) {
 
+            event.preventDefault();
 
-    if (closeButton) {
+            event.stopPropagation();
 
-        closeButton.addEventListener(
-            "click",
-            function (event) {
+            closeLightbox();
 
-                event.preventDefault();
-                event.stopPropagation();
-
-                closeLightbox();
-
-            }
-        );
-
-    }
+        }
+    );
 
 }
 
@@ -1697,8 +1867,22 @@ function openLightbox(
         altText || "";
 
 
-    lightbox.classList.add(
-        "active"
+    lightbox.style.display =
+        "flex";
+
+
+    /*
+       Forza il browser a registrare il display:flex
+       prima di applicare l'opacità.
+    */
+
+    requestAnimationFrame(
+        function () {
+
+            lightbox.style.opacity =
+                "1";
+
+        }
     );
 
 
@@ -1727,8 +1911,24 @@ function closeLightbox() {
     }
 
 
-    lightbox.classList.remove(
-        "active"
+    lightbox.style.opacity =
+        "0";
+
+
+    setTimeout(
+        function () {
+
+            if (
+                lightbox.style.opacity === "0"
+            ) {
+
+                lightbox.style.display =
+                    "none";
+
+            }
+
+        },
+        250
     );
 
 
@@ -1883,6 +2083,12 @@ window.backToCategory =
 
 window.openIllustrations =
     openIllustrations;
+
+window.openLightbox =
+    openLightbox;
+
+window.closeLightbox =
+    closeLightbox;
 
 
 /* =========================================================
