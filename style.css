@@ -41,15 +41,20 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
+
     background: rgba(17, 17, 17, 0.94);
+
     backdrop-filter: blur(10px);
+
     border-bottom: 1px solid #292929;
 }
 
 nav {
     max-width: 1200px;
     margin: auto;
+
     padding: 20px 30px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,8 +62,11 @@ nav {
 
 .logo {
     font-family: "Cinzel", Georgia, serif;
+
     font-weight: 600;
+
     letter-spacing: 4px;
+
     font-size: 18px;
 }
 
@@ -69,8 +77,14 @@ nav {
 
 .menu a {
     color: #cccccc;
-    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
     font-size: 16px;
+
     transition: color 0.3s ease;
 }
 
@@ -85,11 +99,20 @@ nav {
 
 #languageSelector {
     background: #111111;
+
     color: #cccccc;
+
     border: 1px solid #444444;
+
     padding: 6px 10px;
-    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
     font-size: 14px;
+
     cursor: pointer;
 }
 
@@ -104,15 +127,19 @@ nav {
 
 .hero {
     min-height: 100vh;
+
     display: flex;
     align-items: center;
+
     padding: 140px 30px 80px;
+
     background:
         linear-gradient(
-            rgba(0, 0, 0, 0.35),
-            rgba(0, 0, 0, 0.85)
+            rgba(0,0,0,0.35),
+            rgba(0,0,0,0.85)
         ),
         url("hero.JPG");
+
     background-size: cover;
     background-position: center;
 }
@@ -120,29 +147,48 @@ nav {
 .hero-text {
     max-width: 800px;
     margin: auto;
+
     width: 100%;
 }
 
 .small-title {
-    font-family: "Cinzel", Georgia, serif;
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
     font-size: 13px;
+
     letter-spacing: 4px;
+
     color: #aaaaaa;
+
     margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-family: "Cinzel", Georgia, serif;
-    font-size: clamp(60px, 10vw, 130px);
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(60px, 10vw, 130px);
+
     line-height: 0.9;
+
     letter-spacing: 4px;
+
     margin-bottom: 30px;
 }
 
 .hero p:not(.small-title) {
     max-width: 550px;
+
     font-size: 21px;
+
     color: #cccccc;
+
     margin-bottom: 35px;
 }
 
@@ -153,11 +199,20 @@ nav {
 
 .button {
     display: inline-block;
+
     padding: 14px 27px;
+
     border: 1px solid #eeeeee;
-    font-family: "Cinzel", Georgia, serif;
+
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
     font-size: 12px;
+
     letter-spacing: 2px;
+
     transition:
         background 0.3s ease,
         color 0.3s ease,
@@ -166,7 +221,9 @@ nav {
 
 .button:hover {
     background: #ffffff;
+
     color: #111111;
+
     border-color: #ffffff;
 }
 
@@ -177,15 +234,25 @@ nav {
 
 .section {
     max-width: 1200px;
+
     margin: auto;
+
     padding: 120px 30px;
 }
 
 .section h2 {
-    font-family: "Cinzel", Georgia, serif;
-    font-size: clamp(45px, 7vw, 80px);
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(45px, 7vw, 80px);
+
     line-height: 1;
+
     letter-spacing: 1px;
+
     margin-bottom: 60px;
 }
 
@@ -196,14 +263,22 @@ nav {
 
 .portfolio-categories {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
     gap: 50px 30px;
+
     margin-top: 40px;
 }
 
 .portfolio-category {
     cursor: pointer;
-    transition: transform 0.4s ease;
+
+    min-width: 0;
+
+    transition:
+        transform 0.4s ease;
 }
 
 .portfolio-category:hover {
@@ -213,32 +288,49 @@ nav {
 
 /* =========================================================
    CATEGORY IMAGES
-   Mantiene sempre le proporzioni originali
+   ORIGINAL IMAGE PROPORTIONS
 ========================================================= */
 
 .category-image {
     width: 100%;
+
+    max-width: 100%;
+
     overflow: hidden;
+
     background: #181818;
 }
 
 .category-image img {
     display: block;
+
     width: 100%;
-    height: auto;
+
     max-width: 100%;
+
+    height: auto;
+
     object-fit: contain;
-    transition: transform 0.6s ease;
+
+    transition:
+        transform 0.6s ease;
 }
 
-.portfolio-category:hover .category-image img {
+.portfolio-category:hover
+.category-image img {
     transform: scale(1.03);
 }
 
 .portfolio-category h3 {
     margin-top: 18px;
-    font-family: "Cinzel", Georgia, serif;
+
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
     font-size: 21px;
+
     letter-spacing: 1px;
 }
 
@@ -249,18 +341,32 @@ nav {
 
 .portfolio-view {
     margin-top: 40px;
+
+    min-width: 0;
 }
 
 .back-button {
     background: none;
+
     border: none;
+
     padding: 0;
+
     margin-bottom: 30px;
+
     cursor: pointer;
-    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
     font-size: 17px;
+
     color: #bbbbbb;
-    transition: color 0.3s ease;
+
+    transition:
+        color 0.3s ease;
 }
 
 .back-button:hover {
@@ -269,19 +375,32 @@ nav {
 
 .subcategory-list {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 15px;
+
     margin-top: 30px;
 }
 
 .subcategory-list button {
     background: none;
+
     border: 1px solid #555555;
+
     color: #dddddd;
+
     padding: 12px 20px;
+
     cursor: pointer;
-    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
     font-size: 17px;
+
     transition:
         background 0.3s ease,
         color 0.3s ease,
@@ -290,39 +409,72 @@ nav {
 
 .subcategory-list button:hover {
     background: #ffffff;
+
     color: #111111;
+
     border-color: #ffffff;
 }
 
 
 /* =========================================================
    GALLERY
-   IMPORTANTE:
-   Le immagini mantengono la loro dimensione/proporzione.
-   Non vengono forzate in un'altezza comune.
 ========================================================= */
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
     gap: 50px 30px;
-    align-items: start;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
 }
+
+
+/* =========================================================
+   GALLERY ITEMS
+   IMPORTANT:
+   The JavaScript creates .gallery-item
+========================================================= */
 
 .gallery-item {
     width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
+
     overflow: hidden;
+
     background: #181818;
 }
 
+
+/* =========================================================
+   GALLERY IMAGES
+   Automatically handles every future image
+========================================================= */
+
 .gallery-item img {
     display: block;
+
     width: 100%;
+
     max-width: 100%;
+
     height: auto;
+
     object-fit: contain;
-    object-position: center;
-    transition: transform 0.5s ease;
+
+    margin: 0;
+
+    transition:
+        transform 0.5s ease;
 }
 
 .gallery-item:hover img {
@@ -331,24 +483,32 @@ nav {
 
 
 /* =========================================================
-   GENERIC ARTWORK
-   Compatibilità con eventuali immagini già presenti
+   OLD ARTWORK SUPPORT
 ========================================================= */
 
 .artwork {
     width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
+
     overflow: hidden;
-    background: #181818;
 }
 
 .artwork img {
     display: block;
+
     width: 100%;
+
     max-width: 100%;
+
     height: auto;
+
     object-fit: contain;
-    object-position: center;
-    transition: transform 0.5s ease;
+
+    transition:
+        transform 0.5s ease;
 }
 
 .artwork:hover img {
@@ -357,13 +517,36 @@ nav {
 
 .artwork h3 {
     margin-top: 18px;
-    font-family: "Cinzel", Georgia, serif;
+
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
     font-size: 20px;
 }
 
 .artwork p {
     color: #888888;
+
     font-size: 15px;
+}
+
+
+/* =========================================================
+   EMPTY GALLERY
+========================================================= */
+
+.gallery-empty {
+    grid-column: 1 / -1;
+
+    color: #888888;
+
+    font-size: 18px;
+
+    text-align: center;
+
+    padding: 40px 20px;
 }
 
 
@@ -377,8 +560,11 @@ nav {
 
 .about p:not(.small-title) {
     max-width: 700px;
+
     color: #bbbbbb;
+
     font-size: 19px;
+
     margin-bottom: 20px;
 }
 
@@ -389,14 +575,20 @@ nav {
 
 .prices {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
     gap: 20px;
 }
 
 .price-card {
     border: 1px solid #292929;
+
     padding: 35px;
+
     min-height: 280px;
+
     transition:
         border-color 0.3s ease,
         transform 0.3s ease;
@@ -404,23 +596,35 @@ nav {
 
 .price-card:hover {
     border-color: #666666;
+
     transform: translateY(-5px);
 }
 
 .price-card h3 {
-    font-family: "Cinzel", Georgia, serif;
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
     font-size: 21px;
+
     margin-bottom: 25px;
 }
 
 .price {
-    font-family: "Cinzel", Georgia, serif;
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
     font-size: 40px;
+
     margin-bottom: 20px;
 }
 
 .price-card p:not(.price) {
     color: #999999;
+
     font-size: 17px;
 }
 
@@ -431,9 +635,13 @@ nav {
 
 .commission-note {
     max-width: 850px;
+
     margin: 45px auto 0;
+
     color: #999999;
+
     font-size: 17px;
+
     text-align: center;
 }
 
@@ -444,8 +652,11 @@ nav {
 
 .commission-terms {
     max-width: 900px;
+
     margin: 50px auto 0;
+
     border: none;
+
     text-align: center;
 }
 
@@ -456,14 +667,26 @@ nav {
 
 .commission-terms summary {
     display: inline-block;
+
     list-style: none;
+
     cursor: pointer;
+
     padding: 14px 27px;
+
     border: 1px solid #eeeeee;
-    font-family: "Cinzel", Georgia, serif;
+
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
     font-size: 12px;
+
     letter-spacing: 2px;
+
     color: #eeeeee;
+
     transition:
         background 0.3s ease,
         color 0.3s ease,
@@ -480,7 +703,9 @@ nav {
 
 .commission-terms summary:hover {
     background: #ffffff;
+
     color: #111111;
+
     border-color: #ffffff;
 }
 
@@ -491,8 +716,11 @@ nav {
 
 .commission-terms-content {
     max-width: 800px;
+
     margin: 45px auto 0;
+
     padding: 0;
+
     text-align: left;
 }
 
@@ -503,6 +731,7 @@ nav {
 
 .commission-term {
     padding: 30px 0;
+
     border-top: 1px solid #222222;
 }
 
@@ -511,17 +740,27 @@ nav {
 }
 
 .commission-term h3 {
-    font-family: "Cinzel", Georgia, serif;
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
     font-size: 19px;
+
     letter-spacing: 1px;
+
     color: #eeeeee;
+
     margin-bottom: 14px;
 }
 
 .commission-term p {
     max-width: 800px;
+
     color: #999999;
+
     font-size: 17px;
+
     line-height: 1.8;
 }
 
@@ -532,13 +771,17 @@ nav {
 
 .contact {
     text-align: center;
+
     max-width: 850px;
 }
 
 .contact p:not(.small-title) {
     max-width: 650px;
+
     margin: 0 auto 40px;
+
     color: #aaaaaa;
+
     font-size: 19px;
 }
 
@@ -549,20 +792,31 @@ nav {
 
 .contact-links {
     display: flex;
+
     flex-direction: column;
+
     max-width: 600px;
+
     margin: 0 auto 40px;
+
     border-top: 1px solid #292929;
 }
 
 .contact-link {
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     gap: 30px;
+
     padding: 20px 0;
+
     border-bottom: 1px solid #292929;
+
     text-align: left;
+
     transition:
         color 0.3s ease,
         padding-left 0.3s ease;
@@ -570,22 +824,31 @@ nav {
 
 .contact-link:hover {
     color: #ffffff;
+
     padding-left: 8px;
 }
 
 .contact-label {
-    font-family: "Cinzel", Georgia, serif;
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
     font-size: 12px;
+
     letter-spacing: 3px;
+
     color: #888888;
 }
 
 .contact-value {
     font-size: 18px;
+
     color: #dddddd;
 }
 
-.contact-link:hover .contact-value {
+.contact-link:hover
+.contact-value {
     color: #ffffff;
 }
 
@@ -596,9 +859,13 @@ nav {
 
 footer {
     border-top: 1px solid #292929;
+
     padding: 30px;
+
     text-align: center;
+
     color: #666666;
+
     font-size: 14px;
 }
 
@@ -632,12 +899,28 @@ footer {
 
     .portfolio-categories {
         grid-template-columns: 1fr;
+
         gap: 40px;
     }
 
     .gallery {
         grid-template-columns: 1fr;
+
         gap: 40px;
+    }
+
+    .gallery-item {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+    .gallery-item img {
+        width: 100%;
+
+        max-width: 100%;
+
+        height: auto;
     }
 
     .prices {
@@ -646,6 +929,7 @@ footer {
 
     .commission-note {
         font-size: 16px;
+
         text-align: left;
     }
 
@@ -655,6 +939,7 @@ footer {
 
     .commission-terms summary {
         font-size: 12px;
+
         padding: 14px 22px;
     }
 
@@ -672,18 +957,74 @@ footer {
 
     .commission-term p {
         font-size: 16px;
+
         line-height: 1.7;
     }
 
     .contact-link {
         flex-direction: column;
+
         align-items: flex-start;
+
         gap: 5px;
     }
 
     .contact-value {
         font-size: 17px;
+
         word-break: break-word;
     }
 
+}
+
+
+/* =========================================================
+   FINAL IMAGE SAFETY
+   Prevents oversized images in every gallery
+========================================================= */
+
+img {
+    max-width: 100%;
+}
+
+.gallery img,
+.gallery-item img,
+.artwork img,
+.category-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================================================
+   PORTFOLIO CATEGORY COVER IMAGES
+   Original proportions, never oversized
+========================================================= */
+
+.portfolio-categories .category-image {
+    width: 100%;
+
+    max-width: 100%;
+
+    height: auto;
+
+    aspect-ratio: auto;
+
+    overflow: hidden;
+}
+
+.portfolio-categories .category-image img {
+    display: block;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    height: auto !important;
+
+    max-height: none !important;
+
+    aspect-ratio: auto !important;
+
+    object-fit: contain !important;
 }
