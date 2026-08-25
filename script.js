@@ -1,4 +1,4 @@
-```javascript
+
 /* =========================================================
    SXLLEN — SCRIPT.JS
    Portfolio / Navigation / Gallery / Translations
@@ -1737,4 +1737,3 @@ document.addEventListener(
 
     }
 );
-```
