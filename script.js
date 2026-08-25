@@ -1,7 +1,7 @@
 ```javascript
 /* =========================================================
    SXLLEN — SCRIPT.JS
-   Navigation / Gallery / Translations
+   Portfolio / Navigation / Gallery / Translations
 ========================================================= */
 
 
@@ -62,23 +62,23 @@ const translations = {
         commissionsSmall: "COMMISSIONS",
         commissionsTitle: "Commissioni",
 
-        price1: "A partire da €180",
         price1Title: "Character Design",
+        price1: "A partire da €180",
         price1Description:
             "Character design completo, con sketch iniziale e rendering finale.",
 
-        price2: "A partire da €120",
         price2Title: "Prop Design",
+        price2: "A partire da €120",
         price2Description:
             "Design di props e oggetti, con concept e rendering.",
 
-        price3: "A partire da €200",
         price3Title: "Environment Design",
+        price3: "A partire da €200",
         price3Description:
             "Concept di ambiente, con composizione, mood e rendering.",
 
-        price4: "A partire da €180",
         price4Title: "Illustrazione",
+        price4: "A partire da €180",
         price4Description:
             "Illustrazione completa con composizione e rendering.",
 
@@ -184,23 +184,23 @@ const translations = {
         commissionsSmall: "COMMISSIONS",
         commissionsTitle: "Commissions",
 
-        price1: "Starting from €180",
         price1Title: "Character Design",
+        price1: "Starting from €180",
         price1Description:
             "Complete character design with initial sketch and final rendering.",
 
-        price2: "Starting from €120",
         price2Title: "Prop Design",
+        price2: "Starting from €120",
         price2Description:
             "Prop and object design with concept and rendering.",
 
-        price3: "Starting from €200",
         price3Title: "Environment Design",
+        price3: "Starting from €200",
         price3Description:
             "Environment concept with composition, mood and rendering.",
 
-        price4: "Starting from €180",
         price4Title: "Illustration",
+        price4: "Starting from €180",
         price4Description:
             "Complete illustration with composition and rendering.",
 
@@ -306,23 +306,23 @@ const translations = {
         commissionsSmall: "COMISIONES",
         commissionsTitle: "Comisiones",
 
-        price1: "A partir de €180",
         price1Title: "Diseño de Personajes",
+        price1: "A partir de €180",
         price1Description:
             "Diseño completo de personaje, con sketch inicial y renderizado final.",
 
-        price2: "A partir de €120",
         price2Title: "Diseño de Props",
+        price2: "A partir de €120",
         price2Description:
             "Diseño de props y objetos, con concepto y renderizado.",
 
-        price3: "A partir de €200",
         price3Title: "Diseño de Entornos",
+        price3: "A partir de €200",
         price3Description:
             "Concepto de entorno, con composición, mood y renderizado.",
 
-        price4: "A partir de €180",
         price4Title: "Ilustración",
+        price4: "A partir de €180",
         price4Description:
             "Ilustración completa con composición y renderizado.",
 
@@ -428,23 +428,23 @@ const translations = {
         commissionsSmall: "COMMANDES",
         commissionsTitle: "Commandes",
 
-        price1: "À partir de 180 €",
         price1Title: "Character Design",
+        price1: "À partir de 180 €",
         price1Description:
             "Character design complet avec sketch initial et rendu final.",
 
-        price2: "À partir de 120 €",
         price2Title: "Prop Design",
+        price2: "À partir de 120 €",
         price2Description:
             "Design de props et d'objets avec concept et rendu.",
 
-        price3: "À partir de 200 €",
         price3Title: "Environment Design",
+        price3: "À partir de 200 €",
         price3Description:
             "Concept d'environnement avec composition, ambiance et rendu.",
 
-        price4: "À partir de 180 €",
         price4Title: "Illustration",
+        price4: "À partir de 180 €",
         price4Description:
             "Illustration complète avec composition et rendu.",
 
@@ -550,23 +550,23 @@ const translations = {
         commissionsSmall: "AUFTRÄGE",
         commissionsTitle: "Aufträge",
 
-        price1: "Ab €180",
         price1Title: "Character Design",
+        price1: "Ab €180",
         price1Description:
             "Komplettes Character Design mit initialem Sketch und finalem Rendering.",
 
-        price2: "Ab €120",
         price2Title: "Prop Design",
+        price2: "Ab €120",
         price2Description:
             "Design von Props und Objekten mit Konzept und Rendering.",
 
-        price3: "Ab €200",
         price3Title: "Environment Design",
+        price3: "Ab €200",
         price3Description:
             "Environment-Konzept mit Komposition, Stimmung und Rendering.",
 
-        price4: "Ab €180",
         price4Title: "Illustration",
+        price4: "Ab €180",
         price4Description:
             "Komplette Illustration mit Komposition und Rendering.",
 
@@ -672,23 +672,23 @@ const translations = {
         commissionsSmall: "COMMISSIONS",
         commissionsTitle: "ご依頼",
 
-        price1: "€180から",
         price1Title: "キャラクターデザイン",
+        price1: "€180から",
         price1Description:
             "初期スケッチから最終レンダリングまでを含むキャラクターデザイン。",
 
-        price2: "€120から",
         price2Title: "プロップデザイン",
+        price2: "€120から",
         price2Description:
             "コンセプトとレンダリングを含む小道具・アイテムのデザイン。",
 
-        price3: "€200から",
         price3Title: "エンバイロメントデザイン",
+        price3: "€200から",
         price3Description:
             "構図、ムード、レンダリングを含む背景・環境コンセプト。",
 
-        price4: "€180から",
         price4Title: "イラストレーション",
+        price4: "€180から",
         price4Description:
             "構図とレンダリングを含む完成イラスト。",
 
@@ -780,14 +780,13 @@ function getSavedLanguage() {
     } catch (error) {
 
         console.warn(
-            "Impossibile leggere la lingua salvata:",
+            "SXLLEN: impossibile leggere localStorage.",
             error
         );
 
     }
 
     return "it";
-
 }
 
 
@@ -803,7 +802,7 @@ function saveLanguage(language) {
     } catch (error) {
 
         console.warn(
-            "Impossibile salvare la lingua:",
+            "SXLLEN: impossibile salvare la lingua.",
             error
         );
 
@@ -817,6 +816,10 @@ function saveLanguage(language) {
 ========================================================= */
 
 function applyTranslations(language) {
+
+    /* -----------------------------------------
+       Validate language
+    ----------------------------------------- */
 
     if (
         !language ||
@@ -834,13 +837,21 @@ function applyTranslations(language) {
     currentLanguage = language;
 
 
-    /* HTML LANGUAGE */
+    /* -----------------------------------------
+       HTML language
+    ----------------------------------------- */
 
     document.documentElement.lang =
         language;
 
 
-    /* NORMAL DATA-I18N ELEMENTS */
+    /* -----------------------------------------
+       Translate every data-i18n element
+    ----------------------------------------- */
+
+    const languageData =
+        translations[language];
+
 
     const elements =
         document.querySelectorAll(
@@ -851,29 +862,30 @@ function applyTranslations(language) {
     elements.forEach(element => {
 
         const key =
-            element.getAttribute(
-                "data-i18n"
-            );
+            element.getAttribute("data-i18n");
 
 
         if (
+            key &&
             Object.prototype.hasOwnProperty.call(
-                translations[language],
+                languageData,
                 key
             )
         ) {
 
             element.textContent =
-                translations[language][key];
+                languageData[key];
 
         }
 
     });
 
 
-    /* PRICES */
+    /* -----------------------------------------
+       Translate prices
+    ----------------------------------------- */
 
-    const priceElements =
+    const prices =
         document.querySelectorAll(
             ".price"
         );
@@ -887,52 +899,31 @@ function applyTranslations(language) {
     ];
 
 
-    priceElements.forEach(
-        (element, index) => {
+    prices.forEach((element, index) => {
 
-            const key =
-                priceKeys[index];
-
-
-            if (
-                key &&
-                translations[language][key]
-            ) {
-
-                element.textContent =
-                    translations[language][key];
-
-            }
-
-        }
-    );
+        const key =
+            priceKeys[index];
 
 
-    /* SUBCATEGORY TITLE */
+        if (
+            key &&
+            Object.prototype.hasOwnProperty.call(
+                languageData,
+                key
+            )
+        ) {
 
-    if (
-        currentOpenSubcategory
-    ) {
-
-        const title =
-            document.getElementById(
-                "subcategory-title"
-            );
-
-
-        if (title) {
-
-            title.textContent =
-                getSubcategoryTitle(
-                    currentOpenSubcategory
-                );
+            element.textContent =
+                languageData[key];
 
         }
 
-    }
+    });
 
 
-    /* LANGUAGE SELECTOR */
+    /* -----------------------------------------
+       Update language selector
+    ----------------------------------------- */
 
     const selector =
         document.getElementById(
@@ -948,15 +939,74 @@ function applyTranslations(language) {
     }
 
 
-    /* SAVE */
+    /* -----------------------------------------
+       Save language
+    ----------------------------------------- */
 
     saveLanguage(language);
+
+
+    /* -----------------------------------------
+       Update open subcategory title
+    ----------------------------------------- */
+
+    const subcategoryTitle =
+        document.getElementById(
+            "subcategory-title"
+        );
+
+
+    if (
+        subcategoryTitle &&
+        currentOpenSubcategory
+    ) {
+
+        subcategoryTitle.textContent =
+            getSubcategoryTitle(
+                currentOpenSubcategory
+            );
+
+    }
+
+
+    /* -----------------------------------------
+       Update illustration empty message
+       if gallery is currently visible
+    ----------------------------------------- */
+
+    if (
+        currentOpenSubcategory
+    ) {
+
+        loadSubcategoryGallery(
+            currentOpenSubcategory
+        );
+
+    }
+
+
+    const illustrations =
+        document.getElementById(
+            "illustrations"
+        );
+
+
+    if (
+        illustrations &&
+        window.getComputedStyle(
+            illustrations
+        ).display !== "none"
+    ) {
+
+        loadIllustrationsGallery();
+
+    }
 
 }
 
 
 /* =========================================================
-   LANGUAGE SELECTOR SETUP
+   LANGUAGE SELECTOR
 ========================================================= */
 
 function setupLanguageSelector() {
@@ -970,7 +1020,7 @@ function setupLanguageSelector() {
     if (!selector) {
 
         console.warn(
-            "languageSelector non trovato nell'HTML."
+            "SXLLEN: languageSelector non trovato."
         );
 
         return;
@@ -978,27 +1028,26 @@ function setupLanguageSelector() {
     }
 
 
-    /* 
-       Prima recuperiamo la lingua salvata.
-       Se non esiste, usiamo italiano.
-    */
+    /* -----------------------------------------
+       Load saved language
+    ----------------------------------------- */
 
     const savedLanguage =
         getSavedLanguage();
 
 
-    selector.value =
-        savedLanguage;
-
+    /* -----------------------------------------
+       Apply saved language
+    ----------------------------------------- */
 
     applyTranslations(
         savedLanguage
     );
 
 
-    /*
-       Cambio lingua.
-    */
+    /* -----------------------------------------
+       Listen for changes
+    ----------------------------------------- */
 
     selector.addEventListener(
         "change",
@@ -1006,18 +1055,6 @@ function setupLanguageSelector() {
 
             const selectedLanguage =
                 event.target.value;
-
-
-            if (
-                !Object.prototype.hasOwnProperty.call(
-                    translations,
-                    selectedLanguage
-                )
-            ) {
-
-                return;
-
-            }
 
 
             applyTranslations(
@@ -1062,7 +1099,7 @@ function setupContactButton() {
 
 
 /* =========================================================
-   PORTFOLIO NAVIGATION
+   PORTFOLIO VIEW MANAGEMENT
 ========================================================= */
 
 function hideAllPortfolioViews() {
@@ -1082,6 +1119,10 @@ function hideAllPortfolioViews() {
 
 }
 
+
+/* =========================================================
+   OPEN CATEGORY
+========================================================= */
 
 function openCategory(categoryId) {
 
@@ -1110,6 +1151,7 @@ function openCategory(categoryId) {
     currentCategory =
         categoryId;
 
+
     currentOpenSubcategory =
         null;
 
@@ -1133,10 +1175,15 @@ function openCategory(categoryId) {
 }
 
 
+/* =========================================================
+   BACK TO PORTFOLIO
+========================================================= */
+
 function backToPortfolio() {
 
     currentCategory =
         null;
+
 
     currentOpenSubcategory =
         null;
@@ -1151,29 +1198,30 @@ function backToPortfolio() {
         );
 
 
-    if (categories) {
+    if (!categories) {
 
-        categories.style.display =
-            "grid";
-
-
-        categories.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
+        return;
 
     }
+
+
+    categories.style.display =
+        "grid";
+
+
+    categories.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
 
 }
 
 
 /* =========================================================
-   SUBCATEGORY NAVIGATION
+   OPEN SUBCATEGORY
 ========================================================= */
 
-function openSubcategory(
-    subcategoryId
-) {
+function openSubcategory(subcategoryId) {
 
     const gallery =
         document.getElementById(
@@ -1195,10 +1243,6 @@ function openSubcategory(
         return;
 
     }
-
-
-    currentCategory =
-        getCurrentCategory();
 
 
     currentOpenSubcategory =
@@ -1230,6 +1274,10 @@ function openSubcategory(
 
 }
 
+
+/* =========================================================
+   BACK TO CATEGORY
+========================================================= */
 
 function backToCategory() {
 
@@ -1276,52 +1324,6 @@ function backToCategory() {
 
 
 /* =========================================================
-   CURRENT CATEGORY
-========================================================= */
-
-function getCurrentCategory() {
-
-    const categoryIds = [
-
-        "character-design",
-        "prop-design",
-        "environment",
-        "illustrations",
-        "3d-models"
-
-    ];
-
-
-    for (
-        const id of categoryIds
-    ) {
-
-        const element =
-            document.getElementById(
-                id
-            );
-
-
-        if (
-            element &&
-            window.getComputedStyle(
-                element
-            ).display !== "none"
-        ) {
-
-            return id;
-
-        }
-
-    }
-
-
-    return null;
-
-}
-
-
-/* =========================================================
    SUBCATEGORY TITLES
 ========================================================= */
 
@@ -1331,6 +1333,13 @@ function getSubcategoryTitle(
 
     const language =
         translations[currentLanguage];
+
+
+    if (!language) {
+
+        return subcategoryId;
+
+    }
 
 
     const titleMap = {
@@ -1368,8 +1377,10 @@ function getSubcategoryTitle(
 
     if (
         key &&
-        language &&
-        language[key]
+        Object.prototype.hasOwnProperty.call(
+            language,
+            key
+        )
     ) {
 
         return language[key];
@@ -1432,125 +1443,17 @@ function loadSubcategoryGallery(
     }
 
 
-    container.innerHTML =
-        "";
+    container.innerHTML = "";
 
 
     const images =
         galleryData[subcategoryId] || [];
 
 
-    if (
-        images.length === 0
-    ) {
+    if (images.length === 0) {
 
         const message =
-            document.createElement(
-                "p"
-            );
-
-
-        message.className =
-            "gallery-empty";
-
-
-        message.textContent =
-            getGalleryEmptyMessage();
-
-
-        container.appendChild(
-            message
-        );
-
-
-        return;
-
-    }
-
-
-    images.forEach(
-        (imagePath, index) => {
-
-            const imageWrapper =
-                document.createElement(
-                    "div"
-                );
-
-
-            imageWrapper.className =
-                "gallery-item";
-
-
-            const image =
-                document.createElement(
-                    "img"
-                );
-
-
-            image.src =
-                imagePath;
-
-
-            image.alt =
-                `${getSubcategoryTitle(
-                    subcategoryId
-                )} ${index + 1}`;
-
-
-            image.loading =
-                "lazy";
-
-
-            imageWrapper.appendChild(
-                image
-            );
-
-
-            container.appendChild(
-                imageWrapper
-            );
-
-        }
-    );
-
-}
-
-
-/* =========================================================
-   ILLUSTRATIONS GALLERY
-========================================================= */
-
-function loadIllustrationsGallery() {
-
-    const container =
-        document.getElementById(
-            "gallery-illustrations"
-        );
-
-
-    if (!container) {
-
-        return;
-
-    }
-
-
-    container.innerHTML =
-        "";
-
-
-    const images =
-        galleryData.illustrations || [];
-
-
-    if (
-        images.length === 0
-    ) {
-
-        const message =
-            document.createElement(
-                "p"
-            );
+            document.createElement("p");
 
 
         message.className =
@@ -1575,9 +1478,7 @@ function loadIllustrationsGallery() {
         (imagePath, index) => {
 
             const wrapper =
-                document.createElement(
-                    "div"
-                );
+                document.createElement("div");
 
 
             wrapper.className =
@@ -1585,9 +1486,101 @@ function loadIllustrationsGallery() {
 
 
             const image =
-                document.createElement(
-                    "img"
-                );
+                document.createElement("img");
+
+
+            image.src =
+                imagePath;
+
+
+            image.alt =
+                `${getSubcategoryTitle(
+                    subcategoryId
+                )} ${index + 1}`;
+
+
+            image.loading =
+                "lazy";
+
+
+            wrapper.appendChild(
+                image
+            );
+
+
+            container.appendChild(
+                wrapper
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   LOAD ILLUSTRATIONS GALLERY
+========================================================= */
+
+function loadIllustrationsGallery() {
+
+    const container =
+        document.getElementById(
+            "gallery-illustrations"
+        );
+
+
+    if (!container) {
+
+        return;
+
+    }
+
+
+    container.innerHTML = "";
+
+
+    const images =
+        galleryData.illustrations || [];
+
+
+    if (images.length === 0) {
+
+        const message =
+            document.createElement("p");
+
+
+        message.className =
+            "gallery-empty";
+
+
+        message.textContent =
+            getGalleryEmptyMessage();
+
+
+        container.appendChild(
+            message
+        );
+
+
+        return;
+
+    }
+
+
+    images.forEach(
+        (imagePath, index) => {
+
+            const wrapper =
+                document.createElement("div");
+
+
+            wrapper.className =
+                "gallery-item";
+
+
+            const image =
+                document.createElement("img");
 
 
             image.src =
@@ -1778,6 +1771,37 @@ function setupPortfolio() {
 
 
 /* =========================================================
+   ILLUSTRATIONS CATEGORY
+========================================================= */
+
+function setupIllustrationsCategory() {
+
+    const illustrationCategory =
+        document.querySelector(
+            '.portfolio-category[onclick="openCategory(\'illustrations\')"]'
+        );
+
+
+    if (!illustrationCategory) {
+
+        return;
+
+    }
+
+
+    illustrationCategory.onclick =
+        function (event) {
+
+            event.preventDefault();
+
+            openIllustrations();
+
+        };
+
+}
+
+
+/* =========================================================
    ESC KEY
 ========================================================= */
 
@@ -1819,28 +1843,6 @@ function setupEscapeKey() {
 
 
 /* =========================================================
-   INITIALIZATION
-========================================================= */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-        setupLanguageSelector();
-
-        setupContactButton();
-
-        setupCommissionTerms();
-
-        setupPortfolio();
-
-        setupEscapeKey();
-
-    }
-);
-
-
-/* =========================================================
    EXPOSE FUNCTIONS TO HTML
 ========================================================= */
 
@@ -1858,4 +1860,33 @@ window.backToCategory =
 
 window.openIllustrations =
     openIllustrations;
+
+
+/* =========================================================
+   MAIN INITIALIZATION
+========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        console.log(
+            "SXLLEN: script.js caricato correttamente."
+        );
+
+
+        setupLanguageSelector();
+
+        setupContactButton();
+
+        setupPortfolio();
+
+        setupIllustrationsCategory();
+
+        setupCommissionTerms();
+
+        setupEscapeKey();
+
+    }
+);
 ```
